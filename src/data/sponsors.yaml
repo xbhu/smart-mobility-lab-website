@@ -1,0 +1,18 @@
+# Sponsors and partners shown as a name wall. logo: add only after permission (logo_permission: true).
+- { id: usdot, name: U.S. Department of Transportation, group: federal, url: https://www.transportation.gov }
+- { id: fhwa, name: Federal Highway Administration, group: federal, url: https://highways.dot.gov }
+- { id: doe, name: U.S. Department of Energy, group: federal, url: https://www.energy.gov }
+- { id: ed, name: U.S. Department of Education, group: federal, url: https://www.ed.gov }
+- { id: penndot, name: Pennsylvania Department of Transportation, group: state, url: https://www.penndot.pa.gov }
+- { id: padep, name: Pennsylvania Department of Environmental Protection, group: state, url: https://www.dep.pa.gov }
+- { id: dced, name: Pennsylvania Department of Community and Economic Development, group: state, url: https://dced.pa.gov }
+- { id: cdot, name: Colorado Department of Transportation, group: state, url: https://www.codot.gov }
+- { id: modot, name: Missouri Department of Transportation, group: state, url: https://www.modot.org }
+- { id: amt-pooled-fund, name: Autonomous Maintenance Technology Pooled Fund, group: state }
+- { id: kansas-city, name: "City of Kansas City, Missouri", group: local, note: Streetlight charging partner }
+- { id: google, name: Google, group: industry }
+- { id: royal-truck, name: Royal Truck, group: industry, note: LiDAR SLAM collaboration (2025) }
+- { id: kratos, name: Kratos Defense, group: industry }
+- { id: mec, name: Metropolitan Energy Center, group: local, note: Lead organization on DOE streetlight charging and terminal truck projects }
+- { id: lti, name: Larson Transportation Institute, group: penn-state, url: https://www.larson.psu.edu }
+- { id: icds, name: Institute for Computational and Data Sciences, group: penn-state }

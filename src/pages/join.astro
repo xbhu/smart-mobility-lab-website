@@ -1,0 +1,39 @@
+---
+import Base from "../layouts/Base.astro";
+import { getEntry, render } from "astro:content";
+
+const page = (await getEntry("pages", "join"))!;
+const d: any = page.data;
+const { Content } = await render(page);
+---
+<Base title={d.title} description={d.lead}>
+  <header class="page-head">
+    <div class="wrap">
+      <h1>{d.title}</h1>
+      <p class="lede">{d.lead}</p>
+    </div>
+  </header>
+
+  <section class="section section--concrete">
+    <div class="wrap">
+      <h2>Open positions</h2>
+      <div class="subtopics">
+        {d.positions.map((p: any) => (
+          <div class="subtopic"><h3>{p.name}</h3><p>{p.text}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split" style="align-items: start">
+      <div>
+        <h2>How to apply</h2>
+        <p>Email <a href={`mailto:${d.apply.email}`}>{d.apply.email}</a> with:</p>
+        <ul class="facts">{d.apply.email_checklist.map((item: string) => <li>{item}</li>)}</ul>
+        <p>Ph.D. applicants also apply through the department: <a href={d.apply.graduate_admissions}>CEE graduate admissions</a>.</p>
+      </div>
+      <div class="prose"><Content /></div>
+    </div>
+  </section>
+</Base>

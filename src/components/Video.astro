@@ -1,0 +1,26 @@
+---
+// Renders a video entry: click-to-load YouTube, a local loop, or a plain link.
+import { youtubeThumb } from "../lib/site";
+interface Props { video: { id: string; data: any }; caption?: boolean }
+const { video, caption = true } = Astro.props;
+const v = video.data;
+const isLocalFile = typeof v.url === "string" && v.url.startsWith("/");
+---
+{v.youtube ? (
+  <div class="yt">
+    <button type="button" data-yt={v.youtube} data-start={v.start} aria-label={`Play video: ${v.title}`}>
+      <img src={youtubeThumb(v.youtube)} alt="" loading="lazy" />
+      <span class="yt-play">
+        <svg width="14" height="16" viewBox="0 0 14 16" aria-hidden="true"><path d="M0 0l14 8-14 8z" fill="currentColor" /></svg>
+        Play video
+      </span>
+    </button>
+  </div>
+) : isLocalFile ? (
+  <div class="media-frame">
+    <video src={v.url} muted loop playsinline autoplay preload="metadata" aria-label={v.title}></video>
+  </div>
+) : v.url ? (
+  <p><a href={v.url}>Watch: {v.title}</a></p>
+) : null}
+{caption && (v.youtube || isLocalFile) && <h3>{v.title}</h3>}

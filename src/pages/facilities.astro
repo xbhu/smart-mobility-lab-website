@@ -1,0 +1,50 @@
+---
+import Base from "../layouts/Base.astro";
+import Video from "../components/Video.astro";
+import { getCollection, getEntries } from "astro:content";
+import { intros } from "../lib/site";
+
+const order = ["autonomous-vehicle", "test-track", "driving-simulator"];
+const facilities = (await getCollection("facilities")).sort((a, b) => order.indexOf(a.id) - order.indexOf(b.id));
+const withVideos = await Promise.all(
+  facilities.map(async (f) => ({ f, videos: f.data.videos ? await getEntries(f.data.videos) : [] })),
+);
+---
+<Base title={intros.facilities.title} description={intros.facilities.lead}>
+  <header class="page-head">
+    <div class="wrap">
+      <p class="crumbs"><a href="/research">Research</a></p>
+      <h1>{intros.facilities.title}</h1>
+      <p class="lede">{intros.facilities.lead}</p>
+    </div>
+  </header>
+
+  {withVideos.map(({ f, videos }, i) => (
+    <section class:list={["section", { "section--concrete": i % 2 === 1 }]} aria-labelledby={`f-${f.id}`}>
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <h2 id={`f-${f.id}`}>{f.data.name}</h2>
+            <p class="lede">{f.data.tagline}</p>
+            <p>{f.data.description}</p>
+            {f.data.specs && <ul class="facts">{f.data.specs.map((s) => <li>{s}</li>)}</ul>}
+            {f.data.link && <p><a href={f.data.link}>Larson Transportation Institute</a></p>}
+          </div>
+          <div class="media-frame">
+            <img src={f.data.photos[0].src} alt={f.data.photos[0].alt} loading={i === 0 ? "eager" : "lazy"} />
+          </div>
+        </div>
+        {f.data.photos.length > 1 && (
+          <div class="gallery" style="margin-top: 28px">
+            {f.data.photos.slice(1).map((ph) => <img src={ph.src} alt={ph.alt} loading="lazy" />)}
+          </div>
+        )}
+        {videos.length > 0 && (
+          <div class="video-grid" style="margin-top: 40px">
+            {videos.map((v) => <div><Video video={v} /></div>)}
+          </div>
+        )}
+      </div>
+    </section>
+  ))}
+</Base>

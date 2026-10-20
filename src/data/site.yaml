@@ -1,0 +1,80 @@
+# Site-wide settings for lab.mobilitypsu.com
+# Numbers follow XB's CV dated 2026-09-27.
+
+name: Smart Mobility Lab
+full_name: Penn State Smart Mobility Lab
+affiliation: Department of Civil & Environmental Engineering, The Pennsylvania State University
+url: https://lab.mobilitypsu.com
+pi: xianbiao-hu
+
+seo:
+  title: Penn State Smart Mobility Lab — AI, Automation, and Electrification for Transportation
+  description: >-
+    The Smart Mobility Lab at Penn State develops AI, automated driving, and electrification
+    technologies for safer and cleaner transportation, and tests them on a full-size autonomous
+    vehicle and a USDOT-designated AV proving ground.
+
+hero:
+  headline: Smarter mobility, tested on real roads.
+  subhead: >-
+    We build AI for perception, cooperative driving, electrification, and system modeling,
+    and we validate it with a full-size autonomous vehicle, a USDOT-designated proving ground,
+    and state DOT deployments.
+  # Primary: side profile of the wrapped Pacifica ("Automated Vehicle / Smart Mobility Lab", Penn State
+  # mark) during the June 2024 President's visit. 2048x1365; the open sky in the top half takes the headline.
+  image: /media/hero/av-hero.jpg
+  image_alt: The Smart Mobility Lab's automated vehicle, a wrapped Chrysler Pacifica with a roof sensor rack, driving on the LTI test track
+  # Loop for a "What our vehicle sees" panel next to or below the hero (not behind the headline):
+  # 8 s, muted, 2.5 MB, LiDAR point cloud with 3D detection boxes, cropped from
+  # "5 Sensor Perception and Visualization.mp4" (16-24 s) to remove the desktop UI.
+  loop: /media/loops/lidar-perception.mp4
+  loop_poster: /media/loops/lidar-perception-poster.jpg
+  # Alternates kept for the design round: test-track still (2022) and in-cabin waypoint-following loop.
+  alternates: [/media/hero/av-poster.jpg, /media/hero/av-loop-waypoint.mp4]
+  ctas:
+    - label: Explore our research
+      href: /research
+    - label: Join the lab
+      href: /join
+
+stats:
+  as_of: 2026-09
+  items:
+    - value: "$22.6M"
+      label: in research funding across 43 projects, 35 of them external
+    - value: "92"
+      label: journal articles, including 17 in Transportation Research Parts A–E and 11 in IEEE Transactions
+    - value: "1 of 10"
+      label: USDOT-designated Automated Vehicle Proving Grounds is our test track, home to our full-size AV
+    - value: "17"
+      label: state DOTs in the Autonomous Maintenance Technology pooled fund we support
+
+recruiting:
+  open: true
+  banner: >-
+    We are recruiting PhD students and postdocs with strong interest and experience in AI
+    and autonomous vehicles. Positions are fully funded, with a monthly stipend and tuition waiver.
+  href: /join
+
+contact:
+  email: xbhu@psu.edu
+  phone: "+1 814-863-0523"
+  address:
+    - Room 208, ECoRE Building     # CEE main office (XB's own office is 282 ECoRE)
+    - 556 White Course Drive
+    - University Park, PA 16802
+
+social:
+  youtube: https://www.youtube.com/@smartmobilitylabatpennstat1251
+  google_scholar: https://scholar.google.com/citations?user=-2GgVTMAAAAJ
+  researchgate: https://www.researchgate.net/profile/Xianbiao-Hu
+  github: https://github.com/xbhu
+  atlas: https://atlas.mobilitypsu.com
+
+nav:
+  - { label: Research, href: /research }
+  - { label: People, href: /people }
+  - { label: Publications, href: /publications }
+  - { label: Projects & Tools, href: /projects }
+  - { label: News, href: /news }
+  - { label: Join Us, href: /join }

@@ -1,0 +1,50 @@
+---
+import Base from "../../layouts/Base.astro";
+import GuideSign from "../../components/GuideSign.astro";
+import { getCollection } from "astro:content";
+import { intros } from "../../lib/site";
+
+const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
+const papers = await getCollection("papers");
+const projects = await getCollection("projects");
+const count = (id: string) => ({
+  papers: papers.filter((p) => p.data.thrusts.includes(id as any)).length,
+  projects: projects.filter((p) => p.data.thrusts.includes(id as any)).length,
+});
+---
+<Base title={intros.research.title} description={intros.research.lead}>
+  <header class="page-head">
+    <div class="wrap">
+      <h1>{intros.research.title}</h1>
+      <p class="lede">{intros.research.lead}</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="signs">
+        {thrusts.map((t) => (
+          <GuideSign href={`/research/${t.id}`} name={t.data.name} sub={t.data.tagline} workzone={t.id === "work-zone-automation"} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--concrete">
+    <div class="wrap">
+      <h2>Inside each thrust</h2>
+      <div class="subtopics">
+        {thrusts.map((t) => (
+          <div class="subtopic">
+            <h3><a href={`/research/${t.id}`} style="color: inherit">{t.data.name}</a></h3>
+            <p class="muted small">{count(t.id).papers} selected publications, {count(t.id).projects} sponsored projects</p>
+            <ul>
+              {t.data.subtopics.map((s) => <li>{s.name}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <p style="margin-top: 32px"><a class="btn" href="/facilities">Our test vehicle, track, and simulator</a></p>
+    </div>
+  </section>
+</Base>

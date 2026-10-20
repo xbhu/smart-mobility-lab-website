@@ -1,0 +1,115 @@
+---
+import Base from "../../layouts/Base.astro";
+import PaperItem from "../../components/PaperItem.astro";
+import Video from "../../components/Video.astro";
+import { getCollection, getEntry, getEntries, render } from "astro:content";
+import { ROLE_LABEL, ALUMNI_ROLE_LABEL, hasProfile, initials, publicFileExists, years } from "../../lib/site";
+
+export async function getStaticPaths() {
+  const people = await getCollection("people");
+  return people.filter(hasProfile).map((p) => ({ params: { id: p.id }, props: { person: p } }));
+}
+
+const { person } = Astro.props;
+const d = person.data;
+const isPI = person.id === "xianbiao-hu";
+const piPage = isPI ? await getEntry("pages", "xianbiao-hu") : null;
+const { Content } = await render(isPI ? piPage! : person);
+const pi: any = piPage?.data ?? {};
+const papers = (await getCollection("papers"))
+  .filter((p) => p.data.authors.some((a) => a.person?.id === person.id))
+  .sort((a, b) => b.data.year - a.data.year);
+const shown = isPI ? papers.filter((p) => p.data.featured) : papers;
+const startupVideos = isPI && pi.startup_videos ? await getEntries(pi.startup_videos.map((id: string) => ({ collection: "videos" as const, id }))) : [];
+const photo = publicFileExists(d.photo) ? d.photo : null;
+const role = isPI ? pi.role : d.status === "current" ? ROLE_LABEL[d.role] : `${ALUMNI_ROLE_LABEL[d.role]}, ${years(d.start, d.end)}`;
+const thrusts = d.thrusts ? await Promise.all(d.thrusts.map((id) => getEntry("thrusts", id))) : [];
+---
+<Base title={d.name} description={d.short ?? role}>
+  <header class="page-head">
+    <div class="wrap split split--reverse" style="align-items: end">
+      <div class="person-photo" style="max-width: 320px; margin: 0">
+        {photo ? <img src={photo} alt={`Photo of ${d.name}`} /> : <span class="person-initials" aria-hidden="true" style="font-size: 4rem">{initials(d.name)}</span>}
+      </div>
+      <div>
+        <p class="crumbs"><a href="/people">People</a></p>
+        <h1>{d.name}</h1>
+        <p class="lede">{role}</p>
+        {d.status === "alumni" && d.current_position && <p>Now: {d.current_url ? <a href={d.current_url}>{d.current_position}</a> : d.current_position}</p>}
+        {isPI && pi.pronunciation && <p class="muted">{pi.pronunciation}</p>}
+        {thrusts.length > 0 && <p class="small">{thrusts.map((t, i) => <>{i > 0 && ", "}<a href={`/research/${t!.id}`}>{t!.data.name}</a></>)}</p>}
+        {d.links && (
+          <p class="pub-links">
+            {d.links.email && <a href={`mailto:${d.links.email}`}>Email</a>}
+            {d.links.scholar && <a href={d.links.scholar}>Google Scholar</a>}
+            {d.links.researchgate && <a href={d.links.researchgate}>ResearchGate</a>}
+            {d.links.github && <a href={d.links.github}>GitHub</a>}
+            {d.links.linkedin && <a href={d.links.linkedin}>LinkedIn</a>}
+          </p>
+        )}
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap prose"><Content /></div>
+  </section>
+
+  {startupVideos.length > 0 && (
+    <section class="section section--concrete">
+      <div class="wrap">
+        <h2>Metropia on video</h2>
+        <div class="video-grid">{startupVideos.map((v) => <div><Video video={v} /></div>)}</div>
+      </div>
+    </section>
+  )}
+
+  {isPI && (
+    <section class="section">
+      <div class="wrap split" style="align-items: start">
+        <div>
+          <h2>Career</h2>
+          <ul class="news-list">
+            {pi.timeline.map((t: any) => (
+              <li class="news-item"><span class="news-date">{t.years}</span><div><p class="news-title">{t.place}</p><p>{t.role}</p></div></li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2>Service</h2>
+          <ul class="facts">{pi.service_selected.map((s: string) => <li>{s}</li>)}</ul>
+          <h2>Honors</h2>
+          <ul class="facts">{pi.honors.map((h: any) => <li>{h.name}, {h.year}</li>)}</ul>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {isPI && (
+    <section class="section section--concrete">
+      <div class="wrap">
+        <h2>Teaching</h2>
+        <ul class="projects">
+          {pi.teaching.map((c: any) => (
+            <li class="project">
+              <div><p class="project-title">{c.course} {c.name}</p><p class="project-sponsor">{c.school}</p></div>
+              <p class="project-side">{c.terms}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  {shown.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>{isPI ? "Selected publications" : "Publications"}</h2>
+          {isPI && <a href="/publications">All publications</a>}
+        </div>
+        <ul class="pubs">{shown.map((p) => <PaperItem paper={p} />)}</ul>
+      </div>
+    </section>
+  )}
+</Base>
