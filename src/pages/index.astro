@@ -1,0 +1,158 @@
+---
+import Base from "../layouts/Base.astro";
+import GuideSign from "../components/GuideSign.astro";
+import Video from "../components/Video.astro";
+import { getCollection, getEntry } from "astro:content";
+import { site, formatDate } from "../lib/site";
+
+const home = (await getEntry("pages", "home"))!.data.sections as any;
+const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
+const news = (await getCollection("news")).sort((a, b) => String(b.data.date).localeCompare(String(a.data.date))).slice(0, home.news.count);
+const sponsors = await getCollection("sponsors");
+const av = await getEntry("facilities", "autonomous-vehicle");
+const track = await getEntry("facilities", "test-track");
+const sim = await getEntry("facilities", "driving-simulator");
+
+const highlights = await Promise.all(
+  home.highlights.items.map(async (h: any) => ({ ...h, videoEntry: h.video ? await getEntry("videos", h.video) : null })),
+);
+const alumni = await Promise.all(home.alumni.people.map((id: string) => getEntry("people", id)));
+const ALUMNI_WAS: Record<string, string> = { phd: "Ph.D.", postdoc: "Postdoctoral scholar" };
+const signSub: Record<string, string> = {
+  "automated-driving": "Perception, prediction, and control on a full-size vehicle",
+  "work-zone-automation": "Driverless follow trucks that protect highway crews",
+  "electrification": "Charging demand, infrastructure investment, and zero-emission fleets",
+  "system-modeling": "Queues, capacity, networks, and connected vehicle data",
+};
+---
+<Base>
+  <div class="hero">
+    <img src={site.hero.image} alt={site.hero.image_alt} fetchpriority="high" />
+  </div>
+
+  <section class="figures" aria-labelledby="hero-title">
+    <div class="wrap intro-row">
+      <div>
+        <h1 id="hero-title">{site.hero.headline}</h1>
+        <p class="lede">{site.hero.subhead}</p>
+      </div>
+      <div class="btn-row">
+        {site.hero.ctas.map((c: any, i: number) => (
+          <a class:list={["btn", i === 0 ? "btn--lane" : "btn--ghost"]} href={c.href}>{c.label}</a>
+        ))}
+      </div>
+    </div>
+    <div class="wrap figure-row">
+      {site.stats.items.map((s: any) => (
+        <p class="figure"><span class="figure-value">{s.value}</span><span class="figure-label">{s.label}</span></p>
+      ))}
+    </div>
+    <div class="wrap"><p class="figures-asof">Figures as of {formatDate(site.stats.as_of)}</p></div>
+  </section>
+
+  <section class="section" aria-labelledby="thrusts-title">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 id="thrusts-title">{home.thrusts.heading}</h2>
+          <p>{home.thrusts.intro}</p>
+        </div>
+        <a href="/research">All research</a>
+      </div>
+      <div class="signs">
+        {thrusts.map((t) => (
+          <GuideSign href={`/research/${t.id}`} name={t.data.name} sub={signSub[t.id] ?? t.data.tagline} workzone={t.id === "work-zone-automation"} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--concrete" aria-labelledby="sees-title">
+    <div class="wrap split">
+      <figure style="margin: 0">
+        <div class="media-frame">
+          <video src={site.hero.loop} poster={site.hero.loop_poster} muted loop playsinline autoplay preload="metadata" aria-label="LiDAR point cloud with 3D bounding boxes around detected vehicles"></video>
+        </div>
+        <figcaption class="media-caption">LiDAR point cloud and 3D object detection recorded by our vehicle near Beaver Stadium.</figcaption>
+      </figure>
+      <div>
+        <h2 id="sees-title">What our vehicle sees</h2>
+        <p>{home.facilities.intro}</p>
+        <ul class="facts">
+          <li><strong>{av!.data.name}.</strong> {av!.data.tagline}</li>
+          <li><strong>{track!.data.name}.</strong> {track!.data.tagline}</li>
+          <li><strong>{sim!.data.name}.</strong> {sim!.data.tagline}</li>
+        </ul>
+        <a class="btn" href="/facilities">See our facilities</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="highlights-title">
+    <div class="wrap">
+      <div class="section-head"><h2 id="highlights-title">{home.highlights.heading}</h2></div>
+      <div class="highlights">
+        {highlights.map((h: any) => (
+          <article class="highlight">
+            {h.videoEntry ? <Video video={h.videoEntry} caption={false} /> : (
+              <div class="media-frame"><img src={h.image} alt={h.image_alt ?? ""} loading="lazy" style="aspect-ratio:16/9;object-fit:cover;width:100%" /></div>
+            )}
+            <h3><a href={h.href} style="color: inherit; text-decoration: none">{h.title}</a></h3>
+            <p>{h.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--concrete" aria-labelledby="news-title">
+    <div class="wrap">
+      <div class="section-head"><h2 id="news-title">{home.news.heading}</h2><a href="/news">{home.news.more}</a></div>
+      <ul class="news-list">
+        {news.map((n) => (
+          <li class="news-item">
+            <span class="news-date">{formatDate(n.data.date)}</span>
+            <div>
+              <p class="news-title">{n.data.title}</p>
+              {n.data.links?.[0] && <p class="news-links"><a href={n.data.links[0].url}>{n.data.links[0].label}</a></p>}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="alumni-title">
+    <div class="wrap">
+      <div class="section-head"><div><h2 id="alumni-title">{home.alumni.heading}</h2><p>{home.alumni.intro}</p></div><a href="/people#alumni">All alumni</a></div>
+      <ul class="alumni">
+        {alumni.map((p: any) => (
+          <li>
+            <span class="alumni-name">{p.data.name}</span>
+            <span class="alumni-was">{ALUMNI_WAS[p.data.role] ?? ""} {String(p.data.end ?? "").slice(0, 4)}</span>
+            <span class="alumni-now">{p.data.current_position}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--concrete" aria-labelledby="sponsors-title">
+    <div class="wrap">
+      <div class="section-head"><h2 id="sponsors-title">{home.sponsors.heading}</h2><a href="/projects">Projects</a></div>
+      <ul class="sponsor-wall">
+        {sponsors.map((s) => <li>{s.data.name}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--navy" aria-labelledby="join-title">
+    <div class="wrap split">
+      <div>
+        <h2 id="join-title">Join the lab</h2>
+        <p>{site.recruiting.banner}</p>
+      </div>
+      <div><a class="btn btn--lane" href={site.recruiting.href}>How to apply</a></div>
+    </div>
+  </section>
+</Base>

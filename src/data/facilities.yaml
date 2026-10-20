@@ -1,0 +1,65 @@
+# Facilities. Source: https://sites.psu.edu/xbhu/research/ and /projects/cav/ (fetched 2026-10-20).
+# Vehicle photos: XB originals in photos/ (2024 COE shoot, 2024 ITE visit). Others still from the current site.
+
+- id: autonomous-vehicle
+  name: Full-size autonomous vehicle
+  tagline: A retrofitted 7-seat Chrysler Pacifica with drive-by-wire control and a full sensor suite.
+  description: >-
+    Our research vehicle is a full-size autonomous vehicle based at Penn State. It carries LiDAR,
+    radar, GNSS, and cameras, and runs drive-by-wire control so
+    our perception, localization, prediction, and control algorithms can be tested on a real vehicle
+    rather than only in simulation. The software stack integrates Autoware and the CARMA cooperative
+    driving automation platform.
+  specs:
+    - "Base vehicle: Chrysler Pacifica (7-seat), retrofitted"
+    - "Sensors: LiDAR, radar, GNSS, cameras"
+    - "Control: drive-by-wire"
+    - "Software: Autoware, CARMA"
+    - "At Penn State since February 2022"
+  photos:
+    - src: /media/photos/av-wrap-rear-curve.jpg
+      alt: The automated vehicle on a curve of the LTI test track
+    - src: /media/photos/av-wrap-closeup.jpg
+      alt: Close-up of the vehicle wrap reading Automated Vehicle, Smart Mobility Lab
+    - src: /media/photos/av-roof-camera.jpg
+      alt: Forward camera mounted behind the windshield
+    - src: /media/photos/av-interior-displays.jpg
+      alt: Rear-seat displays showing the automation software
+    - src: /media/photos/av-cockpit-monitor.jpg
+      alt: Students monitoring the automation stack during a test run
+    - src: /media/photos/av-cockpit-test-run.jpg
+      alt: Test run on the track with a safety driver and an operator
+    - src: /media/photos/av-students-in-vehicle.jpg
+      alt: Lab members in the driver and passenger seats
+  videos: [lidar-perception-loop, av-lidar-camera-demo, av-waypoint-following, av-drive-by-wire, av-vru-detection]
+
+- id: test-track
+  name: LTI test track
+  tagline: A full-scale test track designated by USDOT as one of 10 Automated Vehicle Proving Grounds.
+  description: >-
+    The Larson Transportation Institute manages a full-scale test track near the University Park
+    campus. USDOT designated it as one of 10 Automated Vehicle Proving Grounds in the country, which
+    lets us move from simulation to closed-course testing before any public-road trial.
+  photos:
+    - src: https://sites.psu.edu/xbhu/files/2021/09/Test-Track-overhead-entrance-road-labeled-copy-1024x608.jpeg
+      alt: Overhead view of the LTI test track
+      replace: Need an unlabeled, higher-resolution aerial photo.
+  link: https://www.larson.psu.edu/
+  videos: [av-waypoint-following, neeli-av-demo]
+
+- id: driving-simulator
+  name: Driving simulator and co-simulation platform
+  tagline: A driving simulator linked to a CARLA–SUMO–Autoware co-simulation suite for cooperative driving research.
+  description: >-
+    Much of our research runs on a CARLA–SUMO co-simulation platform integrated with Autoware and
+    CARMA, connected to a driving simulator. CARLA simulates vehicles and sensors, SUMO simulates
+    surrounding traffic, and Autoware and CARMA run the automation stack, so mixed human–automated
+    traffic and cooperative driving automation can be studied before field testing.
+  photos:
+    - src: https://sites.psu.edu/xbhu/files/2021/09/51733769824_e6445de896_o-1-1917x1278.jpg
+      alt: Driving simulator in use
+    - src: https://sites.psu.edu/xbhu/files/2021/09/WechatIMG21-1702x1134.jpeg
+      alt: Driving simulator cockpit
+    - src: https://sites.psu.edu/xbhu/files/2022/02/51732296272_f1060a7b8b_o-1917x1278.jpg
+      alt: Driving simulator session
+  videos: [atma-cda-simulation]

@@ -1,0 +1,443 @@
+# Sponsored projects. Source: XB CV dated 2026-09-27 (35 external + 8 internal = 43).
+# Per decision 2026-10-20: no dollar amounts or credit shares on the public site.
+# Totals appear once, in site.yaml (stats).
+# role: PI | PSU PI | Co-PI | Co-PI and Project Manager
+# institution: psu | mst (Missouri S&T) | metropia
+# kind: external | internal
+
+# ---------------- Penn State, external ----------------
+- id: doe-mhd-zev-emergency-training
+  title: Immersive and Interactive Training on Medium and Heavy-Duty Zero-Emission Vehicles and Infrastructure Technologies for Critical Emergency Response Workers
+  sponsors: [U.S. Department of Energy]
+  role: PI
+  start: 2025
+  end: 2028
+  institution: psu
+  kind: external
+  thrusts: [electrification]
+  link: https://www.energy.gov/eere/vehicles/funding-selections-fiscal-year-2024-technology-integration-funding-program
+  featured: true
+
+- id: padep-driving-pa-forward-ta
+  title: Driving PA Forward Program Technical Assistance
+  sponsors: [Pennsylvania Department of Environmental Protection]
+  role: PI
+  start: 2026
+  end: 2031
+  institution: psu
+  kind: external
+  thrusts: [electrification]
+  tool: https://dep.mobilitypsu.com
+  featured: true
+
+- id: penndot-friction-forecasting
+  title: Friction Factor Interpolation and Forecasting
+  sponsors: [Pennsylvania Department of Transportation]
+  role: PI
+  start: 2026
+  end: 2026
+  institution: psu
+  kind: external
+  thrusts: [system-modeling]
+  tool: https://penndot.mobilitypsu.com
+  featured: true
+
+- id: usdot-smart-atma
+  title: ATMA for Work Zone Safety
+  sponsors: [U.S. Department of Transportation (SMART Program)]
+  role: PSU PI
+  start: 2024
+  end: 2026
+  institution: psu
+  kind: external
+  thrusts: [work-zone-automation]
+  dataset: https://doi.org/10.21949/53ca-8v96
+  featured: true
+
+- id: padep-mhd-zev-phase2
+  title: "Pennsylvania Medium and Heavy-Duty Zero-Emission Vehicle Program Data Collection and Analysis (Phase 2: Post Award)"
+  sponsors: [Pennsylvania Department of Environmental Protection]
+  role: PI
+  start: 2024
+  end: 2026
+  institution: psu
+  kind: external
+  thrusts: [electrification]
+  tool: https://dep.mobilitypsu.com
+
+- id: penndot-act130-cav
+  title: "PennDOT Act 130 Reporting: Evaluating the Impact of Connected and Automated Vehicles to the Commonwealth of Pennsylvania"
+  sponsors: [Pennsylvania Department of Transportation]
+  role: PI
+  start: 2024
+  end: 2025
+  institution: psu
+  kind: external
+  thrusts: [automated-driving]
+
+- id: padep-mhd-zev-phase1
+  title: "Pennsylvania Medium and Heavy-Duty Zero-Emission Vehicle Program Data Collection and Analysis (Phase 1: Pre-Application Planning)"
+  sponsors: [Pennsylvania Department of Environmental Protection]
+  role: PI
+  start: 2022
+  end: 2023
+  institution: psu
+  kind: external
+  thrusts: [electrification]
+
+- id: dced-atma-gps-denied
+  title: Enhance Autonomous Truck-Mounted Attenuator System Resiliency in a GPS-Denied Environment
+  sponsors: [Pennsylvania Department of Community and Economic Development]
+  role: PI
+  start: 2023
+  end: 2024
+  institution: psu
+  kind: external
+  thrusts: [work-zone-automation]
+
+- id: amt-atma-deployment-guidelines-psu
+  title: Development of ATMA/AIPV Deployment Guidelines Considering Traffic and Safety Impacts
+  sponsors: [Autonomous Maintenance Technology Pooled Fund, Colorado DOT]
+  role: PI
+  start: 2023
+  end: 2025
+  institution: psu
+  kind: external
+  thrusts: [work-zone-automation]
+
+- id: doe-streetlight-charging-psu
+  title: "Electric Vehicle Charging Station (EVSE) Innovation: Streetlight Charging in City Right-of-Way"
+  sponsors: [U.S. Department of Energy, Metropolitan Energy Center]
+  role: PSU PI
+  start: 2019
+  end: 2023
+  institution: psu
+  kind: external
+  thrusts: [electrification]
+  featured: true
+  note: Lead organization Metropolitan Energy Center; continued from the Missouri S&T subaward (2019–2022).
+
+- id: amt-systematic-documentation-psu
+  title: Systematic Documentation for Autonomous Maintenance Technology Promotion and Deployment
+  sponsors: [Autonomous Maintenance Technology Pooled Fund, Colorado DOT]
+  role: PI
+  start: 2020
+  end: 2026
+  institution: psu
+  kind: external
+  thrusts: [work-zone-automation]
+
+- id: doe-terminal-trucks-psu
+  title: Electrifying Terminal Trucks in Unincentivized Markets
+  sponsors: [U.S. Department of Energy, Metropolitan Energy Center]
+  role: PSU PI
+  start: 2020
+  end: 2022
+  institution: psu
+  kind: external
+  thrusts: [electrification]
+
+- id: tridurle-amt-capacity-psu
+  title: Analyzing the Impact of Autonomous Maintenance Technology to Transportation Infrastructure Capacity for Condition Monitoring and Performance Management
+  sponsors: [U.S. Department of Transportation (NCTriDurLE UTC)]
+  role: PSU PI
+  start: 2020
+  end: 2022
+  institution: psu
+  kind: external
+  thrusts: [work-zone-automation]
+
+- id: tridurle-pavement-cav
+  title: Preparation of Pavement Infrastructure for Connected and Autonomous Vehicle Deployment – Phase I
+  sponsors: [U.S. Department of Transportation (NCTriDurLE UTC)]
+  role: PSU PI
+  start: 2022
+  end: 2023
+  institution: psu
+  kind: external
+  thrusts: [automated-driving]
+
+- id: tridurle-ai-asset-management
+  title: AI-Based Prediction Models for Transportation Infrastructure Asset Management Data Hub – Phase I
+  sponsors: [U.S. Department of Transportation (NCTriDurLE UTC)]
+  role: PSU PI
+  start: 2022
+  end: 2023
+  institution: psu
+  kind: external
+  thrusts: [automated-driving, system-modeling]
+
+- id: atma-live-work-zone-evaluation
+  title: Field Evaluation of Autonomous Truck Mounted Attenuator Vehicles During Live Work Zone Operations
+  sponsors: [Kratos Defense]
+  role: PI
+  start: 2022
+  end: 2022
+  institution: psu
+  kind: external
+  thrusts: [work-zone-automation]
+
+# ---------------- Penn State, internal ----------------
+- id: icds-agentic-ai-av
+  title: "Agentic AI for Autonomous Vehicles: Enhancing Goal-Directed and Cooperative Decision-Making at Penn State"
+  sponsors: [Institute for Computational and Data Sciences, Penn State]
+  role: PI
+  start: 2025
+  end: 2026
+  institution: psu
+  kind: internal
+  thrusts: [automated-driving]
+
+- id: psu-zero-emission-fleet
+  title: Penn State Zero-Emission Fleet Implementation
+  sponsors: [Penn State Student Fee Board]
+  role: Co-PI
+  start: 2023
+  end: 2025
+  institution: psu
+  kind: internal
+  thrusts: [electrification]
+  note: With the Sustainability Institute, Office of Physical Plant, and Transportation Services.
+
+- id: harry-west-av-dataset
+  title: "Harry West Teaching Award: Creating a Shared Automated Vehicle Dataset for Transportation Engineering Teaching"
+  sponsors: [Penn State]
+  role: PI
+  start: 2024
+  end: 2025
+  institution: psu
+  kind: internal
+  thrusts: [automated-driving]
+
+- id: leonhard-arts-av-education
+  title: Integrating Arts with Autonomous Vehicles for Transportation Engineering Education
+  sponsors: [Leonhard Center, Penn State]
+  role: PI
+  start: 2023
+  end: 2024
+  institution: psu
+  kind: internal
+  thrusts: [automated-driving]
+
+- id: csrai-socially-responsible-av
+  title: Socially Responsible AI for Autonomous Vehicles
+  sponsors: [Center for Socially Responsible Artificial Intelligence, Penn State]
+  role: PI
+  start: 2022
+  end: 2023
+  institution: psu
+  kind: internal
+  thrusts: [automated-driving]
+
+# ---------------- Before Penn State ----------------
+- id: tridurle-utc
+  title: National Center for Transportation Infrastructure Durability and Life Extension (TriDurLE), a National University Transportation Center
+  sponsors: [U.S. Department of Transportation]
+  role: Co-PI
+  start: 2020
+  end: 2022
+  institution: mst
+  kind: external
+  thrusts: [automated-driving]
+
+- id: matc-amt-optimization
+  title: Optimization of Transportation Infrastructure System Performance with Autonomous Maintenance Technology in Work Zones
+  sponsors: [U.S. Department of Transportation (Mid-America Transportation Center)]
+  role: PI
+  start: 2020
+  end: 2021
+  institution: mst
+  kind: external
+  thrusts: [work-zone-automation]
+
+- id: inspire-utc
+  title: Inspecting and Preserving Infrastructure through Robotic Exploration (INSPIRE), a Tier-1 University Transportation Center
+  sponsors: [U.S. Department of Transportation]
+  role: Co-PI
+  start: 2020
+  end: 2020
+  institution: mst
+  kind: external
+  thrusts: []
+
+- id: matc-rural-safety-vr
+  title: "Transportation Safety Training in Rural Areas: An Exploration of Virtual Reality and Driving Simulation in Driver Response and Awareness"
+  sponsors: [U.S. Department of Transportation (Mid-America Transportation Center)]
+  role: Co-PI
+  start: 2020
+  end: 2021
+  institution: mst
+  kind: external
+  thrusts: []
+
+- id: gaann-infrastructure-preservation
+  title: "GAANN: A Fellowship Program in Civil Engineering for Infrastructure Preservation and Resilience with Emerging Technologies"
+  sponsors: [U.S. Department of Education]
+  role: Co-PI
+  start: 2022
+  end: 2024
+  institution: mst
+  kind: external
+  thrusts: []
+
+- id: doe-terminal-trucks-mst
+  title: Electrifying Terminal Trucks in Unincentivized Markets
+  sponsors: [U.S. Department of Energy, Metropolitan Energy Center]
+  role: Co-PI (Missouri S&T PI)
+  start: 2020
+  end: 2022
+  institution: mst
+  kind: external
+  thrusts: [electrification]
+
+- id: cdot-amt-documentation-mst
+  title: Systematic Documentation for Autonomous Maintenance Technology Promotion and Deployment
+  sponsors: [Colorado Department of Transportation]
+  role: PI
+  start: 2020
+  end: 2022
+  institution: mst
+  kind: external
+  thrusts: [work-zone-automation]
+
+- id: google-covid-ev-kc
+  title: How Bad is COVID-19 Hurting Electric Vehicle Usage and Mobility Patterns? A Case Study in Kansas City, Missouri for Agency and Industry Decision-Making
+  sponsors: [Google]
+  role: PI
+  start: 2020
+  end: 2020
+  institution: mst
+  kind: external
+  thrusts: [electrification]
+
+- id: doe-streetlight-charging-mst
+  title: "Electric Vehicle Charging Station (EVSE) Innovation: Streetlight Charging in City Right-of-Way"
+  sponsors: [U.S. Department of Energy, Metropolitan Energy Center]
+  role: Co-PI (Missouri S&T PI)
+  start: 2019
+  end: 2022
+  institution: mst
+  kind: external
+  thrusts: [electrification]
+
+- id: cdot-atma-guidelines-mst
+  title: Development of ATMA/AIPV Deployment Guidelines Considering Traffic and Safety Impacts
+  sponsors: [Colorado Department of Transportation, U.S. Department of Transportation (Mid-America Transportation Center)]
+  role: PI
+  start: 2019
+  end: 2022
+  institution: mst
+  kind: external
+  thrusts: [work-zone-automation]
+
+- id: tridurle-amt-capacity-mst
+  title: Analyzing the Impact of Autonomous Maintenance Technology to Transportation Infrastructure Capacity for Condition Monitoring and Performance Management
+  sponsors: [U.S. Department of Transportation (NCTriDurLE UTC)]
+  role: PI
+  start: 2019
+  end: 2021
+  institution: mst
+  kind: external
+  thrusts: [work-zone-automation]
+
+- id: gaann-resilient-infrastructure
+  title: "GAANN: Preparing Interdisciplinary Professionals for Rebuilding/Engineering Resilient Infrastructure of the Nation"
+  sponsors: [U.S. Department of Education]
+  role: Co-PI
+  start: 2019
+  end: 2022
+  institution: mst
+  kind: external
+  thrusts: []
+
+- id: modot-leader-follower-tma
+  title: Missouri DOT Leader-Follower TMA System
+  sponsors: [Missouri Department of Transportation]
+  note: Prime contractor Kratos Defense.
+  role: Co-PI (Missouri S&T PI)
+  start: 2018
+  end: 2020
+  institution: mst
+  kind: external
+  thrusts: [work-zone-automation]
+  featured: true
+
+- id: matc-autonomous-truck-guidelines
+  title: Development of Autonomous Trucks Operation Guidelines and Driver Training Process
+  sponsors: [U.S. Department of Transportation (Mid-America Transportation Center)]
+  role: PI
+  start: 2018
+  end: 2020
+  institution: mst
+  kind: external
+  thrusts: [work-zone-automation]
+
+- id: cmt-route160-simulator
+  title: "Evaluation of Route 160 Widening Project: A Before-and-After Study with Driving Simulator"
+  sponsors: [Crawford, Murphy & Tilly]
+  role: PI
+  start: 2018
+  end: 2019
+  institution: mst
+  kind: external
+  thrusts: []
+
+- id: mst-intelligent-infrastructure-datahub
+  title: Preparing Multidisciplinary Datahub for Digital and Intelligent Infrastructure System – Preliminary Phase
+  sponsors: [Center for Intelligent Infrastructure, Missouri S&T]
+  role: Co-PI
+  start: 2020
+  end: 2021
+  institution: mst
+  kind: internal
+  thrusts: [system-modeling]
+
+- id: mst-connectsafe
+  title: "ConnectSafe: Connect Usage Based Insurance, Transportation Big Data and Socioeconomic Behavioral Research in Building a Safe-Driving Community"
+  sponsors: [Smart Living Research Center, Missouri S&T]
+  role: PI
+  start: 2018
+  end: 2019
+  institution: mst
+  kind: internal
+  thrusts: [system-modeling]
+
+- id: mst-atma-simulator-study
+  title: "Evaluation and Behavioral Interventions for Safe Deployment of Autonomous Truck Mounted Attenuator Vehicles: A Driving Simulator Based Study"
+  sponsors: [Intelligent Systems Center, Missouri S&T]
+  role: Co-PI
+  start: 2019
+  end: 2020
+  institution: mst
+  kind: internal
+  thrusts: [work-zone-automation]
+
+- id: fhwa-paydays
+  title: Pay-As-You-Drive-And-You-Save (PAYDAYS) Insurance Actuarial Study
+  sponsors: [Federal Highway Administration]
+  role: Co-PI and Project Manager
+  start: 2013
+  end: 2016
+  institution: metropia
+  kind: external
+  thrusts: [system-modeling]
+
+- id: pag-metropia-data
+  title: Exploring Emerging Traffic Data Collection for Transportation Planning and Operations Using the Metropia System
+  sponsors: [Pima Association of Governments]
+  role: Co-PI
+  start: 2015
+  end: 2016
+  institution: metropia
+  kind: external
+  thrusts: [system-modeling]
+
+- id: fuzhou-dta
+  title: Utilizing DynuStudio-DynusT Dynamic Traffic Assignment Software Suite to Model the Fuzhou Transportation Network
+  sponsors: [Fujian University of Technology]
+  role: PI
+  start: 2016
+  end: 2016
+  institution: metropia
+  kind: external
+  thrusts: [system-modeling]

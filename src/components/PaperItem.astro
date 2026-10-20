@@ -1,0 +1,43 @@
+---
+// One publication: authors (lab members in semibold, * = corresponding), title, venue, links.
+import { getEntry } from "astro:content";
+import { hasProfile } from "../lib/site";
+interface Props { paper: { id: string; data: any }; showSummary?: boolean }
+const { paper, showSummary = false } = Astro.props;
+const d = paper.data;
+const authors = await Promise.all(
+  d.authors.map(async (a: any) => {
+    const person = a.person ? await getEntry(a.person) : null;
+    return { ...a, person, link: person && hasProfile(person) ? `/people/${person.id}` : null };
+  }),
+);
+const venueBits = [d.volume && `${d.volume}${d.issue ? `(${d.issue})` : ""}`, d.pages].filter(Boolean).join(", ");
+const status = d.status === "accepted" ? "Accepted" : d.status === "under-review" ? "Under review" : "";
+const links = [
+  d.doi && { label: "DOI", href: `https://doi.org/${d.doi}` },
+  !d.doi && d.url && { label: d.type === "report" ? "Report" : "Link", href: d.url },
+  d.atlas && { label: "Plain-language summary", href: d.atlas },
+  d.code && { label: "Code", href: d.code },
+  d.video && { label: "Video", href: d.video },
+  d.slides && { label: "Slides", href: d.slides },
+].filter(Boolean) as { label: string; href: string }[];
+---
+<li class="pub" data-thrusts={d.thrusts.join(" ")}>
+  <p class="pub-title">{d.title}</p>
+  <p class="pub-meta">
+    <span class="pub-authors">
+      {authors.map((a, i) => (
+        <>
+          {a.link ? <a class="lab" href={a.link}>{a.name}</a> : <span class:list={{ lab: Boolean(a.person) }}>{a.name}</span>}
+          {a.corresponding && "*"}
+          {i < authors.length - 1 && ", "}
+        </>
+      ))}
+    </span>
+    {" "}({d.year}). <span class="pub-venue">{d.venue}</span>{venueBits && `, ${venueBits}`}.{status && ` ${status}.`}
+  </p>
+  {showSummary && d.summary && <p class="pub-summary">{d.summary}</p>}
+  {links.length > 0 && (
+    <p class="pub-links">{links.map((l) => <a href={l.href}>{l.label}</a>)}</p>
+  )}
+</li>

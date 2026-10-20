@@ -1,0 +1,46 @@
+---
+import Base from "../layouts/Base.astro";
+import { getCollection, render } from "astro:content";
+import { intros, formatDate } from "../lib/site";
+
+const news = (await getCollection("news")).sort((a, b) => String(b.data.date).localeCompare(String(a.data.date)));
+const rendered = await Promise.all(news.map(async (n) => ({ n, Content: (await render(n)).Content })));
+const byYear = new Map<string, typeof rendered>();
+for (const r of rendered) {
+  const y = String(r.n.data.date).slice(0, 4);
+  byYear.set(y, [...(byYear.get(y) ?? []), r]);
+}
+---
+<Base title={intros.news.title} description={intros.news.lead}>
+  <header class="page-head">
+    <div class="wrap">
+      <h1>{intros.news.title}</h1>
+      <p class="lede">{intros.news.lead}</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 24px">
+    <div class="wrap">
+      {[...byYear.entries()].map(([year, items]) => (
+        <>
+          <h2 class="year-head">{year}</h2>
+          <ul class="news-list">
+            {items.map(({ n, Content }) => (
+              <li class="news-item" id={n.id}>
+                <span class="news-date">{formatDate(n.data.date)}</span>
+                <div>
+                  <p class="news-title">{n.data.title}</p>
+                  {n.data.image && <img src={n.data.image} alt="" loading="lazy" style="max-width: 520px; width: 100%; border-radius: 6px; margin: 10px 0 12px" />}
+                  <Content />
+                  {n.data.links && (
+                    <p class="news-links">{n.data.links.map((l) => <a href={l.url}>{l.label}</a>)}</p>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </>
+      ))}
+    </div>
+  </section>
+</Base>

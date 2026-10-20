@@ -1,0 +1,13 @@
+---
+// A research thrust drawn as a highway guide sign. The work zone thrust uses the
+// orange of temporary traffic control signs, as it would on the road.
+interface Props { href: string; name: string; sub: string; workzone?: boolean }
+const { href, name, sub, workzone = false } = Astro.props;
+---
+<a class:list={["sign", { "sign--workzone": workzone }]} href={href}>
+  <svg class="sign-arrow" viewBox="0 0 48 48" aria-hidden="true">
+    <path d="M12 38.5 33 17.5V30h5V9H17v5h12.5L8.5 35z" />
+  </svg>
+  <span class="sign-name">{name}</span>
+  <span class="sign-sub">{sub}</span>
+</a>

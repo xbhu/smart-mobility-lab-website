@@ -1,0 +1,176 @@
+# Videos. YouTube IDs from XB (2026-10-20) and the current site.
+# local: original file in smart-mobility-lab-website/videos/ (for cutting hero clips)
+# source: lab | psu | partner | media
+
+- id: neeli-av-demo
+  title: Penn State Student Researchers Demo Self-Driving Vehicle with President Neeli Bendapudi
+  youtube: fCSTfLUYe-4
+  date: 2024-08-02
+  source: psu
+  thrusts: [automated-driving]
+  featured: true
+  use: [home-highlight, thrust-automated-driving]
+  note: XB plans to cut a short clip from this for the site.
+
+- id: av-lidar-camera-demo
+  title: Autonomous vehicle demo with real-time LiDAR and camera data
+  youtube: tfC9n4Sq1dg
+  start: 12
+  date: 2022-09
+  local: "videos/4 Autonomous Vehicle Demo with Sensor Data Visualization.mp4"
+  note: >-
+    Includes Senator Langerholc's ride (September 2022). The local file is probably the same demo
+    (Autoware RViz view, 1276x720, 3:21); confirm.
+  source: lab
+  thrusts: [automated-driving]
+  featured: true
+  use: [thrust-automated-driving, facilities]
+
+- id: av-waypoint-following
+  title: Waypoint following on the LTI test track
+  youtube: 8GSkOnLVY1A
+  local: videos/video-Way-Point-Following.mp4
+  note: "Also a 10 s cut: videos/Way Point Following_10s.mp4."
+  date: 2022-02
+  source: lab
+  thrusts: [automated-driving]
+  use: [hero-candidate, facilities]
+
+- id: av-carma-campus
+  title: CARMA cooperative driving automation stack tested on the Penn State campus
+  youtube: Hlia0pMnARk
+  local: videos/CARMA DEMO.mp4
+  date: 2024-02
+  source: lab
+  thrusts: [automated-driving]
+  featured: true
+  use: [thrust-automated-driving]
+
+- id: av-drive-by-wire
+  title: Drive-by-wire, speed, and steering control demonstration
+  youtube: 8CqulBMvkJ8
+  local: videos/video-Drive-by-Wire.mp4
+  note: "One YouTube video covers video-Drive-by-Wire.mp4 and video-Speed-and-Steering-Control.mp4; 10 s cut: videos/Drive by Wire_10s.mp4."
+  source: lab
+  thrusts: [automated-driving]
+  use: [hero-candidate, facilities]
+
+- id: atma-cdot-unveiling
+  title: Colorado DOT unveils the world's first self-driving work zone vehicle
+  youtube: 8GPcbtVaqnY
+  local: videos/Video-Demonstration-of-Worlds-First-Self-Driving-Work-Zone-Vehicle.mp4
+  source: partner
+  thrusts: [work-zone-automation]
+  featured: true
+  use: [home-highlight, thrust-work-zone-automation]
+
+- id: atma-abc-news
+  title: "ABC News: Self-driving trucks, automation that can save lives on the road"
+  youtube: O1Vrhn0wct8
+  source: media
+  thrusts: [work-zone-automation]
+  featured: true
+  use: [thrust-work-zone-automation]
+
+- id: atma-modot-field-test
+  title: Missouri DOT field testing and evaluation with Missouri S&T
+  youtube: SXMpkDJ_uG8
+  local: videos/Autonomous-Vehicles-Technology-for-Smart-Work-Zone-Management.mp4
+  source: lab
+  thrusts: [work-zone-automation]
+  use: [thrust-work-zone-automation]
+
+- id: atma-cda-simulation
+  title: Leader-follower cooperative driving automation simulation
+  youtube: P3dDycZf2IQ
+  local: videos/ATMA simulation.mp4
+  date: 2024-02
+  source: lab
+  thrusts: [work-zone-automation]
+  use: [thrust-work-zone-automation]
+
+- id: trb-atma-webinar
+  title: "TRB webinar: Saving Lives with Autonomous Truck Mounted Attenuator Systems"
+  url: https://onlinepubs.trb.org/onlinepubs/webinars/ArchivedRecordings/2022-06-14_SavingLivesWithAutonomousTruckMountedAttenuatorSystems.mp4
+  date: 2022-06-14
+  source: partner
+  thrusts: [work-zone-automation]
+  use: [thrust-work-zone-automation]
+
+- id: metropia-why-congestion
+  title: Why does traffic congestion happen?
+  youtube: TwmnElRDQag
+  source: partner
+  thrusts: [system-modeling]
+  use: [pi-page]
+
+- id: metropia-what-is
+  title: What is Metropia?
+  youtube: hby3oAup4lA
+  source: partner
+  thrusts: [system-modeling]
+  use: [pi-page]
+
+- id: metropia-how-to-use
+  title: How to use the Metropia app
+  youtube: Qp3W1en8484
+  source: partner
+  thrusts: [system-modeling]
+  use: [pi-page]
+
+- id: paydays-summary
+  title: PAYDAYS usage-based insurance study, executive summary
+  youtube: myCBhpj4CtQ
+  source: lab
+  thrusts: [system-modeling]
+  use: [pi-page]
+
+- id: metropia-kgun
+  title: "KGUN-9: UA startup designs app to end traffic jams"
+  youtube: 9bgigTEgaHc
+  date: 2013-09
+  source: media
+  thrusts: [system-modeling]
+  use: [pi-page]
+
+- id: lidar-perception-loop
+  title: "What our vehicle sees: LiDAR point cloud with 3D object detection"
+  youtube: null
+  local: "videos/5 Sensor Perception and Visualization.mp4"
+  url: /media/loops/lidar-perception.mp4
+  date: 2022-10
+  source: lab
+  thrusts: [automated-driving]
+  featured: true
+  use: [home-loop, facilities]
+  note: Cropped 8 s loop from the 30 s recording (Foxglove, Oct 2022, near Beaver Stadium).
+
+- id: av-vru-detection
+  title: Vehicle and vulnerable road user detection
+  youtube: null
+  local: videos/Vehicle and VRU detection.mp4
+  source: lab
+  thrusts: [automated-driving]
+  use: [facilities]
+  note: Local only (1080p, 54 s). Dark RViz view; better embedded than looped.
+
+- id: av-lidar-object-detection
+  title: Object detection with LiDAR perception
+  youtube: null
+  local: videos/3 Object Detection with Lidar Perception.mp4
+  source: lab
+  thrusts: [automated-driving]
+  use: []
+  note: Local only (900x720, 89 s). Lower resolution; keep as backup.
+
+- id: atma-royal-live-demo
+  title: "ATMA live demonstration of a striping operation (Royal Truck & Equipment)"
+  youtube: null
+  local: videos/ATMA- Live Demo.mp4
+  source: partner
+  thrusts: [work-zone-automation]
+  featured: true
+  use: [thrust-work-zone-automation]
+  note: >-
+    Best ATMA footage we have (drone shots of the driverless TMA truck, 720p) but it carries Royal Truck's
+    watermark and inset. Use as an embedded video with credit; ask Royal for the original or permission to cut a loop.

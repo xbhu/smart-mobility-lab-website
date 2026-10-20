@@ -1,0 +1,17 @@
+---
+import { ROLE_LABEL, hasProfile, initials, publicFileExists, years } from "../lib/site";
+interface Props { person: { id: string; data: any } }
+const { person } = Astro.props;
+const d = person.data;
+const photo = publicFileExists(d.photo) ? d.photo : null;
+const href = hasProfile(person) ? `/people/${person.id}` : null;
+const Tag = href ? "a" : "div";
+---
+<Tag class="person" href={href ?? undefined}>
+  <span class="person-photo">
+    {photo ? <img src={photo} alt={`Photo of ${d.name}`} loading="lazy" /> : <span class="person-initials" aria-hidden="true">{initials(d.name)}</span>}
+  </span>
+  <span class="person-name">{d.name}</span>
+  <span class="person-role">{d.title ?? ROLE_LABEL[d.role]}{d.start && d.role !== "pi" ? `, since ${String(d.start).slice(0, 4)}` : ""}</span>
+  {d.short && <span class="person-short">{d.short}</span>}
+</Tag>

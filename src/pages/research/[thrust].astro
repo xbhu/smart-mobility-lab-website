@@ -1,0 +1,134 @@
+---
+import Base from "../../layouts/Base.astro";
+import Video from "../../components/Video.astro";
+import PaperItem from "../../components/PaperItem.astro";
+import PersonCard from "../../components/PersonCard.astro";
+import { getCollection, getEntry, getEntries, render } from "astro:content";
+import { years } from "../../lib/site";
+
+export async function getStaticPaths() {
+  const thrusts = await getCollection("thrusts");
+  return thrusts.map((t) => ({ params: { thrust: t.id }, props: { thrust: t } }));
+}
+
+const { thrust } = Astro.props;
+const t = thrust.data;
+const { Content } = await render(thrust);
+
+const featured = await getEntries(t.featured_papers);
+const subtopics = await Promise.all(
+  t.subtopics.map(async (s) => ({ ...s, entries: await getEntries(s.papers) })),
+);
+const videos = await getEntries(t.videos);
+const allPapers = (await getCollection("papers"))
+  .filter((p) => p.data.thrusts.includes(thrust.id as any))
+  .sort((a, b) => b.data.year - a.data.year);
+const recent = allPapers.slice(0, 10);
+const projects = (await getCollection("projects"))
+  .filter((p) => p.data.thrusts.includes(thrust.id as any))
+  .sort((a, b) => (b.data.start ?? 0) - (a.data.start ?? 0));
+const people = (await getCollection("people")).filter(
+  (p) => p.data.status === "current" && p.id !== "xianbiao-hu" && p.data.thrusts?.includes(thrust.id as any),
+);
+const isUrl = (s: string | null) => Boolean(s);
+---
+<Base title={t.name} description={t.tagline} image={t.hero.image ?? undefined}>
+  <header class="page-head">
+    <div class="wrap">
+      <p class="crumbs"><a href="/research">Research</a></p>
+      <h1>{t.name}</h1>
+      <p class="lede">{t.tagline}</p>
+    </div>
+  </header>
+
+  {isUrl(t.hero.image) && (
+    <div class="thrust-hero"><img src={t.hero.image!} alt={t.hero.image_alt ?? ""} /></div>
+  )}
+
+  <section class="section">
+    <div class="wrap prose"><Content /></div>
+  </section>
+
+  <section class="section section--concrete" aria-labelledby="sub-title">
+    <div class="wrap">
+      <h2 id="sub-title">What we work on</h2>
+      <div class="subtopics">
+        {subtopics.map((s) => (
+          <div class="subtopic">
+            <h3>{s.name}</h3>
+            <p>{s.summary}</p>
+            {s.entries.length > 0 && (
+              <ul>{s.entries.slice(0, 3).map((p) => <li><em>{p.data.title}</em> ({p.data.venue_short ?? p.data.venue}, {p.data.year})</li>)}</ul>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="feat-title">
+    <div class="wrap">
+      <h2 id="feat-title">Representative work</h2>
+      <ul class="pubs">{featured.map((p) => <PaperItem paper={p} showSummary />)}</ul>
+    </div>
+  </section>
+
+  {videos.length > 0 && (
+    <section class="section section--concrete" aria-labelledby="vid-title">
+      <div class="wrap">
+        <h2 id="vid-title">Videos</h2>
+        <div class="video-grid">{videos.map((v) => <div><Video video={v} /></div>)}</div>
+      </div>
+    </section>
+  )}
+
+  {t.resources && t.resources.length > 0 && (
+    <section class="section" aria-labelledby="res-title">
+      <div class="wrap">
+        <h2 id="res-title">Data and resources</h2>
+        <div class="tools">{t.resources.map((r) => <div class="tool"><a href={r.url}>{r.label}</a></div>)}</div>
+      </div>
+    </section>
+  )}
+
+  <section class="section" aria-labelledby="proj-title">
+    <div class="wrap">
+      <div class="section-head"><h2 id="proj-title">Sponsored projects</h2><a href="/projects">All projects</a></div>
+      <ul class="projects">
+        {projects.map((p) => (
+          <li class="project">
+            <div>
+              <p class="project-title">{p.data.title}</p>
+              <p class="project-sponsor">{p.data.sponsors.join(", ")}</p>
+            </div>
+            <p class="project-side">{years(p.data.start, p.data.end)}<br />{p.data.role}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--concrete" aria-labelledby="pubs-title">
+    <div class="wrap">
+      <div class="section-head"><h2 id="pubs-title">Recent publications</h2><a href={`/publications?thrust=${thrust.id}`}>All {allPapers.length} in this thrust</a></div>
+      <ul class="pubs">{recent.map((p) => <PaperItem paper={p} />)}</ul>
+    </div>
+  </section>
+
+  {people.length > 0 && (
+    <section class="section" aria-labelledby="people-title">
+      <div class="wrap">
+        <h2 id="people-title">People</h2>
+        <div class="people">{people.map((p) => <PersonCard person={p} />)}</div>
+      </div>
+    </section>
+  )}
+
+  <section class="section section--navy">
+    <div class="wrap">
+      <h2>Work with us</h2>
+      <p>{t.collaborate}</p>
+      <a class="btn btn--lane" href="mailto:xbhu@psu.edu">Email Dr. Hu</a>
+    </div>
+  </section>
+</Base>

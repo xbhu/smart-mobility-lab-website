@@ -1,0 +1,83 @@
+# One-paragraph intros for index pages. Lists on each page come from the collections.
+
+research:
+  title: Research
+  lead: >-
+    The Smart Mobility Lab works in four thrusts. AI runs through all of them: in how vehicles perceive
+    and decide, how charging demand is predicted, and how system models are calibrated. Each thrust
+    ends in something agencies can use, such as a tested algorithm, a deployment guideline, a planning
+    model, or a dataset.
+
+people:
+  title: People
+  lead: >-
+    We are modelers, programmers, and technology enthusiasts, equal parts curious and stubborn, who
+    enjoy turning hard problems into working systems.
+  groups:
+    - { role: pi, label: Director }
+    - { role: postdoc, label: Postdoctoral Scholars }
+    - { role: phd, label: Ph.D. Students }
+    - { role: deng, label: Doctor of Engineering Students }
+    - { role: ms, label: M.S. Students }
+    - { role: undergrad, label: Undergraduate Researchers }
+  alumni_lead: >-
+    Our alumni include tenure-track faculty, industry engineers, and researchers in the U.S. and abroad.
+  honors_heading: Student honors
+  honors:
+    - { year: 2026, name: "Harry G. Miller Fellowship in Engineering", person: zirui-wu }
+    - { year: 2026, name: "NASA Pennsylvania Space Grant Consortium URIP Scholarship", person: zoe-latham }
+    - { year: 2025, name: "NASA Women in Science and Engineering Research (WISER) scholarship", person: harshitha-lingam }
+    - { year: 2024, name: "IACIP Student Best Presentation Award", person: chenxi-chen }
+    - { year: 2024, name: "FEGR Assistantship Stipend Supplement Fund", person: shuhua-hong }
+    - { year: 2023, name: "Leo P. Russell Graduate Fellowship, Penn State", person: yang-song }
+    - { year: 2023, name: "Mark E. and Claire L. Alpert Graduate Fellowship", person: qing-tang }
+    - { year: 2023, name: "NASA Women in Science and Engineering Research (WISER) scholarship", person: victoria-butler }
+    - { year: 2023, name: "FEGR Assistantship Stipend Supplement Fund", person: yuxin-ding }
+    - { year: 2022, name: "Leo P. Russell Graduate Fellowship, Penn State", person: qing-tang }
+    - { year: 2022, name: "First place, poster competition, Global Symposium on Connected and Automated Vehicles and Infrastructure", person: yang-song }
+    - { year: 2021, name: "Ozarks Chapter ITE student excellence scholarship", person: qing-tang }
+    - { year: 2020, name: "First place, Central Missouri ITE student poster competition", person: qing-tang }
+    - { year: 2018, name: "Excellent Paper Award, World Transport Convention", person: qing-tang }
+
+publications:
+  title: Publications
+  lead: >-
+    Selected publications by thrust. Dr. Hu has published 92 journal articles (as of September 2026),
+    including 17 in Transportation Research Parts A–E and 11 in IEEE Transactions. For the full list,
+    see Google Scholar.
+  note: Lab members are marked; * marks the corresponding author.
+  scholar: https://scholar.google.com/citations?user=-2GgVTMAAAAJ&view_op=list_works&sortby=pubdate
+
+projects:
+  title: Projects & Tools
+  lead: >-
+    Since 2013 our work has been funded by 43 projects, 35 of them external, totaling $22.6 million.
+    Sponsors include USDOT, FHWA, the Department of Energy, PennDOT, Pennsylvania DEP, Colorado DOT,
+    Missouri DOT, and the Autonomous Maintenance Technology pooled fund.
+  tools_heading: Tools and data
+  tools:
+    - name: PennDOT road friction project
+      url: https://penndot.mobilitypsu.com
+      text: Project site for friction factor interpolation and forecasting.
+    - name: PA DEP zero-emission vehicle dashboard
+      url: https://dep.mobilitypsu.com
+      text: Data and analysis for Pennsylvania's medium- and heavy-duty zero-emission vehicle program.
+    - name: ATMA field dataset (USDOT SMART)
+      url: https://doi.org/10.21949/53ca-8v96
+      text: Field data from ATMA deployments in Colorado, Minnesota, Wisconsin, and Oklahoma.
+    - name: Lab code on GitHub
+      url: https://github.com/xbhu
+      text: Code released with our papers.
+    - name: Smart Mobility Research Atlas
+      url: https://atlas.mobilitypsu.com
+      text: Plain-language pages for selected papers, with code, slides, and video.
+
+facilities:
+  title: Facilities
+  lead: >-
+    Our algorithms are tested in three stages: co-simulation, a full-size autonomous vehicle, and a
+    USDOT-designated proving ground.
+
+news:
+  title: News
+  lead: Grants, awards, media coverage, visits, and lab milestones.

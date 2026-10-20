@@ -1,0 +1,119 @@
+---
+import "@fontsource-variable/overpass/wght.css";
+import "@fontsource-variable/source-serif-4/opsz.css";
+import "@fontsource-variable/source-serif-4/opsz-italic.css";
+import "../styles/global.css";
+import { site } from "../lib/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+const { title, description, image } = Astro.props;
+const pageTitle = title ? `${title} | ${site.full_name}` : site.seo.title;
+const desc = description ?? site.seo.description;
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isActive = (href: string) => (href === "/" ? path === "/" : path === href || path.startsWith(href + "/"));
+const ogImage = new URL(image ?? site.hero.image, Astro.site).toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23001e44'/%3E%3Crect x='14' y='4' width='4' height='7' fill='%23f5b700'/%3E%3Crect x='14' y='13' width='4' height='7' fill='%23f5b700'/%3E%3Crect x='14' y='22' width='4' height='7' fill='%23f5b700'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="wordmark" href="/">
+          <span class="wordmark-name">{site.name}</span>
+          <span class="wordmark-unit">Penn State Civil &amp; Environmental Engineering</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="nav" id="site-nav" aria-label="Main">
+          <ul>
+            {site.nav.map((item: { label: string; href: string }) => (
+              <li><a href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>{item.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-grid">
+          <div>
+            <p class="footer-name">{site.full_name}</p>
+            <p>{site.affiliation}</p>
+            <address style="font-style: normal">
+              {site.contact.address.map((line: string) => (<>{line}<br /></>))}
+              <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a><br />{site.contact.phone}
+            </address>
+          </div>
+          <div>
+            <p class="footer-head">Explore</p>
+            <ul>
+              <li><a href="/research">Research</a></li>
+              <li><a href="/facilities">Facilities</a></li>
+              <li><a href="/people/xianbiao-hu">XB Hu</a></li>
+              <li><a href="/join">Join the lab</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-head">Elsewhere</p>
+            <ul>
+              <li><a href={site.social.google_scholar}>Google Scholar</a></li>
+              <li><a href={site.social.youtube}>YouTube</a></li>
+              <li><a href={site.social.github}>GitHub</a></li>
+              <li><a href={site.social.atlas}>Research Atlas</a></li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-note">© {new Date().getFullYear()} {site.full_name}, The Pennsylvania State University.</p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>(".nav-toggle");
+      const nav = document.getElementById("site-nav");
+      toggle?.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") !== "true";
+        toggle.setAttribute("aria-expanded", String(open));
+        nav?.setAttribute("data-open", String(open));
+      });
+      // Click-to-load YouTube: the iframe (and YouTube's cookies) load only after a click.
+      document.querySelectorAll<HTMLButtonElement>(".yt button[data-yt]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const id = btn.dataset.yt;
+          const start = btn.dataset.start ? `&start=${btn.dataset.start}` : "";
+          const iframe = document.createElement("iframe");
+          iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0${start}`;
+          iframe.title = btn.getAttribute("aria-label") ?? "Video";
+          iframe.allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture";
+          iframe.allowFullscreen = true;
+          btn.replaceWith(iframe);
+        });
+      });
+      // Respect reduced motion for looping videos.
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        document.querySelectorAll<HTMLVideoElement>("video[autoplay]").forEach((v) => { v.pause(); v.removeAttribute("autoplay"); v.controls = true; });
+      }
+    </script>
+  </body>
+</html>

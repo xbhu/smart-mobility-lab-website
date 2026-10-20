@@ -1,0 +1,60 @@
+---
+import Base from "../layouts/Base.astro";
+import PaperItem from "../components/PaperItem.astro";
+import { getCollection } from "astro:content";
+import { intros } from "../lib/site";
+
+const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
+const papers = (await getCollection("papers")).sort((a, b) => b.data.year - a.data.year || a.data.title.localeCompare(b.data.title));
+const byYear = new Map<number, typeof papers>();
+for (const p of papers) byYear.set(p.data.year, [...(byYear.get(p.data.year) ?? []), p]);
+---
+<Base title={intros.publications.title} description={intros.publications.lead}>
+  <header class="page-head">
+    <div class="wrap">
+      <h1>{intros.publications.title}</h1>
+      <p class="lede">{intros.publications.lead}</p>
+      <p><a href={intros.publications.scholar}>Full list on Google Scholar</a></p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 40px">
+    <div class="wrap">
+      <div class="filters" role="group" aria-label="Filter by research thrust">
+        <button type="button" data-filter="all" aria-pressed="true">All ({papers.length})</button>
+        {thrusts.map((t) => (
+          <button type="button" data-filter={t.id} aria-pressed="false">
+            {t.data.name} ({papers.filter((p) => p.data.thrusts.includes(t.id as any)).length})
+          </button>
+        ))}
+      </div>
+      <p class="muted small">{intros.publications.note}</p>
+
+      {[...byYear.entries()].map(([year, list]) => (
+        <div class="year-group" data-year={year}>
+          <h2 class="year-head">{year}</h2>
+          <ul class="pubs">{list.map((p) => <PaperItem paper={p} />)}</ul>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>(".filters button");
+  const apply = (filter: string) => {
+    buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === filter)));
+    document.querySelectorAll<HTMLElement>(".pub").forEach((li) => {
+      li.hidden = filter !== "all" && !(li.dataset.thrusts ?? "").split(" ").includes(filter);
+    });
+    document.querySelectorAll<HTMLElement>(".year-group").forEach((g) => {
+      g.hidden = !g.querySelector(".pub:not([hidden])");
+    });
+    const url = new URL(location.href);
+    if (filter === "all") url.searchParams.delete("thrust"); else url.searchParams.set("thrust", filter);
+    history.replaceState(null, "", url);
+  };
+  buttons.forEach((b) => b.addEventListener("click", () => apply(b.dataset.filter ?? "all")));
+  const initial = new URL(location.href).searchParams.get("thrust");
+  if (initial && [...buttons].some((b) => b.dataset.filter === initial)) apply(initial);
+</script>
