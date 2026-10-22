@@ -1,7 +1,7 @@
 ---
 name: Transportation Electrification
 order: 3
-tagline: Where EV charging is needed, who invests in it, and how fleets make the switch.
+tagline: Where EV charging is needed, who invests in it, and how fleets make the switch, using AI from machine learning to multimodal LLMs.
 keywords: [charging demand, charging station location, streetlight charging, medium- and heavy-duty ZEV, multimodal LLM]
 hero:
   image: https://sites.psu.edu/xbhu/files/2022/02/EV-Charging-1024x683.jpeg
@@ -57,9 +57,11 @@ fleets can see that zero-emission trucks perform in real service.
 ## What we do
 
 We model how EV drivers decide when and where to charge, and we use those models to plan charging
-infrastructure that matches demand instead of guessing at it. We are also integrating EV charging
-behavior into column-generation-based traffic assignment, so network models capture how charging
-changes traffic.
+infrastructure that matches demand instead of guessing at it. AI is part of the toolkit: machine
+learning on charging records, and multimodal large language models (LLMs) that read satellite
+imagery to predict where charging demand will grow. We are also integrating EV charging behavior
+into column-generation-based traffic assignment, so network models capture how charging changes
+traffic.
 
 Our projects put the models to work. In Kansas City we evaluated streetlights as low-cost curbside
 chargers for residents without home charging; the work drew national and international media
