@@ -63,6 +63,7 @@ const people = defineCollection({
     links: z.record(z.string(), z.string()).optional(),
     photo: z.string(),
     page: z.string().optional(),
+    profile: z.boolean().optional(),
     author_aliases: z.array(z.string()).optional(),
     bio_draft: z.boolean().optional(),
     ...review,

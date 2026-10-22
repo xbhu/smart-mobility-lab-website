@@ -69,8 +69,9 @@ export const ALUMNI_ROLE_LABEL: Record<string, string> = {
 };
 
 /** People who get their own profile page. */
-export function hasProfile(p: { id: string; data: { role: string; status: string } }): boolean {
+export function hasProfile(p: { id: string; data: { role: string; status: string; profile?: boolean } }): boolean {
   if (p.id === "xianbiao-hu") return true;
+  if (p.data.profile === false) return false;
   if (p.data.status === "current") return ["postdoc", "phd"].includes(p.data.role);
   return ["postdoc", "phd"].includes(p.data.role);
 }
