@@ -14,12 +14,9 @@ people:
     We are modelers, programmers, and technology enthusiasts, equal parts curious and stubborn, who
     enjoy turning hard problems into working systems.
   groups:
-    - { role: pi, label: Director }
-    - { role: postdoc, label: Postdoctoral Scholars }
-    - { role: phd, label: Ph.D. Students }
-    - { role: deng, label: Doctor of Engineering Students }
-    - { role: ms, label: M.S. Students }
-    - { role: undergrad, label: Undergraduate Researchers }
+    - { id: director, roles: [pi], label: Director }
+    - { id: postdocs, roles: [postdoc], label: Postdoctoral Scholars }
+    - { id: students, roles: [phd, deng, ms, undergrad], label: Students }
   alumni_lead: >-
     Our alumni include tenure-track faculty, industry engineers, and researchers in the U.S. and abroad.
   honors_heading: Student honors

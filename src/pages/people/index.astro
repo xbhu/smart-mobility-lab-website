@@ -5,9 +5,16 @@ import { getCollection, getEntry } from "astro:content";
 import { intros, hasProfile, years, ALUMNI_ROLE_LABEL } from "../../lib/site";
 
 const people = await getCollection("people");
+const familyName = (name: string) => name.replace(/\s*\(.*?\)/g, "").trim().split(/\s+/).pop() ?? name;
 const current = people.filter((p) => p.data.status === "current");
 const groups = intros.people.groups
-  .map((g: any) => ({ ...g, members: current.filter((p) => p.data.role === g.role) }))
+  .map((g: any) => ({
+    ...g,
+    // Students of all levels are listed together, ordered by family name.
+    members: current
+      .filter((p) => g.roles.includes(p.data.role))
+      .sort((a, b) => familyName(a.data.name).localeCompare(familyName(b.data.name))),
+  }))
   .filter((g: any) => g.members.length > 0);
 
 const ALUMNI_ORDER = ["postdoc", "phd", "adjunct", "visiting", "ms", "undergrad", "intern"];
@@ -30,9 +37,9 @@ const honors = await Promise.all(
   </header>
 
   {groups.map((g: any, i: number) => (
-    <section class:list={["section", { "section--concrete": i % 2 === 1 }]} style="padding-block: 48px" aria-labelledby={`g-${g.role}`}>
+    <section class:list={["section", { "section--concrete": i % 2 === 1 }]} style="padding-block: 48px" aria-labelledby={`g-${g.id}`}>
       <div class="wrap">
-        <h2 id={`g-${g.role}`}>{g.label}</h2>
+        <h2 id={`g-${g.id}`}>{g.label}</h2>
         <div class="people">{g.members.map((p: any) => <PersonCard person={p} />)}</div>
       </div>
     </section>
