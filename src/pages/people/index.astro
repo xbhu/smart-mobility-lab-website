@@ -27,7 +27,11 @@ const alumni = people
   .filter((p) => p.data.status === "alumni")
   .sort((a, b) =>
     ALUMNI_ORDER.indexOf(a.data.role) - ALUMNI_ORDER.indexOf(b.data.role) ||
-    String(b.data.end ?? "").localeCompare(String(a.data.end ?? "")),
+    // Within each role: graduates first (members without a profile, e.g. transfers, go last),
+    // then earliest graduation (end), then earliest start.
+    Number(a.data.profile === false) - Number(b.data.profile === false) ||
+    String(a.data.end ?? "").localeCompare(String(b.data.end ?? "")) ||
+    String(a.data.start ?? "").localeCompare(String(b.data.start ?? "")),
   );
 const honors = await Promise.all(
   intros.people.honors.map(async (h: any) => ({ ...h, person: await getEntry("people", h.person) })),
