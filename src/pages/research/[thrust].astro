@@ -116,7 +116,7 @@ const bg = (key: string) => (shown.indexOf(key) % 2 === 1 ? "section section--co
       <details class="collapsible">
         <summary>
           <span class="collapsible-title" id="pubs-title">Recent publications</span>
-          <span class="collapsible-sub">The {recent.length} most recent of {allPapers.length} selected papers in this thrust</span>
+          <span class="collapsible-sub">{recent.length < allPapers.length ? `The ${recent.length} most recent of ${allPapers.length} selected papers in this thrust` : `All ${allPapers.length} selected papers in this thrust`}</span>
         </summary>
         <ul class="pubs">{recent.map((p) => <PaperItem paper={p} />)}</ul>
         <p><a href={`/publications?thrust=${thrust.id}`}>All {allPapers.length} papers in this thrust</a></p>
