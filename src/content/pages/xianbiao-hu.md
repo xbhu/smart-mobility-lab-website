@@ -5,7 +5,7 @@ photo: /media/people/xianbiao-hu.jpg   # need original of 2024.6 photo (current 
 pronunciation: XB is pronounced "Sean-Bell".
 contact:
   email: xbhu@psu.edu
-  scholar: https://scholar.google.com/citations?user=-2GgVTMAAAAJ
+  scholar: https://scholar.google.com/citations?hl=en&user=-2GgVTMAAAAJ&view_op=list_works&sortby=pubdate
   researchgate: https://www.researchgate.net/profile/Xianbiao-Hu
 
 timeline:
