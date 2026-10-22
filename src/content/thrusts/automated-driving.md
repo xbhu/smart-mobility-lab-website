@@ -7,6 +7,19 @@ hero:
   image: /media/thrusts/automated-driving.jpg
   image_alt: The lab's wrapped automated vehicle on the LTI test track beside a no-passing-zone sign
   video: av-carma-campus
+gallery:
+  - src: /media/photos/av-roof-camera.jpg
+    alt: The forward camera and sensor mounts behind the windshield of the automated vehicle
+    caption: Sensors behind the windshield.
+  - src: /media/photos/av-interior-displays.jpg
+    alt: Rear-seat displays showing the automation software
+    caption: Rear-seat displays run the automation stack.
+  - src: /media/photos/av-cockpit-test-run.jpg
+    alt: A test run on the LTI test track with a safety driver and an operator
+    caption: A test run on the LTI test track.
+  - src: /media/photos/av-students-in-vehicle.jpg
+    alt: Lab members in the driver and passenger seats of the vehicle
+    caption: Ph.D. students on a test day.
 subtopics:
   - id: perception-localization
     name: Perception and localization
