@@ -20,7 +20,7 @@ thrusts:
 subtopic: demand-behavior
 featured: true
 verified: crossref-2026-10-20
-note: Official title differs slightly from the current site's listing; Crossref title used.
+note: Official title differs slightly from the current site’s listing; Crossref title used.
 status: published
 summary: >-
   Uses multimodal large language models on satellite imagery to predict where EV charging demand will

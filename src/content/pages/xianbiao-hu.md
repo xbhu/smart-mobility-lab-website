@@ -2,7 +2,7 @@
 title: Xianbiao (XB) Hu
 role: Associate Professor of Transportation Engineering, Penn State · Director, Smart Mobility Lab
 photo: /media/people/xianbiao-hu.jpg   # need original of 2024.6 photo (current file is 300 px wide)
-pronunciation: XB is pronounced "Sean-Bell".
+pronunciation: XB is pronounced “Sean-Bell”.
 contact:
   email: xbhu@psu.edu
   scholar: https://scholar.google.com/citations?hl=en&user=-2GgVTMAAAAJ&view_op=list_works&sortby=pubdate

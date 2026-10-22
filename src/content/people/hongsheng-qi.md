@@ -14,5 +14,5 @@ author_aliases:
 - Hongsheng Qi
 - H. Qi
 - Qi, H.
-note: Long-time collaborator; Adjunct Research Professor (2026).
+note: Long-time collaborator; Adjunct Research Professor (2026)
 ---

@@ -30,7 +30,7 @@ sections:
       - title: President Bendapudi rides with our students
         thrust: automated-driving
         text: >-
-          Penn State's president and executive team took a self-driving ride on the LTI test track,
+          Penn State’s president and executive team took a self-driving ride on the LTI test track,
           with Ph.D. students Yuxin Ding and Chenxi Chen on board.
         video: neeli-av-demo
         href: /research/automated-driving

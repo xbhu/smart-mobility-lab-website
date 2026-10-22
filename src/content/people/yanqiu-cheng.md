@@ -4,7 +4,7 @@ role: visiting
 status: alumni
 start: '2018'
 end: '2020'
-current_position: Assistant Professor, Chang'an University
+current_position: Assistant Professor, Chang’an University
 current_url: https://js.chd.edu.cn/ysgcxy/cyq/list.htm
 thrusts:
 - automated-driving

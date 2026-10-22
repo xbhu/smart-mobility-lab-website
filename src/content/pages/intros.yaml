@@ -15,7 +15,7 @@ research:
     tiles:
       autonomous-vehicle:
         src: /media/photos/av-door-open-ite.jpg
-        alt: Students seated in the lab's automated vehicle, a Chrysler Pacifica with a roof sensor rack
+        alt: Students seated in the lab’s automated vehicle, a Chrysler Pacifica with a roof sensor rack
       test-track:
         src: /media/photos/av-wrap-rear-curve.jpg
         alt: The automated vehicle driving a curve of the LTI test track
@@ -75,7 +75,7 @@ projects:
       text: Project site for friction factor interpolation and forecasting.
     - name: PA DEP zero-emission vehicle dashboard
       url: https://dep.mobilitypsu.com
-      text: Data and analysis for Pennsylvania's medium- and heavy-duty zero-emission vehicle program.
+      text: Data and analysis for Pennsylvania’s medium- and heavy-duty zero-emission vehicle program.
     - name: ATMA field dataset (USDOT SMART)
       url: https://rosap.ntl.bts.gov/view/dot/87547
       text: Field data from ATMA deployments in Colorado, Minnesota, Wisconsin, and Oklahoma.

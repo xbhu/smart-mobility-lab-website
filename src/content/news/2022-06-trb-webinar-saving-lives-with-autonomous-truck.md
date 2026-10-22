@@ -1,7 +1,7 @@
 ---
 date: 2022-06
 title: >-
-  TRB webinar "Saving Lives with Autonomous Truck Mounted Attenuator Systems" draws nearly 300 attendees
+  TRB webinar “Saving Lives with Autonomous Truck Mounted Attenuator Systems” draws nearly 300 attendees
 tags:
 - event
 thrusts:

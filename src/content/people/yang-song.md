@@ -17,5 +17,5 @@ author_aliases:
 - Y. Song
 - Song, Y.
 - Chris Song
-note: Data Scientist at ElectroTempo after graduation.
+note: Data Scientist at ElectroTempo after graduation
 ---

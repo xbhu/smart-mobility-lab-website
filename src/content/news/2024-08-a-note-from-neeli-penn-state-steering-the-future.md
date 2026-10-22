@@ -1,6 +1,6 @@
 ---
 date: 2024-08
-title: '"A Note from Neeli": Penn State steering the future of autonomous vehicles'
+title: '“A Note from Neeli”: Penn State steering the future of autonomous vehicles'
 tags:
 - media
 thrusts:

@@ -1,6 +1,6 @@
 ---
 title: >-
-  Will Information and Incentive Affect Traveler's Day-to-Day Departure Time Decisions? An Empirical Study
+  Will Information and Incentive Affect Traveler’s Day-to-Day Departure Time Decisions? An Empirical Study
   of Decision Making Evolution Process
 authors:
 - name: Xianbiao Hu

@@ -14,4 +14,4 @@ author_aliases:
 bio_draft: true
 ---
 
-Shuhua Hong is a Ph.D. student in Transportation Engineering at Penn State (since Fall 2024). Shuhua's research develops demand–supply coupled models for electric vehicle charging infrastructure, including how public and private investment should be balanced (Transportation Research Part D, 2026), and was awarded the FEGR Assistantship Stipend Supplement Fund (2024).
+Shuhua Hong is a Ph.D. student in Transportation Engineering at Penn State (since Fall 2024). Shuhua’s research develops demand–supply coupled models for electric vehicle charging infrastructure, including how public and private investment should be balanced (Transportation Research Part D, 2026), and was awarded the FEGR Assistantship Stipend Supplement Fund (2024).
