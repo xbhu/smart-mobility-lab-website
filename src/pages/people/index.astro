@@ -11,11 +11,12 @@ const groups = intros.people.groups
   .map((g: any) => ({
     ...g,
     // Students of all levels share one section: ordered by level (g.roles order),
-    // then by start year, then by family name.
+    // then manual order, then start year, then family name.
     members: current
       .filter((p) => g.roles.includes(p.data.role))
       .sort((a, b) =>
         g.roles.indexOf(a.data.role) - g.roles.indexOf(b.data.role) ||
+        (a.data.order ?? 0) - (b.data.order ?? 0) ||
         String(a.data.start ?? "9999").localeCompare(String(b.data.start ?? "9999")) ||
         familyName(a.data.name).localeCompare(familyName(b.data.name)),
       ),
@@ -28,8 +29,9 @@ const alumni = people
   .sort((a, b) =>
     ALUMNI_ORDER.indexOf(a.data.role) - ALUMNI_ORDER.indexOf(b.data.role) ||
     // Within each role: graduates first (members without a profile, e.g. transfers, go last),
-    // then earliest graduation (end), then earliest start.
+    // then manual order, then earliest graduation (end), then earliest start.
     Number(a.data.profile === false) - Number(b.data.profile === false) ||
+    (a.data.order ?? 0) - (b.data.order ?? 0) ||
     String(a.data.end ?? "").localeCompare(String(b.data.end ?? "")) ||
     String(a.data.start ?? "").localeCompare(String(b.data.start ?? "")),
   );

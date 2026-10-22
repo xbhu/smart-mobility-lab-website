@@ -64,6 +64,8 @@ const people = defineCollection({
     photo: z.string(),
     page: z.string().optional(),
     profile: z.boolean().optional(),
+    // Manual tie-breaker within a role on the People page: lower first, default 0.
+    order: z.number().optional(),
     author_aliases: z.array(z.string()).optional(),
     bio_draft: z.boolean().optional(),
     ...review,
