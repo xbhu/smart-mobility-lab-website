@@ -6,6 +6,9 @@ keywords: [queueing and capacity, volume-delay functions, OD calibration, connec
 hero:
   image: null
   image_replace: No photo exists. Claude to draw a diagram (e.g., queue/discharge illustration) in phase 4.
+card:
+  image: /media/thrusts/system-modeling.svg
+  alt: Illustration of a road network with traffic flows, a highlighted route, and a queue at a signal
 subtopics:
   - id: queueing-capacity
     name: Queueing, bottlenecks, and capacity

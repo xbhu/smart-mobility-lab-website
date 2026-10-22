@@ -73,6 +73,7 @@ a:hover { text-decoration-thickness: 2px; }
 .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; flex-wrap: wrap; margin-bottom: 32px; }
 .section-head h2 { margin: 0; }
 .section-head p { margin: 8px 0 0; color: var(--muted); }
+.section--navy .section-head p { color: #c9d4e4; max-width: 60ch; }
 
 .lede { font-size: 1.3rem; line-height: 1.55; color: var(--ink); max-width: 60ch; }
 .muted { color: var(--muted); }
@@ -304,6 +305,40 @@ a.person:hover .person-name { text-decoration: underline; text-decoration-thickn
 .startup-title { font: 800 1.35rem var(--font-sign); color: var(--navy); }
 .startup-summary { color: var(--muted); }
 .startup h3 { margin-top: 32px; }
+
+/* Thrust cards (research landing, home) */
+.thrust-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+@media (max-width: 760px) { .thrust-cards { grid-template-columns: 1fr; } }
+.thrust-card { display: flex; flex-direction: column; text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; transition: box-shadow 0.15s, transform 0.15s; }
+.thrust-card:hover { box-shadow: 0 10px 28px rgba(0, 30, 68, 0.14); transform: translateY(-2px); }
+.thrust-card-media { position: relative; display: block; aspect-ratio: 16 / 9; background: var(--navy); }
+.thrust-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thrust-card-num { position: absolute; left: 0; bottom: 0; background: var(--lane); color: var(--navy); font: 800 1rem / 1 var(--font-sign); padding: 10px 14px; letter-spacing: 0.04em; }
+.thrust-card-body { display: flex; flex-direction: column; gap: 10px; padding: 22px 24px 20px; flex: 1; }
+.thrust-card-name { font: 800 clamp(1.3rem, 2vw, 1.55rem) / 1.15 var(--font-sign); color: var(--navy); }
+.thrust-card:hover .thrust-card-name { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.16em; }
+.thrust-card-tagline { font-size: 1.02rem; line-height: 1.5; }
+.thrust-card-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.thrust-card-topics span { font: 600 0.82rem / 1.2 var(--font-sign); color: var(--blue); background: var(--concrete); border-radius: 999px; padding: 6px 10px; }
+.thrust-card-meta { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--rule); font: 700 0.88rem var(--font-sign); color: var(--muted); }
+.thrust-card-go { margin-left: auto; color: var(--navy); }
+@media (prefers-reduced-motion: reduce) { .thrust-card, .thrust-card:hover { transition: none; transform: none; } }
+
+/* Facilities showcase mosaic */
+.fac-mosaic { display: grid; grid-template-columns: 1.6fr 1fr; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 16px; height: clamp(420px, 46vw, 600px); }
+.fac-tile { position: relative; display: block; overflow: hidden; border-radius: 10px; background: var(--blue); color: var(--white); text-decoration: none; }
+.fac-tile--big { grid-row: span 2; }
+.fac-tile img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+.fac-tile:hover img { transform: scale(1.03); }
+.fac-tile-text { position: absolute; inset: auto 0 0 0; padding: 48px 20px 18px; background: linear-gradient(to top, rgba(0, 20, 48, 0.88), rgba(0, 20, 48, 0)); display: flex; flex-direction: column; gap: 4px; }
+.fac-tile-name { font: 800 1.2rem / 1.2 var(--font-sign); }
+.fac-tile--big .fac-tile-name { font-size: 1.5rem; }
+.fac-tile-sub { font-size: 0.95rem; line-height: 1.4; color: #dfe6f0; max-width: 46ch; }
+@media (max-width: 760px) {
+  .fac-mosaic { grid-template-columns: 1fr; grid-template-rows: none; height: auto; }
+  .fac-tile, .fac-tile--big { grid-row: auto; aspect-ratio: 4 / 3; }
+}
+@media (prefers-reduced-motion: reduce) { .fac-tile img { transition: none; } .fac-tile:hover img { transform: none; } }
 
 /* ---------- Projects ---------- */
 .projects { list-style: none; padding: 0; margin: 0; }

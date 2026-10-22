@@ -30,6 +30,8 @@ const thrusts = defineCollection({
       image_replace: z.string().optional(),
       video: reference("videos").optional(),
     }),
+    // Image for the thrust card on /research and the home page; falls back to hero.image.
+    card: z.object({ image: z.string(), alt: z.string() }).optional(),
     subtopics: z.array(
       z.object({
         id: z.string(),

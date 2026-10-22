@@ -1,0 +1,35 @@
+---
+// A research thrust as a photo card: image, name, one-line tagline, topics, and counts.
+interface Props {
+  thrust: { id: string; data: any };
+  index: number;
+  papers?: number;
+  projects?: number;
+  showTopics?: boolean;
+}
+const { thrust, index, papers, projects, showTopics = true } = Astro.props;
+const d = thrust.data;
+const image = d.card?.image ?? d.hero?.image ?? null;
+const alt = d.card?.alt ?? d.hero?.image_alt ?? "";
+const num = String(index + 1).padStart(2, "0");
+---
+<a class="thrust-card" href={`/research/${thrust.id}`}>
+  <span class="thrust-card-media">
+    {image && <img src={image} alt={alt} loading="lazy" />}
+    <span class="thrust-card-num" aria-hidden="true">{num}</span>
+  </span>
+  <span class="thrust-card-body">
+    <span class="thrust-card-name">{d.name}</span>
+    <span class="thrust-card-tagline">{d.tagline}</span>
+    {showTopics && (
+      <span class="thrust-card-topics">
+        {d.subtopics.map((s: any) => <span>{s.name}</span>)}
+      </span>
+    )}
+    <span class="thrust-card-meta">
+      {projects !== undefined && <span>{projects} external projects</span>}
+      {papers !== undefined && <span>{papers} selected papers</span>}
+      <span class="thrust-card-go">Explore <span aria-hidden="true">→</span></span>
+    </span>
+  </span>
+</a>

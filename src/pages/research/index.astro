@@ -1,16 +1,22 @@
 ---
 import Base from "../../layouts/Base.astro";
-import GuideSign from "../../components/GuideSign.astro";
+import ThrustCard from "../../components/ThrustCard.astro";
 import { getCollection } from "astro:content";
 import { intros } from "../../lib/site";
 
 const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
 const papers = await getCollection("papers");
-const projects = await getCollection("projects");
+const projects = (await getCollection("projects")).filter((p) => p.data.kind === "external");
 const count = (id: string) => ({
   papers: papers.filter((p) => p.data.thrusts.includes(id as any)).length,
   projects: projects.filter((p) => p.data.thrusts.includes(id as any)).length,
 });
+const facilities = (await getCollection("facilities")).sort(
+  (a, b) => ["autonomous-vehicle", "test-track", "driving-simulator"].indexOf(a.id) - ["autonomous-vehicle", "test-track", "driving-simulator"].indexOf(b.id),
+);
+const f = intros.research.facilities;
+// One photo per facility for the showcase; set in intros.yaml.
+const tiles = facilities.map((x) => ({ ...x, tile: f.tiles[x.id] }));
 ---
 <Base title={intros.research.title} description={intros.research.lead}>
   <header class="page-head">
@@ -20,31 +26,34 @@ const count = (id: string) => ({
     </div>
   </header>
 
-  <section class="section">
+  <section class="section" aria-label="Research thrusts">
     <div class="wrap">
-      <div class="signs">
-        {thrusts.map((t) => (
-          <GuideSign href={`/research/${t.id}`} name={t.data.name} sub={t.data.tagline} workzone={t.id === "work-zone-automation"} />
-        ))}
+      <div class="thrust-cards">
+        {thrusts.map((t, i) => <ThrustCard thrust={t} index={i} papers={count(t.id).papers} projects={count(t.id).projects} />)}
       </div>
     </div>
   </section>
 
-  <section class="section section--concrete">
+  <section class="section section--navy" aria-labelledby="fac-title">
     <div class="wrap">
-      <h2>Inside each thrust</h2>
-      <div class="subtopics">
-        {thrusts.map((t) => (
-          <div class="subtopic">
-            <h3><a href={`/research/${t.id}`} style="color: inherit">{t.data.name}</a></h3>
-            <p class="muted small">{count(t.id).papers} selected publications, {count(t.id).projects} sponsored projects</p>
-            <ul>
-              {t.data.subtopics.map((s) => <li>{s.name}</li>)}
-            </ul>
-          </div>
+      <div class="section-head">
+        <div>
+          <h2 id="fac-title">{f.heading}</h2>
+          <p>{f.lead}</p>
+        </div>
+        <a class="btn btn--lane" href="/facilities">See our facilities</a>
+      </div>
+      <div class="fac-mosaic">
+        {tiles.map((x, i) => (
+          <a class:list={["fac-tile", { "fac-tile--big": i === 0 }]} href={`/facilities#${x.id}`}>
+            <img src={x.tile.src} alt={x.tile.alt} loading="lazy" />
+            <span class="fac-tile-text">
+              <span class="fac-tile-name">{x.data.name}</span>
+              <span class="fac-tile-sub">{x.data.tagline}</span>
+            </span>
+          </a>
         ))}
       </div>
-      <p style="margin-top: 32px"><a class="btn" href="/facilities">Our test vehicle, track, and simulator</a></p>
     </div>
   </section>
 </Base>
