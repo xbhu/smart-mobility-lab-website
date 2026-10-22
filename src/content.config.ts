@@ -131,6 +131,7 @@ const news = defineCollection({
     featured: z.boolean().optional(),
     video: z.string().optional(),
     image: z.string().optional(),
+    image_alt: z.string().optional(),
     links: z.array(link).optional(),
     ...review,
   }),

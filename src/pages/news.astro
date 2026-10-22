@@ -30,7 +30,7 @@ for (const r of rendered) {
                 <span class="news-date">{formatDate(n.data.date)}</span>
                 <div>
                   <p class="news-title">{n.data.title}</p>
-                  {n.data.image && <img src={n.data.image} alt="" loading="lazy" style="max-width: 520px; width: 100%; border-radius: 6px; margin: 10px 0 12px" />}
+                  {n.data.image && <img src={n.data.image} alt={n.data.image_alt ?? ""} loading="lazy" style="max-width: 520px; width: 100%; border-radius: 6px; margin: 10px 0 12px" />}
                   <Content />
                   {n.data.links && (
                     <p class="news-links">{n.data.links.map((l) => <a href={l.url}>{l.label}</a>)}</p>
