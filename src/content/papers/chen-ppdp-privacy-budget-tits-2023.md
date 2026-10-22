@@ -23,7 +23,6 @@ doi: 10.1109/TITS.2023.3309783
 thrusts:
 - system-modeling
 subtopic: privacy
-code: https://github.com/ccrxf/PPDP
 verified: cv-2026-09-27
 status: published
 ---
