@@ -38,7 +38,7 @@
   end: 2026
   institution: psu
   kind: external
-  thrusts: [system-modeling]
+  thrusts: [automated-driving, system-modeling]
   tool: https://penndot.mobilitypsu.com
   featured: true
 
@@ -50,7 +50,7 @@
   end: 2026
   institution: psu
   kind: external
-  thrusts: [work-zone-automation]
+  thrusts: [automated-driving, work-zone-automation]
   dataset: https://doi.org/10.21949/53ca-8v96
   featured: true
 
@@ -93,7 +93,7 @@
   end: 2024
   institution: psu
   kind: external
-  thrusts: [work-zone-automation]
+  thrusts: [automated-driving, work-zone-automation]
 
 - id: amt-atma-deployment-guidelines-psu
   title: Development of ATMA/AIPV Deployment Guidelines Considering Traffic and Safety Impacts
