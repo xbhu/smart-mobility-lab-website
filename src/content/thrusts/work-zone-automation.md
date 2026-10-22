@@ -10,6 +10,17 @@ hero:
 card:
   image: /media/photos/atma-aerial.jpg
   alt: Aerial view of a lead truck and a driverless follow truck on a suburban road
+gallery:
+  - src: /media/photos/atma-missouri-truck.jpg
+    alt: A maintenance truck equipped for autonomous truck mounted attenuator field testing
+    caption: Missouri DOT field testing.
+  - src: /media/photos/atma-aerial.jpg
+    alt: Aerial view of a lead truck and a driverless follow truck on a suburban road
+    caption: The lead truck and the driverless follow truck, from a drone.
+    credit: Royal Truck & Equipment
+  - src: /media/news/2025-10-royal-truck-yuxin-chenxi.jpg
+    alt: Ph.D. students Yuxin Ding and Chenxi Chen working on a laptop in the driver's seat of the lab's automated vehicle
+    caption: Yuxin Ding and Chenxi Chen developing LiDAR SLAM for the follow truck.
 subtopics:
   - id: field-evaluation
     name: Field testing and evaluation
