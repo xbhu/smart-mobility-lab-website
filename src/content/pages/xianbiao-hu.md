@@ -51,9 +51,8 @@ teaching:
 
 startup_videos: [metropia-what-is, metropia-why-congestion, paydays-summary, metropia-kgun]
 startup_media:
-  - { date: 2015-04, note: "current site dates this 2015/8; URL says 2015/04", label: "Arizona Daily Wildcat: New app to aid traffic flow", url: "http://www.wildcat.arizona.edu/article/2015/04/new-app-to-aid-traffic-flow" }
+  - { date: 2015-04, note: "current site dates this 2015/8; URL says 2015/04", label: "Arizona Daily Wildcat: New app to aid traffic flow", url: "https://wildcat.arizona.edu/123005/uncategorized/new-app-to-aid-traffic-flow/" }
   - { date: 2013-09, label: "KGUN-9: No more traffic jams, UA startup designs new mobile app", url: "https://www.youtube.com/watch?v=9bgigTEgaHc" }
-  - { date: 2013-09, label: "Startup Tucson: Mobile traffic app from Tucson startup brings new solution for congestion", url: "http://startuptucson.com/2013/mobile-%C2%ADtraffic-%C2%ADapp%C2%AD-from-%C2%ADtucson%C2%AD-startup%C2%AD-brings-%C2%ADnew%C2%AD-solution-%C2%ADfor%C2%AD-congestion/" }
 ---
 
 Dr. Xianbiao (XB) Hu is an Associate Professor of Transportation Engineering at Penn State and
