@@ -1,10 +1,10 @@
 ---
 // A row of photos with optional captions and credits.
 interface Photo { src: string; alt: string; caption?: string; credit?: string }
-interface Props { photos: Photo[]; columns?: number }
-const { photos, columns } = Astro.props;
+interface Props { photos: Photo[]; columns?: number; wide?: boolean }
+const { photos, columns, wide = false } = Astro.props;
 ---
-<div class="photo-strip" style={columns ? `--cols: ${columns}` : undefined}>
+<div class:list={["photo-strip", { "photo-strip--wide": wide }]} style={columns ? `--cols: ${columns}` : undefined}>
   {photos.map((p) => (
     <figure>
       <img src={p.src} alt={p.alt} loading="lazy" />
