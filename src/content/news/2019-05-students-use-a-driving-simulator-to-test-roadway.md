@@ -6,5 +6,5 @@ tags:
 links:
 - label: CE News
   url: >-
-    https://csengineermag.com/students-use-a-driving-simulator-to-test-roadway-design-before-construction/
+    https://zweiglist.com/students-use-a-driving-simulator-to-test-roadway-design-before-construction/
 ---
