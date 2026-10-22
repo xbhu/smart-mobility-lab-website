@@ -1,5 +1,5 @@
 ---
-// Renders a video entry: click-to-load YouTube, a local loop, or a plain link.
+// Renders a video entry: click-to-load YouTube, a site-hosted video (silent loop or player), or a link.
 import { youtubeThumb } from "../lib/site";
 interface Props { video: { id: string; data: any }; caption?: boolean }
 const { video, caption = true } = Astro.props;
@@ -18,7 +18,11 @@ const isLocalFile = typeof v.url === "string" && v.url.startsWith("/");
   </div>
 ) : isLocalFile ? (
   <div class="media-frame">
-    <video src={v.url} muted loop playsinline autoplay preload="metadata" aria-label={v.title}></video>
+    {v.loop ? (
+      <video src={v.url} poster={v.poster} muted loop playsinline autoplay preload="metadata" aria-label={v.title}></video>
+    ) : (
+      <video src={v.url} poster={v.poster} controls playsinline preload="none" aria-label={v.title}></video>
+    )}
   </div>
 ) : v.url ? (
   <p><a href={v.url}>Watch: {v.title}</a></p>

@@ -163,6 +163,8 @@ const videos = defineCollection({
     start: z.number().int().optional(),
     url: z.string().optional(), // absolute URL or a site path such as /media/loops/x.mp4
     local: z.string().optional(),
+    poster: z.string().optional(), // still shown before a site-hosted video plays
+    loop: z.boolean().optional(), // true: silent autoplay loop; otherwise a player with controls
     date: z.union([yearMonth, z.date()]).optional(),
     source: z.enum(["lab", "psu", "partner", "media"]),
     thrusts: z.array(thrustId),
