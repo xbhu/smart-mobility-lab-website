@@ -249,6 +249,12 @@ a.person:hover .person-name { text-decoration: underline; text-decoration-thickn
 .person-role { font-size: 0.95rem; color: var(--muted); display: block; margin: 2px 0 6px; }
 .person-short { font-size: 0.98rem; display: block; }
 
+/* People page: centered groups */
+.people-group { text-align: center; }
+.people-group .people { display: flex; flex-wrap: wrap; justify-content: center; }
+.people-group .person { width: 240px; }
+@media (max-width: 560px) { .people-group .person { width: min(100%, 300px); } }
+
 .alumni-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
 .alumni-table th { font: 700 0.9rem var(--font-sign); color: var(--muted); text-align: left; padding: 8px 12px 8px 0; border-bottom: 2px solid var(--navy); }
 .alumni-table td { padding: 12px 12px 12px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
