@@ -21,7 +21,7 @@ positions:
 apply:
   email: xbhu@psu.edu
   email_checklist:
-    - "Subject line: [Prospective PhD | Postdoc | Visitor] – Your name"
+    - "Subject line: [Prospective Ph.D. | Postdoc | Visitor] – Your name"
     - Your CV
     - Which of our four thrusts fits you, and why, in two or three sentences
     - One piece of work you are proud of (paper, code repository, or project) with a link
@@ -32,8 +32,8 @@ apply:
 ## What working here looks like
 
 Ph.D. students in the lab work on problems that sponsors care about and that can be tested on real
-hardware: our full-size autonomous vehicle, the LTI test track, and the driving simulator. We ask
-students to publish the code behind each paper on GitHub using the lab's repository template, so
+hardware: our full-size autonomous vehicle, the Larson Transportation Institute (LTI) test track, and the driving simulator. We ask
+students to publish the code behind each paper on GitHub using the lab’s repository template, so
 the work stays citable and reusable after graduation.
 
 Our Ph.D. graduates and postdocs have gone on to tenure-track faculty positions at Old Dominion
@@ -50,5 +50,5 @@ on active grants, so please email first.
 
 **Can I visit or talk to current students?** Yes. Ask in your email and we will connect you.
 
-**Do you accept master's students?** Thesis-option M.S. students are considered case by case,
+**Do you accept master’s students?** Thesis-option M.S. students are considered case by case,
 usually when they bring their own funding or fit an active project.
