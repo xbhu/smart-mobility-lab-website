@@ -6,6 +6,7 @@ start: '2023'
 short: Human factors of driver interaction with automated vehicles. Co-advised with Dr. Yiqi Zhang (Industrial and Manufacturing Engineering).
 thrusts:
 - automated-driving
+order: 1
 photo: /media/people/book-chen.jpg
 bio_draft: true
 ---
