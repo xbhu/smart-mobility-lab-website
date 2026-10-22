@@ -3,7 +3,7 @@ name: Tianjia Yang
 role: postdoc
 status: current
 start: 2024-06
-short: AI for automated vehicles, including reinforcement learning control and lane keeping assistance; leads the lab's PA DEP zero-emission truck program.
+short: AI for automated vehicles; leads the lab's PA DEP zero-emission truck program.
 thrusts:
 - automated-driving
 - electrification
