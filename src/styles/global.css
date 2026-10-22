@@ -253,7 +253,10 @@ a.person:hover .person-name { text-decoration: underline; text-decoration-thickn
 .people-group { text-align: center; }
 .people-group .people { display: flex; flex-wrap: wrap; justify-content: center; }
 .people-group .person { width: 240px; }
-@media (max-width: 560px) { .people-group .person { width: min(100%, 300px); } }
+@media (max-width: 560px) {
+  .people-group .people { gap: 28px 16px; }
+  .people-group .person { width: calc(50% - 8px); }
+}
 
 .alumni-table { width: 100%; border-collapse: collapse; font-size: 1rem; }
 .alumni-table th { font: 700 0.9rem var(--font-sign); color: var(--muted); text-align: left; padding: 8px 12px 8px 0; border-bottom: 2px solid var(--navy); }
