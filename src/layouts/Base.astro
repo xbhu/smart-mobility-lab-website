@@ -30,7 +30,7 @@ const ogImage = new URL(image ?? site.hero.image, Astro.site).toString();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={desc} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    {path === "/404" ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />}
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={desc} />
     <meta property="og:image" content={ogImage} />
