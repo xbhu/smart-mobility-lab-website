@@ -296,6 +296,16 @@ a.person:hover .person-name { text-decoration: underline; text-decoration-thickn
 .service-org { line-height: 1.45; }
 .service-years { font: 700 0.88rem var(--font-sign); color: var(--muted); }
 
+/* Collapsible sections (thrust publications) */
+.collapsible { border-top: 4px solid var(--navy); }
+.collapsible summary { cursor: pointer; list-style: none; display: grid; grid-template-columns: 1fr auto; gap: 4px 20px; padding: 18px 0; }
+.collapsible summary::-webkit-details-marker { display: none; }
+.collapsible summary::after { content: "+"; grid-row: 1 / span 2; grid-column: 2; align-self: center; font: 800 1.8rem / 1 var(--font-sign); color: var(--navy); }
+.collapsible[open] summary::after { content: "\2212"; }
+.collapsible-title { font: 800 clamp(1.4rem, 2.4vw, 1.8rem) var(--font-sign); color: var(--navy); }
+.collapsible-sub { color: var(--muted); }
+.collapsible .pubs { margin-top: 8px; }
+
 /* Collapsible story (PI page) */
 .startup { border-top: 4px solid var(--navy); padding-top: 4px; }
 .startup summary { cursor: pointer; list-style: none; display: grid; grid-template-columns: 1fr auto; gap: 4px 20px; padding: 16px 0; }
