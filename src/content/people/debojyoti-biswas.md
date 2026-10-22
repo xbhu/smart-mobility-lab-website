@@ -7,6 +7,7 @@ end: 2026-08
 current_position: Tenure-Track Assistant Professor, Youngstown State University
 current_url: https://ysu.edu/people/debojyoti-biswas
 featured: true
+faculty: true
 thrusts:
 - automated-driving
 order: -1

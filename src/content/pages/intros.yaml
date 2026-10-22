@@ -17,6 +17,8 @@ people:
     - { id: director, roles: [pi], label: Director }
     - { id: postdocs, roles: [postdoc], label: Postdoctoral Scholars }
     - { id: students, roles: [phd, deng, ms, undergrad], label: Students }
+  faculty_heading: Alumni in faculty positions
+  faculty_lead: Lab alumni who now lead their own research groups and classrooms.
   alumni_lead: >-
     Our alumni include tenure-track faculty, industry engineers, and researchers in the U.S. and abroad.
   honors_heading: Student honors

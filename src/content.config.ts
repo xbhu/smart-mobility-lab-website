@@ -64,6 +64,8 @@ const people = defineCollection({
     photo: z.string(),
     page: z.string().optional(),
     profile: z.boolean().optional(),
+    // Alumni now in faculty positions; highlighted on the People page.
+    faculty: z.boolean().optional(),
     // Manual tie-breaker within a role on the People page: lower first, default 0.
     order: z.number().optional(),
     author_aliases: z.array(z.string()).optional(),

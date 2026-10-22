@@ -2,7 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import PersonCard from "../../components/PersonCard.astro";
 import { getCollection, getEntry } from "astro:content";
-import { intros, hasProfile, years, ALUMNI_ROLE_LABEL } from "../../lib/site";
+import { intros, hasProfile, years, initials, publicFileExists, ALUMNI_ROLE_LABEL } from "../../lib/site";
 
 const people = await getCollection("people");
 const familyName = (name: string) => name.replace(/\s*\(.*?\)/g, "").trim().split(/\s+/).pop() ?? name;
@@ -35,6 +35,10 @@ const alumni = people
     String(a.data.end ?? "").localeCompare(String(b.data.end ?? "")) ||
     String(a.data.start ?? "").localeCompare(String(b.data.start ?? "")),
   );
+// Faculty alumni, most recent first.
+const faculty = alumni
+  .filter((p) => p.data.faculty)
+  .sort((a, b) => String(b.data.end ?? "").localeCompare(String(a.data.end ?? "")));
 const honors = await Promise.all(
   intros.people.honors.map(async (h: any) => ({ ...h, person: await getEntry("people", h.person) })),
 );
@@ -56,6 +60,29 @@ const honors = await Promise.all(
     </section>
   ))}
 
+  {faculty.length > 0 && (
+    <section class="section section--navy" aria-labelledby="faculty-title">
+      <div class="wrap">
+        <h2 id="faculty-title">{intros.people.faculty_heading}</h2>
+        <p>{intros.people.faculty_lead}</p>
+        <ul class="faculty-alumni">
+          {faculty.map((p) => (
+            <li>
+              <span class="faculty-photo">
+                {publicFileExists(p.data.photo) ? <img src={p.data.photo} alt="" /> : <span aria-hidden="true">{initials(p.data.name)}</span>}
+              </span>
+              <div>
+                <p class="faculty-name">{hasProfile(p) ? <a href={`/people/${p.id}`}>{p.data.name}</a> : p.data.name}</p>
+                <p class="faculty-now">{p.data.current_url ? <a href={p.data.current_url}>{p.data.current_position}</a> : p.data.current_position}</p>
+                <p class="faculty-was">{ALUMNI_ROLE_LABEL[p.data.role]}, {years(p.data.start, p.data.end)}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
   <section class="section" id="alumni" aria-labelledby="alumni-title">
     <div class="wrap">
       <h2 id="alumni-title">Alumni</h2>
@@ -67,7 +94,10 @@ const honors = await Promise.all(
             <tr>
               <td>{hasProfile(p) ? <a href={`/people/${p.id}`}>{p.data.name}</a> : p.data.name}</td>
               <td>{ALUMNI_ROLE_LABEL[p.data.role]}, {years(p.data.start, p.data.end)}</td>
-              <td>{p.data.current_url ? <a href={p.data.current_url}>{p.data.current_position}</a> : (p.data.current_position ?? p.data.note ?? "")}</td>
+              <td>
+                {p.data.faculty && <span class="tag-faculty">Faculty</span>}
+                {p.data.current_url ? <a href={p.data.current_url}>{p.data.current_position}</a> : (p.data.current_position ?? p.data.note ?? "")}
+              </td>
             </tr>
           ))}
         </tbody>

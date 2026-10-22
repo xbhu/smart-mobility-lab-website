@@ -7,6 +7,7 @@ end: '2023'
 current_position: Tenure-Track Assistant Professor, Old Dominion University
 current_url: https://www.odu.edu/directory/qing-tang
 featured: true
+faculty: true
 thrusts:
 - work-zone-automation
 - automated-driving
