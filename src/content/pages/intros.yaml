@@ -77,7 +77,7 @@ projects:
       url: https://dep.mobilitypsu.com
       text: Data and analysis for Pennsylvania's medium- and heavy-duty zero-emission vehicle program.
     - name: ATMA field dataset (USDOT SMART)
-      url: https://doi.org/10.21949/53ca-8v96
+      url: https://rosap.ntl.bts.gov/view/dot/87547
       text: Field data from ATMA deployments in Colorado, Minnesota, Wisconsin, and Oklahoma.
     - name: Lab code on GitHub
       url: https://github.com/xbhu

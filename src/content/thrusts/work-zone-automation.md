@@ -39,7 +39,7 @@ featured_papers: [av-atma-field-testing-trr-2021, atma-toolkit-usdot-2025, tang-
 videos: [atma-cdot-unveiling, atma-abc-news, atma-modot-field-test, atma-cda-simulation, trb-atma-webinar]
 resources:
   - label: "USDOT SMART dataset: ATMA field data from Colorado, Minnesota, Wisconsin, and Oklahoma"
-    url: https://doi.org/10.21949/53ca-8v96
+    url: https://rosap.ntl.bts.gov/view/dot/87547
   - label: "TRB webinar slides: Saving Lives with Autonomous Truck Mounted Attenuator Systems (2022)"
     url: https://onlinepubs.trb.org/onlinepubs/webinars/220614.pdf
 collaborate: >-
