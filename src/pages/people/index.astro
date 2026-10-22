@@ -1,4 +1,5 @@
 ---
+import PhotoStrip from "../../components/PhotoStrip.astro";
 import Base from "../../layouts/Base.astro";
 import PersonCard from "../../components/PersonCard.astro";
 import { getCollection, getEntry } from "astro:content";
@@ -50,6 +51,10 @@ const honors = await Promise.all(
       <p class="lede">{intros.people.lead}</p>
     </div>
   </header>
+
+  <div class="wrap" style="margin-bottom: 40px">
+    <PhotoStrip wide columns={1} photos={[{ src: "/media/photos/ite-visit-group-wide.jpg", alt: "A group of lab members and visitors standing on either side of the lab's automated vehicle in a parking lot", caption: "Lab members and visitors from the Penn State ITE student chapter with our automated vehicle, February 2024." }]} />
+  </div>
 
   {groups.map((g: any, i: number) => (
     <section class:list={["section", { "section--concrete": i % 2 === 1 }]} style="padding-block: 48px" aria-labelledby={`g-${g.id}`}>
