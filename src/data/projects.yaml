@@ -39,7 +39,7 @@
   institution: psu
   kind: external
   thrusts: [automated-driving, system-modeling]
-  tool: https://penndot.mobilitypsu.com
+  tool: http://penndot.mobilitypsu.com
   featured: true
 
 - id: usdot-smart-atma

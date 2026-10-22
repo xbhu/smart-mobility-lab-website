@@ -71,7 +71,7 @@ projects:
   tools_heading: Tools and data
   tools:
     - name: PennDOT road friction project
-      url: https://penndot.mobilitypsu.com
+      url: http://penndot.mobilitypsu.com
       text: Project site for friction factor interpolation and forecasting.
     - name: PA DEP zero-emission vehicle dashboard
       url: https://dep.mobilitypsu.com

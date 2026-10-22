@@ -47,7 +47,7 @@ featured_papers: [pan-fluid-queue-trc-2026, tang-bus-lane-discharge-trb-2021, so
 videos: []
 resources:
   - label: PennDOT road friction project site
-    url: https://penndot.mobilitypsu.com
+    url: http://penndot.mobilitypsu.com
 collaborate: >-
   Our models help agencies evaluate operational strategies, such as lane conversions, before they
   build them, and get more out of the connected vehicle data they already receive.
