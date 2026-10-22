@@ -38,7 +38,7 @@ const honors = await Promise.all(
 
   {groups.map((g: any, i: number) => (
     <section class:list={["section", { "section--concrete": i % 2 === 1 }]} style="padding-block: 48px" aria-labelledby={`g-${g.id}`}>
-      <div class="wrap">
+      <div class="wrap people-group">
         <h2 id={`g-${g.id}`}>{g.label}</h2>
         <div class="people">{g.members.map((p: any) => <PersonCard person={p} />)}</div>
       </div>
