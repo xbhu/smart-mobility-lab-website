@@ -41,9 +41,8 @@
     campus. USDOT designated it as one of 10 Automated Vehicle Proving Grounds in the country, which
     lets us move from simulation to closed-course testing before any public-road trial.
   photos:
-    - src: https://sites.psu.edu/xbhu/files/2021/09/Test-Track-overhead-entrance-road-labeled-copy-1024x608.jpeg
+    - src: /media/photos/test-track-overhead.jpg
       alt: Overhead view of the LTI test track
-      replace: Need an unlabeled, higher-resolution aerial photo.
   link: https://www.larson.psu.edu/
   videos: [neeli-av-demo]
 
@@ -56,10 +55,10 @@
     surrounding traffic, and Autoware and CARMA run the automation stack, so mixed human–automated
     traffic and cooperative driving automation can be studied before field testing.
   photos:
-    - src: https://sites.psu.edu/xbhu/files/2021/09/51733769824_e6445de896_o-1-1917x1278.jpg
+    - src: /media/photos/simulator-session.jpg
       alt: Driving simulator in use
-    - src: https://sites.psu.edu/xbhu/files/2021/09/WechatIMG21-1702x1134.jpeg
+    - src: /media/photos/simulator-cockpit.jpg
       alt: Driving simulator cockpit
-    - src: https://sites.psu.edu/xbhu/files/2022/02/51732296272_f1060a7b8b_o-1917x1278.jpg
+    - src: /media/photos/simulator-wheel.jpg
       alt: Driving simulator session
   videos: [atma-cda-simulation]

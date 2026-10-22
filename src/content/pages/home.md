@@ -24,7 +24,7 @@ sections:
         text: >-
           Our Kansas City study of curbside charging from existing streetlights was covered by Penn
           State News, Tech Briefs, Yahoo, MSN, and outlets in China and India in October 2025.
-        image: https://sites.psu.edu/xbhu/files/2022/02/EV-Charging-1024x683.jpeg
+        image: /media/photos/ev-streetlight-pole.jpg
         image_alt: An electric vehicle charging from a streetlight-mounted charger in Kansas City
         href: /news#2025-10-streetlight-ev-charging-research-draws-national
       - title: President Bendapudi rides with our students
