@@ -43,6 +43,11 @@ const thrusts = defineCollection({
     featured_papers: z.array(reference("papers")),
     videos: z.array(reference("videos")),
     facilities: z.array(reference("facilities")).optional(),
+    // Sponsored projects on the thrust page (external only): projects_first in the given order,
+    // then external projects from projects_also_from thrusts, then this thrust's other external
+    // projects; each group newest first.
+    projects_first: z.array(reference("projects")).optional(),
+    projects_also_from: z.array(thrustId).optional(),
     resources: z.array(link).optional(),
     collaborate: z.string(),
   }),
