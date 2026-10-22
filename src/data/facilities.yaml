@@ -43,6 +43,16 @@
   photos:
     - src: /media/photos/test-track-overhead.jpg
       alt: Overhead view of the LTI test track
+    - src: /media/photos/av-front-view-test-track.jpg
+      alt: The lab's automated vehicle on a curve of the test track
+    - src: /media/news/2024-06-president-visit-vehicle.jpg
+      alt: Lab members and Penn State President Neeli Bendapudi at the open rear of the automated vehicle on the test track
+    - src: /media/news/2024-06-president-visit-students.jpg
+      alt: President Bendapudi talking with students on the test track
+    - src: /media/news/2024-06-president-visit-handshake.jpg
+      alt: Lab members explaining the automated vehicle to visitors on the test track
+    - src: /media/news/2024-06-president-visit-group.jpg
+      alt: Lab members and Larson Transportation Institute staff in front of the Penn State trolley at the test track
   link: https://www.larson.psu.edu/
   videos: [neeli-av-demo]
 
