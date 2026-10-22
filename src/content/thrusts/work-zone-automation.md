@@ -19,7 +19,7 @@ gallery:
     caption: The lead truck and the driverless follow truck, from a drone.
     credit: Royal Truck & Equipment
   - src: /media/news/2025-10-royal-truck-yuxin-chenxi.jpg
-    alt: Ph.D. students Yuxin Ding and Chenxi Chen working on a laptop in the driver's seat of the lab's automated vehicle
+    alt: Yuxin Ding and Chenxi Chen working on a laptop in the driver’s seat of the lab’s automated vehicle
     caption: Yuxin Ding and Chenxi Chen developing LiDAR SLAM for the follow truck.
 subtopics:
   - id: field-evaluation
@@ -40,7 +40,7 @@ subtopics:
   - id: resilience-localization
     name: Resilience and localization
     summary: >-
-      Keeping the follow truck on the lead truck's path when GPS degrades: LiDAR-based cooperative
+      Keeping the follow truck on the lead truck’s path when GPS degrades: LiDAR-based cooperative
       localization and, with Royal Truck, a LiDAR SLAM algorithm for the leader-follower system.
     papers: [ding-lidar-cooperative-localization-tits-2026]
   - id: operations
@@ -86,5 +86,5 @@ published the resulting field data with a citable DOI.
 
 ## Outreach
 
-Dr. Hu organized the TRB webinar "Saving Lives with Autonomous Truck Mounted Attenuator Systems"
+Dr. Hu organized the TRB webinar “Saving Lives with Autonomous Truck Mounted Attenuator Systems”
 (June 2022), with speakers from a state DOT, industry, and academia. It drew nearly 300 attendees.
