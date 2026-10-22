@@ -26,6 +26,11 @@ links:
   url: https://tech.ifeng.com/c/8nAaE6eUkJs
 - label: 新浪
   url: https://finance.sina.com.cn/tech/digi/2025-10-04/doc-infssrzs4429800.shtml
+images:
+- src: /media/photos/ev-streetlight-car.jpg
+  alt: An electric car charging from a streetlight-mounted charger on a town street
+- src: /media/photos/ev-streetlight-pole.jpg
+  alt: A streetlight pole with an EV charger mounted on it
 ---
 
 Our study of turning city streetlights into low-cost EV chargers was covered by Penn State News, Tech Briefs, Yahoo, MSN, Asianet, Newsbreak, ifeng, and Sina.

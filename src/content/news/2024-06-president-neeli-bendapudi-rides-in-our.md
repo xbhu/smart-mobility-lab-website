@@ -16,6 +16,11 @@ links:
     https://www.linkedin.com/posts/larson-transportation-institute_pennstate-autonomousvehicle-pennstatelti-activity-7212865598815379456-6LFT
 - label: Video
   url: https://www.youtube.com/watch?v=fCSTfLUYe-4
+images:
+- src: /media/news/2024-06-president-visit-vehicle.jpg
+  alt: Lab members and President Bendapudi at the open rear of the automated vehicle
+- src: /media/news/2024-06-president-visit-handshake.jpg
+  alt: President Bendapudi talking with students at the test track
 ---
 
 We hosted President Bendapudi and her executive team at the Larson Transportation Institute test track for a self-driving demo led by our students.

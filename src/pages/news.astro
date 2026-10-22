@@ -1,10 +1,13 @@
 ---
 import Base from "../layouts/Base.astro";
-import { getCollection, render } from "astro:content";
+import Video from "../components/Video.astro";
+import { getCollection, getEntry, render } from "astro:content";
 import { intros, formatDate } from "../lib/site";
 
 const news = (await getCollection("news")).sort((a, b) => String(b.data.date).localeCompare(String(a.data.date)));
-const rendered = await Promise.all(news.map(async (n) => ({ n, Content: (await render(n)).Content })));
+const rendered = await Promise.all(
+  news.map(async (n) => ({ n, Content: (await render(n)).Content, video: n.data.video ? await getEntry(n.data.video) : null })),
+);
 const byYear = new Map<string, typeof rendered>();
 for (const r of rendered) {
   const y = String(r.n.data.date).slice(0, 4);
@@ -25,13 +28,24 @@ for (const r of rendered) {
         <>
           <h2 class="year-head">{year}</h2>
           <ul class="news-list">
-            {items.map(({ n, Content }) => (
+            {items.map(({ n, Content, video }) => (
               <li class="news-item" id={n.id}>
                 <span class="news-date">{formatDate(n.data.date)}</span>
                 <div>
                   <p class="news-title">{n.data.title}</p>
                   {n.data.image && <img src={n.data.image} alt={n.data.image_alt ?? ""} loading="lazy" style="max-width: 520px; width: 100%; border-radius: 6px; margin: 10px 0 12px" />}
+                  {n.data.images && (
+                    <div class="news-photos">
+                      {n.data.images.map((im) => (
+                        <figure>
+                          <img src={im.src} alt={im.alt} loading="lazy" />
+                          {im.credit && <figcaption>Photo: {im.credit}</figcaption>}
+                        </figure>
+                      ))}
+                    </div>
+                  )}
                   <Content />
+                  {video && <div class="news-video"><Video video={video} /></div>}
                   {n.data.links && (
                     <p class="news-links">{n.data.links.map((l) => <a href={l.url}>{l.label}</a>)}</p>
                   )}
