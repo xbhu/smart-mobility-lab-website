@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Preview domain; change to https://lab.mobilitypsu.com at launch.
-      SITE_URL: https://new.mobilitypsu.com
+      SITE_URL: https://lab.mobilitypsu.com
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-node@v5
