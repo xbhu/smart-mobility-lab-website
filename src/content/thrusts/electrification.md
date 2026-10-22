@@ -35,7 +35,7 @@ subtopics:
       responders who work with zero-emission trucks.
     papers: []
 featured_papers: [song-visionev-trd-2026, hong-ev-infrastructure-investment-trd-2026, pan-streetlight-charging-jupd-2025, song-charging-station-location-trd-2023]
-videos: []
+videos: [ev-cold-weather-fox43]
 resources:
   - label: PA DEP medium- and heavy-duty ZEV program dashboard
     url: https://dep.mobilitypsu.com

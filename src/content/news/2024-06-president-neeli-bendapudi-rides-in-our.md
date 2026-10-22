@@ -7,7 +7,7 @@ tags:
 thrusts:
 - automated-driving
 featured: true
-video: fCSTfLUYe-4
+video: neeli-av-demo
 links:
 - label: Penn State Research Q&A
   url: https://www.psu.edu/news/engineering/story/qa-xianbiao-hu-driving-transportation-research-forward/

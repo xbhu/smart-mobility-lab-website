@@ -31,7 +31,7 @@
       alt: Test run on the track with a safety driver and an operator
     - src: /media/photos/av-students-in-vehicle.jpg
       alt: Lab members in the driver and passenger seats
-  videos: [lidar-perception-loop, av-lidar-camera-demo, av-waypoint-following, av-drive-by-wire, av-vru-detection]
+  videos: [lidar-perception-loop, av-lidar-camera-demo, av-carma-demo, av-waypoint-following, av-drive-by-wire]
 
 - id: test-track
   name: LTI test track
