@@ -4,9 +4,8 @@ order: 3
 tagline: Where EV charging is needed, who invests in it, and how fleets make the switch, using AI from machine learning to multimodal LLMs.
 keywords: [charging demand, charging station location, streetlight charging, medium- and heavy-duty ZEV, multimodal LLM]
 hero:
-  image: https://sites.psu.edu/xbhu/files/2022/02/EV-Charging-1024x683.jpeg
+  image: /media/photos/ev-streetlight-car.jpg
   image_alt: An electric vehicle charging from a retrofitted streetlight in Kansas City
-  image_replace: Need a higher-resolution original (current file is 1024 px wide).
 subtopics:
   - id: demand-behavior
     name: Charging demand and driver behavior

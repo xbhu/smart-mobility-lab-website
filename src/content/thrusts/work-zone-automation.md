@@ -4,9 +4,12 @@ order: 2
 tagline: Driverless follow trucks that take highway maintenance workers out of the crash zone.
 keywords: [leader-follower CDA, autonomous truck mounted attenuator, field evaluation, operational design domain, deployment guidelines]
 hero:
-  image: https://sites.psu.edu/xbhu/files/2022/03/ATMA-Missouri.png
-  image_alt: Lead truck and driverless follow truck with a truck mounted attenuator during a Missouri DOT field test
+  image: /media/photos/atma-hero.jpg
+  image_alt: A driverless truck mounted attenuator truck at a live demonstration, with state DOT observers beside the roadway
   video: atma-cdot-unveiling
+card:
+  image: /media/photos/atma-aerial.jpg
+  alt: Aerial view of a lead truck and a driverless follow truck on a suburban road
 subtopics:
   - id: field-evaluation
     name: Field testing and evaluation
