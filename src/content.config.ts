@@ -32,6 +32,8 @@ const thrusts = defineCollection({
     }),
     // Image for the thrust card on /research and the home page; falls back to hero.image.
     card: z.object({ image: z.string(), alt: z.string() }).optional(),
+    // Photos shown under the "why it matters / what we do" text.
+    gallery: z.array(z.object({ src: z.string(), alt: z.string(), caption: z.string().optional(), credit: z.string().optional() })).optional(),
     subtopics: z.array(
       z.object({
         id: z.string(),
