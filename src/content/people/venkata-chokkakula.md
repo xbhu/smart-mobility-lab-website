@@ -5,5 +5,5 @@ status: alumni
 start: '2018'
 end: '2019'
 photo: /media/people/venkata-chokkakula.jpg
-note: Missouri S&T.
+note: Missouri S&T
 ---

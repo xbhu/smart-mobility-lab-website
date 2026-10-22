@@ -39,7 +39,7 @@ subtopics:
   - id: behavior-demand
     name: Travel behavior and demand management
     summary: >-
-      How information and incentives change travel choices, built on Dr. Hu's work at Metropia on
+      How information and incentives change travel choices, built on Dr. Hu’s work at Metropia on
       incentive-based active demand management and on telematics-based driving risk for usage-based
       insurance.
     papers: [hu-departure-time-ijst-2020, tang-atdm-review-atpp-2019, hu-capacity-reduction-gps-jits-2019, ma-ubi-rate-making-tra-2018]

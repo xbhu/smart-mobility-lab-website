@@ -5,7 +5,7 @@ tagline: AI for automated vehicles, from deep learning to large language and vis
 keywords: [perception, cooperative localization, lane topology, motion prediction, trajectory control, LLM, VLM, agentic AI]
 hero:
   image: /media/thrusts/automated-driving.jpg
-  image_alt: The lab's wrapped automated vehicle on the LTI test track beside a no-passing-zone sign
+  image_alt: The lab’s wrapped automated vehicle on the LTI test track beside a no-passing-zone sign
   video: av-carma-campus
 gallery:
   - src: /media/photos/av-roof-camera.jpg

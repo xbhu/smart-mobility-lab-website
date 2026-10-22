@@ -17,5 +17,5 @@ author_aliases:
 - Qing Tang
 - Q. Tang
 - Tang, Q.
-note: Postdoc at Georgia Tech after graduation.
+note: Postdoc at Georgia Tech after graduation
 ---

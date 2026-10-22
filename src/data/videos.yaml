@@ -23,7 +23,7 @@
   date: 2022-09
   local: "videos/4 Autonomous Vehicle Demo with Sensor Data Visualization.mp4"
   note: >-
-    Includes Senator Langerholc's ride (September 2022). The local file is probably the same demo
+    Includes Senator Langerholc’s ride (September 2022). The local file is probably the same demo
     (Autoware RViz view, 1276x720, 3:21); confirm.
   source: lab
   thrusts: [automated-driving]
@@ -66,7 +66,7 @@
   use: [hero-candidate, facilities]
 
 - id: atma-cdot-unveiling
-  title: Colorado DOT unveils the world's first self-driving work zone vehicle
+  title: Colorado DOT unveils the world’s first self-driving work zone vehicle
   youtube: null
   url: /media/videos/atma-cdot-unveiling.mp4
   poster: /media/videos/atma-cdot-unveiling-poster.jpg
@@ -195,7 +195,7 @@
   featured: true
   use: [thrust-work-zone-automation]
   note: >-
-    Best ATMA footage we have (drone shots of the driverless TMA truck, 720p). It carries Royal Truck's
+    Best ATMA footage we have (drone shots of the driverless TMA truck, 720p). It carries Royal Truck’s
     watermark and inset, so it is shown with a credit line. Ask Royal for permission to use it and for a clean original.
 
 - id: av-carma-demo
@@ -222,5 +222,5 @@
   thrusts: [electrification]
   use: [thrust-electrification, news]
   note: >-
-    Broadcast segment hosted with the station credit. Rehosting TV footage is the station's call;
+    Broadcast segment hosted with the station credit. Rehosting TV footage is the station’s call;
     if FOX43 objects, replace this with a link to the article.

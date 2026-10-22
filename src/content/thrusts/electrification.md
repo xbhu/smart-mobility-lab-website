@@ -30,8 +30,8 @@ subtopics:
   - id: fleet-electrification
     name: Medium- and heavy-duty fleet electrification
     summary: >-
-      Technical support for Pennsylvania DEP's zero-emission truck programs, electrification of terminal
-      trucks in freight yards, Penn State's own zero-emission fleet, and DOE-funded training for emergency
+      Technical support for Pennsylvania DEP’s zero-emission truck programs, electrification of terminal
+      trucks in freight yards, Penn State’s own zero-emission fleet, and DOE-funded training for emergency
       responders who work with zero-emission trucks.
     papers: []
 featured_papers: [song-visionev-trd-2026, hong-ev-infrastructure-investment-trd-2026, pan-streetlight-charging-jupd-2025, song-charging-station-location-trd-2023]
