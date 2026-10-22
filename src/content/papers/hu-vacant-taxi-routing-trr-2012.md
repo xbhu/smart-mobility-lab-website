@@ -17,7 +17,6 @@ doi: 10.3141/2284-10
 thrusts:
 - system-modeling
 subtopic: behavior-demand
-code: https://bitbucket.org/xbhu/taxi-driver-behavior-modeling
 verified: cv-2026-09-27
 status: published
 ---
