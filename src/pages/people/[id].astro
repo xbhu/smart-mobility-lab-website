@@ -21,7 +21,8 @@ const pi: any = piPage?.data ?? {};
 const papers = (await getCollection("papers"))
   .filter((p) => p.data.authors.some((a) => a.person?.id === person.id))
   .sort((a, b) => b.data.year - a.data.year);
-const shown = isPI ? papers.filter((p) => p.data.featured) : papers;
+// The PI page links to /publications instead of repeating a paper list.
+const shown = isPI ? [] : papers;
 const startupVideos = isPI && pi.startup_videos ? await getEntries(pi.startup_videos.map((id: string) => ({ collection: "videos" as const, id }))) : [];
 const photo = publicFileExists(d.photo) ? d.photo : null;
 const role = isPI ? pi.role : d.status === "current" ? ROLE_LABEL[d.role] : `${ALUMNI_ROLE_LABEL[d.role]}, ${years(d.start, d.end)}`;
@@ -98,8 +99,7 @@ const thrusts = d.thrusts ? await Promise.all(d.thrusts.map((id) => getEntry("th
     <section class="section">
       <div class="wrap">
         <div class="section-head">
-          <h2>{isPI ? "Selected publications" : "Publications"}</h2>
-          {isPI && <a href="/publications">All publications</a>}
+          <h2>Publications</h2>
         </div>
         <ul class="pubs">{shown.map((p) => <PaperItem paper={p} />)}</ul>
       </div>
