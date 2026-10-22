@@ -14,6 +14,8 @@ const { person } = Astro.props;
 const d = person.data;
 const isPI = person.id === "xianbiao-hu";
 const piPage = isPI ? await getEntry("pages", "xianbiao-hu") : null;
+const startupPage = isPI ? await getEntry("pages", "xianbiao-hu-startup") : null;
+const Startup = startupPage ? (await render(startupPage)).Content : null;
 const { Content } = await render(isPI ? piPage! : person);
 const pi: any = piPage?.data ?? {};
 const papers = (await getCollection("papers"))
@@ -54,15 +56,6 @@ const thrusts = d.thrusts ? await Promise.all(d.thrusts.map((id) => getEntry("th
   <section class="section">
     <div class="wrap prose"><Content /></div>
   </section>
-
-  {startupVideos.length > 0 && (
-    <section class="section section--concrete">
-      <div class="wrap">
-        <h2>Metropia on video</h2>
-        <div class="video-grid">{startupVideos.map((v) => <div><Video video={v} /></div>)}</div>
-      </div>
-    </section>
-  )}
 
   {isPI && (
     <section class="section">
@@ -109,6 +102,31 @@ const thrusts = d.thrusts ? await Promise.all(d.thrusts.map((id) => getEntry("th
           {isPI && <a href="/publications">All publications</a>}
         </div>
         <ul class="pubs">{shown.map((p) => <PaperItem paper={p} />)}</ul>
+      </div>
+    </section>
+  )}
+  {isPI && Startup && (
+    <section class="section section--concrete">
+      <div class="wrap">
+        <details class="startup">
+          <summary>
+            <span class="startup-title">{(startupPage!.data as any).title}</span>
+            <span class="startup-summary">{(startupPage!.data as any).summary}</span>
+          </summary>
+          <div class="prose"><Startup /></div>
+          {startupVideos.length > 0 && (
+            <>
+              <h3>Metropia on video</h3>
+              <div class="video-grid">{startupVideos.map((v) => <div><Video video={v} /></div>)}</div>
+            </>
+          )}
+          {pi.startup_media && (
+            <>
+              <h3>In the press</h3>
+              <ul class="facts">{pi.startup_media.map((m: any) => <li><a href={m.url}>{m.label}</a></li>)}</ul>
+            </>
+          )}
+        </details>
       </div>
     </section>
   )}
