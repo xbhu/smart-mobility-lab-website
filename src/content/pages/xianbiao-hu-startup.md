@@ -3,8 +3,7 @@ title: From startup to academia
 summary: Before joining academia, XB spent six years (2011–2017) helping build Metropia, a University of Arizona spinoff.
 ---
 
-Before returning to academia, XB spent six years building Metropia, a University of Arizona spinoff
-that tried to reduce congestion by changing behavior instead of building roads. Metropia predicted
+Metropia tried to reduce congestion by changing behavior instead of building roads. Metropia predicted
 future traffic, offered travelers several departure times with predicted travel times, and rewarded
 them for choices that relieved congestion. A field study in Los Angeles showed promising behavior
 changes and travel time savings.
