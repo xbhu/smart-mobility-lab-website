@@ -3,6 +3,7 @@ import "@fontsource-variable/overpass/wght.css";
 import "@fontsource-variable/source-serif-4/opsz.css";
 import "@fontsource-variable/source-serif-4/opsz-italic.css";
 import "../styles/global.css";
+import { getCollection } from "astro:content";
 import { site } from "../lib/site";
 
 interface Props {
@@ -11,6 +12,11 @@ interface Props {
   image?: string;
 }
 const { title, description, image } = Astro.props;
+const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
+const researchMenu = [
+  ...thrusts.map((t) => ({ label: t.data.name, href: `/research/${t.id}` })),
+  { label: "Facilities", href: "/facilities", divider: true },
+];
 const pageTitle = title ? `${title} | ${site.full_name}` : site.seo.title;
 const desc = description ?? site.seo.description;
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
@@ -44,7 +50,19 @@ const ogImage = new URL(image ?? site.hero.image, Astro.site).toString();
         <nav class="nav" id="site-nav" aria-label="Main">
           <ul>
             {site.nav.map((item: { label: string; href: string }) => (
-              <li><a href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>{item.label}</a></li>
+              item.href === "/research" ? (
+                <li class="has-menu">
+                  <a href={item.href} aria-current={isActive(item.href) || isActive("/facilities") ? "page" : undefined}>{item.label}</a>
+                  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-research" aria-label="Research submenu"></button>
+                  <ul class="submenu" id="menu-research">
+                    {researchMenu.map((m: any) => (
+                      <li class:list={{ "submenu-divider": m.divider }}><a href={m.href} aria-current={isActive(m.href) ? "page" : undefined}>{m.label}</a></li>
+                    ))}
+                  </ul>
+                </li>
+              ) : (
+                <li><a href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>{item.label}</a></li>
+              )
             ))}
           </ul>
         </nav>
@@ -97,6 +115,16 @@ const ogImage = new URL(image ?? site.hero.image, Astro.site).toString();
         toggle.setAttribute("aria-expanded", String(open));
         nav?.setAttribute("data-open", String(open));
       });
+      // Research submenu: opens on hover/focus (CSS), on the arrow button, and closes on Esc or outside click.
+      const menuLi = document.querySelector<HTMLElement>(".has-menu");
+      const menuBtn = menuLi?.querySelector<HTMLButtonElement>(".menu-btn");
+      const setMenu = (open: boolean) => { menuBtn?.setAttribute("aria-expanded", String(open)); };
+      menuBtn?.addEventListener("click", () => setMenu(menuBtn.getAttribute("aria-expanded") !== "true"));
+      document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menuLi) { setMenu(false); menuLi.setAttribute("data-dismissed", ""); (menuLi.contains(document.activeElement) ? menuBtn : null)?.focus(); } });
+      menuLi?.addEventListener("mouseleave", () => menuLi.removeAttribute("data-dismissed"));
+      menuLi?.addEventListener("focusout", (e) => { if (!menuLi.contains(e.relatedTarget as Node)) menuLi.removeAttribute("data-dismissed"); });
+      menuBtn?.addEventListener("click", () => menuLi?.removeAttribute("data-dismissed"));
+      document.addEventListener("click", (e) => { if (menuLi && !menuLi.contains(e.target as Node)) setMenu(false); });
       // Click-to-load YouTube: the iframe (and YouTube's cookies) load only after a click.
       document.querySelectorAll<HTMLButtonElement>(".yt button[data-yt]").forEach((btn) => {
         btn.addEventListener("click", () => {
