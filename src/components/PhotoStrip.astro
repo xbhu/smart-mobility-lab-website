@@ -1,0 +1,16 @@
+---
+// A row of photos with optional captions and credits.
+interface Photo { src: string; alt: string; caption?: string; credit?: string }
+interface Props { photos: Photo[]; columns?: number }
+const { photos, columns } = Astro.props;
+---
+<div class="photo-strip" style={columns ? `--cols: ${columns}` : undefined}>
+  {photos.map((p) => (
+    <figure>
+      <img src={p.src} alt={p.alt} loading="lazy" />
+      {(p.caption || p.credit) && (
+        <figcaption>{p.caption}{p.caption && p.credit ? " " : ""}{p.credit && <span class="media-credit">Photo: {p.credit}</span>}</figcaption>
+      )}
+    </figure>
+  ))}
+</div>

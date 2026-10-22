@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import Video from "../../components/Video.astro";
 import PaperItem from "../../components/PaperItem.astro";
+import PhotoStrip from "../../components/PhotoStrip.astro";
 import { getCollection, getEntry, getEntries, render } from "astro:content";
 import { years } from "../../lib/site";
 import { thrustProjects } from "../../lib/thrust";
@@ -47,6 +48,7 @@ const bg = (key: string) => (shown.indexOf(key) % 2 === 1 ? "section section--co
 
   <section class={bg("content")}>
     <div class="wrap prose"><Content /></div>
+    {t.gallery && t.gallery.length > 0 && <div class="wrap"><PhotoStrip photos={t.gallery} /></div>}
   </section>
 
   <section class={bg("sub")} aria-labelledby="sub-title">

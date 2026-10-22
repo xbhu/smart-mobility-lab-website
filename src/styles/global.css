@@ -382,3 +382,11 @@ a.person:hover .person-name { text-decoration: underline; text-decoration-thickn
 }
 
 .media-credit { margin: 4px 0 0; font-size: 0.82rem; color: var(--muted); }
+
+/* ---------- Photo strips ---------- */
+.photo-strip { display: grid; grid-template-columns: repeat(var(--cols, auto-fit), minmax(220px, 1fr)); gap: 12px; margin-top: 32px; }
+.photo-strip figure { margin: 0; }
+.photo-strip img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 6px; background: #dfe3e8; }
+.photo-strip figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 6px; line-height: 1.4; }
+.photo-strip .media-credit { display: block; margin: 0; }
+@media (max-width: 760px) { .photo-strip { grid-template-columns: 1fr 1fr; } }
