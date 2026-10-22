@@ -18,15 +18,15 @@ timeline:
   - { years: "2009", place: Tongji University, role: "M.S., Transportation Engineering" }
   - { years: "2006", place: Tongji University, role: "B.S., Transportation Engineering" }
 
-service_selected:
-  - Managing Editor, Journal of Intelligent Transportation Systems
-  - Associate Editor, IEEE Transactions on Intelligent Transportation Systems; IEEE Electrification Magazine; Transportation Research Record; International Journal of Transportation Science and Technology
-  - Chair, IEEE ITSS Technical Committee on Intelligent Electrified Mobility Operations and Infrastructure (E-Mobility)
-  - Representative and voting member, IEEE Transportation Electrification Council (for IEEE ITSS)
-  - Research Coordinator and Paper Review Coordinator, TRB Committee on Maintenance and Operations Management (AKR10), 2021–2025
-  - Member, TRB Standing Committee on Maintenance Management (AKJ14), 2025–2028
-  - Board of Directors, Chinese Overseas Transportation Association (COTA)
-  - Penn State Representative, Smart Belt Coalition, 2023–present
+service:
+  - { role: Managing Editor, org: Journal of Intelligent Transportation Systems, featured: true }
+  - { role: Chair, org: "IEEE ITSS Technical Committee on Intelligent Electrified Mobility Operations and Infrastructure (E-Mobility)", featured: true }
+  - { role: Associate Editor, org: "IEEE Transactions on Intelligent Transportation Systems; IEEE Electrification Magazine; Transportation Research Record; International Journal of Transportation Science and Technology", featured: true }
+  - { role: Representative and voting member, org: "IEEE Transportation Electrification Council (for IEEE ITSS)" }
+  - { role: Research Coordinator and Paper Review Coordinator, org: "TRB Committee on Maintenance and Operations Management (AKR10)", years: "2021–2025" }
+  - { role: Member, org: "TRB Standing Committee on Maintenance Management (AKJ14)", years: "2025–2028" }
+  - { role: Board of Directors, org: Chinese Overseas Transportation Association (COTA) }
+  - { role: Penn State Representative, org: Smart Belt Coalition, years: "2023–present" }
 
 honors:
   - { year: 2026, name: "Penn State Emerging Academic Leaders (PSEAL) program" }

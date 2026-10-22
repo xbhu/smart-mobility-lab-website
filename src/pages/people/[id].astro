@@ -59,22 +59,44 @@ const thrusts = d.thrusts ? await Promise.all(d.thrusts.map((id) => getEntry("th
   </section>
 
   {isPI && (
-    <section class="section">
-      <div class="wrap split" style="align-items: start">
-        <div>
-          <h2>Career</h2>
-          <ul class="news-list">
-            {pi.timeline.map((t: any) => (
-              <li class="news-item"><span class="news-date">{t.years}</span><div><p class="news-title">{t.place}</p><p>{t.role}</p></div></li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2>Service</h2>
-          <ul class="facts">{pi.service_selected.map((s: string) => <li>{s}</li>)}</ul>
-          <h2>Honors</h2>
-          <ul class="facts">{pi.honors.map((h: any) => <li>{h.name}, {h.year}</li>)}</ul>
-        </div>
+    <section class="section section--navy" aria-labelledby="honors-title">
+      <div class="wrap">
+        <h2 id="honors-title">Honors and awards</h2>
+        <ul class="honors">
+          {pi.honors.map((h: any) => (
+            <li><span class="honor-year">{h.year}</span><span class="honor-name">{h.name}</span></li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  {isPI && (
+    <section class="section section--concrete" aria-labelledby="service-title">
+      <div class="wrap">
+        <h2 id="service-title">Professional service</h2>
+        <ul class="service">
+          {pi.service.map((v: any) => (
+            <li class:list={{ "service--featured": v.featured }}>
+              <span class="service-role">{v.role}</span>
+              <span class="service-org">{v.org}</span>
+              {v.years && <span class="service-years">{v.years}</span>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  {isPI && (
+    <section class="section" aria-labelledby="career-title">
+      <div class="wrap">
+        <h2 id="career-title">Career</h2>
+        <ul class="news-list">
+          {pi.timeline.map((t: any) => (
+            <li class="news-item"><span class="news-date">{t.years}</span><div><p class="news-title">{t.place}</p><p>{t.role}</p></div></li>
+          ))}
+        </ul>
       </div>
     </section>
   )}
@@ -106,7 +128,7 @@ const thrusts = d.thrusts ? await Promise.all(d.thrusts.map((id) => getEntry("th
     </section>
   )}
   {isPI && Startup && (
-    <section class="section section--concrete">
+    <section class="section">
       <div class="wrap">
         <details class="startup">
           <summary>
