@@ -7,6 +7,7 @@ end: '2023'
 current_position: Tenure-Track Assistant Professor, SUNY Alfred State College
 current_url: https://www.alfredstate.edu/directory/songy2
 featured: true
+faculty: true
 thrusts:
 - electrification
 - system-modeling
