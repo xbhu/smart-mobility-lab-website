@@ -23,7 +23,7 @@ hero:
   # Primary: side profile of the wrapped Pacifica ("Automated Vehicle / Smart Mobility Lab", Penn State
   # mark) during the June 2024 President's visit. 2048x1365; the open sky in the top half takes the headline.
   image: /media/hero/av-hero.jpg
-  image_alt: The Smart Mobility Lab's automated vehicle, a wrapped Chrysler Pacifica with a roof sensor rack, driving on the LTI test track
+  image_alt: The Smart Mobility Lab’s automated vehicle, a wrapped Chrysler Pacifica with a roof sensor rack, driving on the LTI test track
   # Loop for a "What our vehicle sees" panel next to or below the hero (not behind the headline):
   # 8 s, muted, 2.5 MB, LiDAR point cloud with 3D detection boxes, cropped from
   # "5 Sensor Perception and Visualization.mp4" (16-24 s) to remove the desktop UI.
@@ -45,14 +45,14 @@ stats:
     - value: "92"
       label: journal articles, including 17 in Transportation Research Parts A–E and 11 in IEEE Transactions
     - value: "1 of 10"
-      label: USDOT-designated Automated Vehicle Proving Grounds is our test track, home to our full-size AV
+      label: USDOT-designated Automated Vehicle Proving Grounds is the test track where we run our full-size vehicle
     - value: "17"
       label: state DOTs in the Autonomous Maintenance Technology pooled fund we support
 
 recruiting:
   open: true
   banner: >-
-    We are recruiting PhD students and postdocs with strong interest and experience in AI
+    We are recruiting Ph.D. students and postdocs with strong interest and experience in AI
     and autonomous vehicles. Positions are fully funded, with a monthly stipend and tuition waiver.
   href: /join
 
@@ -60,7 +60,7 @@ contact:
   email: xbhu@psu.edu
   phone: "+1 814-863-0523"
   address:
-    - Room 208, ECoRE Building     # CEE main office (XB's own office is 282 ECoRE)
+    - Room 208, ECoRE Building     # CEE main office (XB’s own office is 282 ECoRE)
     - 556 White Course Drive
     - University Park, PA 16802
 

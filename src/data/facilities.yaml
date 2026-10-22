@@ -35,7 +35,7 @@
 
 - id: test-track
   name: LTI test track
-  tagline: A full-scale test track designated by USDOT as one of 10 Automated Vehicle Proving Grounds.
+  tagline: A full-scale test track at the Larson Transportation Institute (LTI), designated by USDOT as one of 10 Automated Vehicle Proving Grounds.
   description: >-
     The Larson Transportation Institute manages a full-scale test track near the University Park
     campus. USDOT designated it as one of 10 Automated Vehicle Proving Grounds in the country, which
@@ -44,7 +44,7 @@
     - src: /media/photos/test-track-overhead.jpg
       alt: Overhead view of the LTI test track
     - src: /media/photos/av-front-view-test-track.jpg
-      alt: The lab's automated vehicle on a curve of the test track
+      alt: The lab’s automated vehicle on a curve of the test track
     - src: /media/news/2024-06-president-visit-vehicle.jpg
       alt: Lab members and Penn State President Neeli Bendapudi at the open rear of the automated vehicle on the test track
     - src: /media/news/2024-06-president-visit-students.jpg

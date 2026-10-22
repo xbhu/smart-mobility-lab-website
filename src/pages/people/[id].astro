@@ -28,7 +28,7 @@ const photo = publicFileExists(d.photo) ? d.photo : null;
 const role = isPI ? pi.role : d.status === "current" ? ROLE_LABEL[d.role] : `${ALUMNI_ROLE_LABEL[d.role]}, ${years(d.start, d.end)}`;
 const thrusts = d.thrusts ? await Promise.all(d.thrusts.map((id) => getEntry("thrusts", id))) : [];
 ---
-<Base title={d.name} description={d.short ?? role}>
+<Base title={d.name} description={d.short ?? `${d.name}: ${role}. Smart Mobility Lab, Penn State.`}>
   <header class="page-head">
     <div class="wrap split split--reverse" style="align-items: end">
       <div class="person-photo" style="max-width: 320px; margin: 0">
