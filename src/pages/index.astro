@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import GuideSign from "../components/GuideSign.astro";
+import ThrustCard from "../components/ThrustCard.astro";
 import Video from "../components/Video.astro";
 import { getCollection, getEntry } from "astro:content";
 import { site, formatDate } from "../lib/site";
@@ -18,12 +18,6 @@ const highlights = await Promise.all(
 );
 const alumni = await Promise.all(home.alumni.people.map((id: string) => getEntry("people", id)));
 const ALUMNI_WAS: Record<string, string> = { phd: "Ph.D.", postdoc: "Postdoctoral scholar" };
-const signSub: Record<string, string> = {
-  "automated-driving": "Perception, prediction, and control on a full-size vehicle",
-  "work-zone-automation": "Driverless follow trucks that protect highway crews",
-  "electrification": "Charging demand, infrastructure investment, and zero-emission fleets",
-  "system-modeling": "Queues, capacity, networks, and connected vehicle data",
-};
 ---
 <Base>
   <div class="hero">
@@ -59,10 +53,8 @@ const signSub: Record<string, string> = {
         </div>
         <a href="/research">All research</a>
       </div>
-      <div class="signs">
-        {thrusts.map((t) => (
-          <GuideSign href={`/research/${t.id}`} name={t.data.name} sub={signSub[t.id] ?? t.data.tagline} workzone={t.id === "work-zone-automation"} />
-        ))}
+      <div class="thrust-cards thrust-cards--compact">
+        {thrusts.map((t, i) => <ThrustCard thrust={t} index={i} showTopics={false} />)}
       </div>
     </div>
   </section>
