@@ -20,7 +20,7 @@ const withVideos = await Promise.all(
   </header>
 
   {withVideos.map(({ f, videos }, i) => (
-    <section class:list={["section", { "section--concrete": i % 2 === 1 }]} aria-labelledby={`f-${f.id}`}>
+    <section id={f.id} class:list={["section", { "section--concrete": i % 2 === 1 }]} aria-labelledby={`f-${f.id}`}>
       <div class="wrap">
         <div class="split">
           <div>

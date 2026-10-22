@@ -7,6 +7,21 @@ research:
     and decide, how charging demand is predicted, and how system models are calibrated. Each thrust
     ends in something agencies can use, such as a tested algorithm, a deployment guideline, a planning
     model, or a dataset.
+  facilities:
+    heading: Our test vehicle, track, and simulator
+    lead: >-
+      We test our algorithms on our own full-size automated vehicle, on a USDOT-designated proving
+      ground, and in a driving simulator linked to a co-simulation platform.
+    tiles:
+      autonomous-vehicle:
+        src: /media/photos/av-door-open-ite.jpg
+        alt: Students seated in the lab's automated vehicle, a Chrysler Pacifica with a roof sensor rack
+      test-track:
+        src: /media/photos/av-wrap-rear-curve.jpg
+        alt: The automated vehicle driving a curve of the LTI test track
+      driving-simulator:
+        src: https://sites.psu.edu/xbhu/files/2021/09/51733769824_e6445de896_o-1-1917x1278.jpg
+        alt: A participant in the driving simulator
 
 people:
   title: People
