@@ -51,7 +51,7 @@
   institution: psu
   kind: external
   thrusts: [automated-driving, work-zone-automation]
-  dataset: https://doi.org/10.21949/53ca-8v96
+  dataset: https://rosap.ntl.bts.gov/view/dot/87547
   featured: true
 
 - id: padep-mhd-zev-phase2
