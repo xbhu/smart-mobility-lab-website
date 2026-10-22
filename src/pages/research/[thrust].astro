@@ -26,6 +26,7 @@ const allPapers = (await getCollection("papers"))
 const recent = allPapers.slice(0, 10);
 const projects = await thrustProjects(thrust);
 const isUrl = (s: string | null) => Boolean(s);
+const INSTITUTION: Record<string, string> = { mst: "at Missouri S&T", metropia: "at Metropia" };
 const hasResources = Boolean(t.resources && t.resources.length > 0);
 // Alternate white and concrete backgrounds over the sections that are actually shown.
 const shown = ["content", "sub", videos.length > 0 ? "videos" : null, "featured", projects.length > 0 || hasResources ? "projects" : null, "pubs"].filter(Boolean);
@@ -94,7 +95,7 @@ const bg = (key: string) => (shown.indexOf(key) % 2 === 1 ? "section section--co
                     <p class="project-title">{p.data.title}</p>
                     <p class="project-sponsor">{p.data.sponsors.join(", ")}</p>
                   </div>
-                  <p class="project-side">{years(p.data.start, p.data.end)}<br />{p.data.role}</p>
+                  <p class="project-side">{years(p.data.start, p.data.end)}<br />{p.data.role}{INSTITUTION[p.data.institution] && <><br />{INSTITUTION[p.data.institution]}</>}</p>
                 </li>
               ))}
             </ul>
