@@ -45,7 +45,7 @@
       alt: Overhead view of the LTI test track
       replace: Need an unlabeled, higher-resolution aerial photo.
   link: https://www.larson.psu.edu/
-  videos: [av-waypoint-following, neeli-av-demo]
+  videos: [neeli-av-demo]
 
 - id: driving-simulator
   name: Driving simulator and co-simulation platform
