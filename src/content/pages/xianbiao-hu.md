@@ -42,10 +42,10 @@ honors:
   - { year: 2018, name: "Excellent Paper Award, World Transport Convention" }
 
 teaching:
-  - { course: "CE 100S", name: First-Year Seminar, school: Penn State, terms: "Fall 2024, Fall 2025, Spring 2026" }
-  - { course: "CE 321", name: Highway Engineering, school: Penn State, terms: "Spring 2022, Spring 2023, Fall 2023, Spring 2025, Spring 2026" }
+  - { course: "CE 100S", name: First-Year Seminar, school: Penn State, terms: "Fall 2024, Fall 2025, Spring 2026, Fall 2026" }
+  - { course: "CE 321", name: Highway Engineering, school: Penn State, terms: "Spring 2022, Spring 2023, Fall 2023, Spring 2025, Spring 2026, Fall 2026" }
   - { course: "CE 521", name: Transportation Networks and System Analysis, school: Penn State, terms: "Fall 2022, Spring 2024, Fall 2025" }
-  - { course: "CE 597", name: Transportation Data Science, school: Penn State, terms: "Fall 2024" }
+  - { course: "CE 597", name: Transportation Data Science, school: Penn State, terms: "Fall 2024, Fall 2026" }
   - { course: "CE 5513", name: Traffic Engineering, school: Missouri S&T, terms: "Fall 2018–2020" }
   - { course: "CE 5515", name: Advanced Traffic Operation and Capacity Analysis, school: Missouri S&T, terms: "Spring 2018–2020" }
 
