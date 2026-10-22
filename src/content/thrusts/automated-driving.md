@@ -1,8 +1,8 @@
 ---
 name: Automated & Cooperative Driving
 order: 1
-tagline: Perception, prediction, and control for automated vehicles, built on AI and tested on a full-size vehicle.
-keywords: [perception, cooperative localization, lane topology, motion prediction, trajectory control, foundation models]
+tagline: AI for automated vehicles, from deep learning to large language and vision-language models, tested on a full-size vehicle.
+keywords: [perception, cooperative localization, lane topology, motion prediction, trajectory control, LLM, VLM, agentic AI]
 hero:
   image: /media/thrusts/automated-driving.jpg
   image_alt: The lab's wrapped automated vehicle on the LTI test track beside a no-passing-zone sign
@@ -25,12 +25,14 @@ subtopics:
       generation of safety-critical scenarios.
     papers: [li-ccfm-scenario-generation-eccv-2026, qi-lane-change-inference-trc-2022, qi-lateral-wandering-trc-2023, qi-digital-twin-trajectories-iotj-2024]
   - id: planning-control
-    name: Planning and control
+    name: Planning, control, and AI decision-making
     summary: >-
       Control methods that range from analytical to learning-based: freeway merging control with
       state-dependent discharge rates, deep reinforcement learning for longitudinal trajectories, Monte
       Carlo tree search at arterial intersections, platooning, and simulation-based verification of lane
-      keeping assistance. A current project applies agentic AI to goal-directed, cooperative decision-making.
+      keeping assistance. Current projects use vision-language models (VLMs) to turn camera input into
+      driving actions and agentic AI built on large language models (LLMs) for goal-directed,
+      cooperative decision-making.
     papers: [tang-freeway-merging-tits-2025, cheng-drl-trajectory-planning-jits-2023, cheng-mcts-mixed-traffic-trr-2020, xie-adaptive-platoon-tits-2024, yang-simlkas-lane-keeping-vv-jits-2025]
   - id: infrastructure-policy
     name: Infrastructure and policy for automation
@@ -43,6 +45,8 @@ subtopics:
 featured_papers: [wu-lane-topology-icra-2026, li-ccfm-scenario-generation-eccv-2026, ding-lidar-cooperative-localization-tits-2026, tang-freeway-merging-tits-2025, hav-policy-trt-2026]
 videos: [neeli-av-demo, av-lidar-camera-demo, av-carma-campus, av-waypoint-following]
 facilities: [autonomous-vehicle, test-track, driving-simulator]
+projects_first: [usdot-smart-atma, penndot-act130-cav, penndot-friction-forecasting, dced-atma-gps-denied]
+projects_also_from: [work-zone-automation]
 collaborate: >-
   We work with agencies and companies that want to test automated driving algorithms on a real vehicle
   and a closed test track, or need an independent evaluation of how automation affects their roads.
@@ -58,10 +62,11 @@ merges, and roads that were never designed for automated driving.
 ## What we do
 
 We develop the perception, prediction, and control algorithms behind automated and cooperative
-driving, and we use AI wherever it adds capability that classical models lack: learned
-localization, topology reasoning, reinforcement learning, and, more recently, foundation models
-and agentic AI for driving decisions. We keep analytical models where they give guarantees that
-learning alone cannot.
+driving, with AI at the core: deep learning for localization and lane topology, reinforcement
+learning for control, and foundation models, including large language models (LLMs) and
+vision-language models (VLMs), for scene understanding and driving decisions. We are also building
+agentic AI that plans and cooperates toward goals. We keep analytical models where they give
+guarantees that learning alone cannot.
 
 What sets the work apart is the test loop. Algorithms move from our CARLA–SUMO co-simulation
 platform to a full-size autonomous vehicle and then to the Larson Transportation Institute test
