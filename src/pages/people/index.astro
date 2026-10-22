@@ -10,10 +10,15 @@ const current = people.filter((p) => p.data.status === "current");
 const groups = intros.people.groups
   .map((g: any) => ({
     ...g,
-    // Students of all levels are listed together, ordered by family name.
+    // Students of all levels share one section: ordered by level (g.roles order),
+    // then by start year, then by family name.
     members: current
       .filter((p) => g.roles.includes(p.data.role))
-      .sort((a, b) => familyName(a.data.name).localeCompare(familyName(b.data.name))),
+      .sort((a, b) =>
+        g.roles.indexOf(a.data.role) - g.roles.indexOf(b.data.role) ||
+        String(a.data.start ?? "9999").localeCompare(String(b.data.start ?? "9999")) ||
+        familyName(a.data.name).localeCompare(familyName(b.data.name)),
+      ),
   }))
   .filter((g: any) => g.members.length > 0);
 
