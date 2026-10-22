@@ -1,11 +1,12 @@
 ---
 name: Transportation System Modeling
 order: 4
-tagline: Analytical and data-driven models of how traffic, travelers, and networks behave.
+tagline: Analytical, data-driven, and physics-informed AI models of how traffic, travelers, and networks behave.
 keywords: [queueing and capacity, volume-delay functions, OD calibration, connected vehicle data, road friction, privacy-preserving data]
 hero:
-  image: null
-  image_replace: No photo exists. Claude to draw a diagram (e.g., queue/discharge illustration) in phase 4.
+  image: /media/thrusts/system-modeling-wide.svg
+  image_alt: Illustration of a road network with traffic flows, a highlighted route, and a queue at a signal
+  image_replace: Illustration drawn for the site; replace with a photo or figure if a good one exists.
 card:
   image: /media/thrusts/system-modeling.svg
   alt: Illustration of a road network with traffic flows, a highlighted route, and a queue at a signal
@@ -62,10 +63,10 @@ traffic flow theory and fast enough to use.
 ## What we do
 
 We build analytical models where structure matters, such as queues, discharge rates, and merging,
-and calibrate them with data. Where data are rich, we use machine learning, and we keep it
-consistent with traffic flow physics. Recent work ranges from a fluid queue model for heavy
-congestion to a review of volume-delay functions that pairs classical forms with AI-based ones
-and comes with open code.
+and calibrate them with data. Where data are rich, we use AI, including physics-informed machine
+learning that stays consistent with traffic flow theory. Recent work ranges from a fluid queue
+model for heavy congestion to a review of volume-delay functions that pairs classical forms with
+AI-based ones and comes with open code.
 
 We also make mobility data more useful and safer to share: connected vehicle data for spillover
 detection and road friction forecasting, and differential privacy methods for publishing transit
