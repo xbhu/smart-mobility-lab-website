@@ -57,8 +57,13 @@
 
 - id: atma-cdot-unveiling
   title: Colorado DOT unveils the world's first self-driving work zone vehicle
-  youtube: 8GPcbtVaqnY
+  youtube: null
+  url: /media/videos/atma-cdot-unveiling.mp4
+  poster: /media/videos/atma-cdot-unveiling-poster.jpg
   local: videos/Video-Demonstration-of-Worlds-First-Self-Driving-Work-Zone-Vehicle.mp4
+  note: >-
+    The YouTube link (8GPcbtVaqnY) no longer works. Site copy is the CDOT livestream with the
+    "starting soon" slates cut (12:54, 240p as recorded).
   source: partner
   thrusts: [work-zone-automation]
   featured: true
@@ -138,6 +143,8 @@
   youtube: null
   local: "videos/5 Sensor Perception and Visualization.mp4"
   url: /media/loops/lidar-perception.mp4
+  poster: /media/loops/lidar-perception-poster.jpg
+  loop: true
   date: 2022-10
   source: lab
   thrusts: [automated-driving]
