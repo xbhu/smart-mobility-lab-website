@@ -6,11 +6,15 @@ import { intros, years } from "../lib/site";
 const projects = (await getCollection("projects")).sort(
   (a, b) => (b.data.start ?? 0) - (a.data.start ?? 0) || a.data.title.localeCompare(b.data.title),
 );
+// Externally funded projects by institution; internal and teaching grants are listed last, collapsed.
+const external = projects.filter((p) => p.data.kind === "external");
+const internal = projects.filter((p) => p.data.kind === "internal");
 const groups = [
-  { label: "At Penn State", items: projects.filter((p) => p.data.institution === "psu") },
-  { label: "At Missouri S&T", items: projects.filter((p) => p.data.institution === "mst") },
-  { label: "At Metropia", items: projects.filter((p) => p.data.institution === "metropia") },
+  { label: "At Penn State", items: external.filter((p) => p.data.institution === "psu") },
+  { label: "At Missouri S&T", items: external.filter((p) => p.data.institution === "mst") },
+  { label: "At Metropia", items: external.filter((p) => p.data.institution === "metropia") },
 ];
+const INSTITUTION: Record<string, string> = { psu: "Penn State", mst: "Missouri S&T", metropia: "Metropia" };
 ---
 <Base title={intros.projects.title} description={intros.projects.lead}>
   <header class="page-head">
@@ -42,7 +46,6 @@ const groups = [
                 <p class="project-title">{p.data.title}</p>
                 <p class="project-sponsor">
                   {p.data.sponsors.join(", ")}
-                  {p.data.kind === "internal" && " (internal)"}
                 </p>
                 {(p.data.tool || p.data.dataset) && (
                   <p class="news-links">
@@ -58,4 +61,28 @@ const groups = [
       </div>
     </section>
   ))}
+
+  {internal.length > 0 && (
+    <section class="section section--concrete" aria-labelledby="internal-title">
+      <div class="wrap">
+        <details class="collapsible">
+          <summary>
+            <span class="collapsible-title" id="internal-title">Internal and teaching grants</span>
+            <span class="collapsible-sub">{internal.length} seed, center, and teaching grants at Penn State and Missouri S&T</span>
+          </summary>
+          <ul class="projects">
+            {internal.map((p) => (
+              <li class="project">
+                <div>
+                  <p class="project-title">{p.data.title}</p>
+                  <p class="project-sponsor">{p.data.sponsors.join(", ")}</p>
+                </div>
+                <p class="project-side">{years(p.data.start, p.data.end)}<br />{p.data.role}<br />{INSTITUTION[p.data.institution]}</p>
+              </li>
+            ))}
+          </ul>
+        </details>
+      </div>
+    </section>
+  )}
 </Base>
