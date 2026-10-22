@@ -43,7 +43,7 @@ subtopics:
       vehicle policy.
     papers: [hav-policy-trt-2026, chen-av-pavement-roughness-rsta-2023, qi-pavement-mixed-traffic-tb-2024, song-pavement-condition-tits-2022, penndot-cav-impact-act130-2025]
 featured_papers: [wu-lane-topology-icra-2026, li-ccfm-scenario-generation-eccv-2026, ding-lidar-cooperative-localization-tits-2026, tang-freeway-merging-tits-2025, hav-policy-trt-2026]
-videos: [neeli-av-demo, av-lidar-camera-demo, av-carma-campus, av-waypoint-following]
+videos: [neeli-av-demo, av-lidar-camera-demo, av-carma-demo, av-waypoint-following, av-drive-by-wire, av-carma-campus]
 facilities: [autonomous-vehicle, test-track, driving-simulator]
 projects_first: [usdot-smart-atma, penndot-act130-cav, penndot-friction-forecasting, dced-atma-gps-denied]
 projects_also_from: [work-zone-automation]

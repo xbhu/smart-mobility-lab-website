@@ -39,7 +39,7 @@ subtopics:
       optimization for highway maintenance.
     papers: [tang-atma-route-optimization-ai-2026]
 featured_papers: [av-atma-field-testing-trr-2021, atma-toolkit-usdot-2025, tang-atma-odd-multilane-trr-2022, ding-lidar-cooperative-localization-tits-2026, tang-atma-route-optimization-ai-2026]
-videos: [atma-cdot-unveiling, atma-abc-news, atma-modot-field-test, atma-cda-simulation, trb-atma-webinar]
+videos: [atma-cdot-unveiling, atma-royal-live-demo, atma-abc-news, atma-modot-field-test, atma-cda-simulation, trb-atma-webinar]
 resources:
   - label: "USDOT SMART dataset: ATMA field data from Colorado, Minnesota, Wisconsin, and Oklahoma"
     url: https://rosap.ntl.bts.gov/view/dot/87547

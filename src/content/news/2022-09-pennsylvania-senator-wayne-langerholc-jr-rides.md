@@ -5,7 +5,7 @@ tags:
 - visit
 thrusts:
 - automated-driving
-video: tfC9n4Sq1dg
+video: av-lidar-camera-demo
 links:
 - label: Video
   url: https://youtu.be/tfC9n4Sq1dg?t=10

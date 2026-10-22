@@ -166,6 +166,7 @@ const videos = defineCollection({
     local: z.string().optional(),
     poster: z.string().optional(), // still shown before a site-hosted video plays
     loop: z.boolean().optional(), // true: silent autoplay loop; otherwise a player with controls
+    credit: z.string().optional(), // shown under the video
     date: z.union([yearMonth, z.date()]).optional(),
     source: z.enum(["lab", "psu", "partner", "media"]),
     thrusts: z.array(thrustId),

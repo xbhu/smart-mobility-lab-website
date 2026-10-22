@@ -28,3 +28,4 @@ const isLocalFile = typeof v.url === "string" && v.url.startsWith("/");
   <p><a href={v.url}>Watch: {v.title}</a></p>
 ) : null}
 {caption && (v.youtube || isLocalFile) && <h3>{v.title}</h3>}
+{caption && isLocalFile && v.credit && <p class="media-credit">Video: {v.credit}</p>}

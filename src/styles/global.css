@@ -380,3 +380,5 @@ a.person:hover .person-name { text-decoration: underline; text-decoration-thickn
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
+
+.media-credit { margin: 4px 0 0; font-size: 0.82rem; color: var(--muted); }

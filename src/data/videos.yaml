@@ -4,13 +4,17 @@
 
 - id: neeli-av-demo
   title: Penn State Student Researchers Demo Self-Driving Vehicle with President Neeli Bendapudi
-  youtube: fCSTfLUYe-4
+  youtube: null
+  url: /media/videos/neeli-av-ride.mp4
+  poster: /media/videos/neeli-av-ride-poster.jpg
+  credit: Penn State
+  local: videos/Penn-State-Student-Researchers-Demo-Self-Driving-Vehicle-with-President-Neeli-Bendapudi.mp4
   date: 2024-08-02
   source: psu
   thrusts: [automated-driving]
   featured: true
   use: [home-highlight, thrust-automated-driving]
-  note: XB plans to cut a short clip from this for the site.
+  note: Site copy is 960 px wide (3 min, with captions). Original on YouTube as fCSTfLUYe-4.
 
 - id: av-lidar-camera-demo
   title: Autonomous vehicle demo with real-time LiDAR and camera data
@@ -28,9 +32,12 @@
 
 - id: av-waypoint-following
   title: Waypoint following on the LTI test track
-  youtube: 8GSkOnLVY1A
-  local: videos/video-Way-Point-Following.mp4
-  note: "Also a 10 s cut: videos/Way Point Following_10s.mp4."
+  youtube: null
+  url: /media/loops/waypoint-following.mp4
+  poster: /media/loops/waypoint-following-poster.jpg
+  loop: true
+  local: videos/Way Point Following_10s.mp4
+  note: "Site copy is the 10 s cut as a silent loop. Full video on YouTube as 8GSkOnLVY1A (videos/video-Way-Point-Following.mp4)."
   date: 2022-02
   source: lab
   thrusts: [automated-driving]
@@ -48,9 +55,12 @@
 
 - id: av-drive-by-wire
   title: Drive-by-wire, speed, and steering control demonstration
-  youtube: 8CqulBMvkJ8
-  local: videos/video-Drive-by-Wire.mp4
-  note: "One YouTube video covers video-Drive-by-Wire.mp4 and video-Speed-and-Steering-Control.mp4; 10 s cut: videos/Drive by Wire_10s.mp4."
+  youtube: null
+  url: /media/loops/drive-by-wire.mp4
+  poster: /media/loops/drive-by-wire-poster.jpg
+  loop: true
+  local: videos/Drive by Wire_10s.mp4
+  note: "Site copy is the 10 s cut as a silent loop. The full YouTube video (8CqulBMvkJ8) covers video-Drive-by-Wire.mp4 and video-Speed-and-Steering-Control.mp4."
   source: lab
   thrusts: [automated-driving]
   use: [hero-candidate, facilities]
@@ -87,8 +97,11 @@
 
 - id: atma-cda-simulation
   title: Leader-follower cooperative driving automation simulation
-  youtube: P3dDycZf2IQ
+  youtube: null
+  url: /media/videos/atma-simulation.mp4
+  poster: /media/videos/atma-simulation-poster.jpg
   local: videos/ATMA simulation.mp4
+  note: Site copy is silent, 2 min. Original on YouTube as P3dDycZf2IQ.
   date: 2024-02
   source: lab
   thrusts: [work-zone-automation]
@@ -173,11 +186,41 @@
 - id: atma-royal-live-demo
   title: "ATMA live demonstration of a striping operation (Royal Truck & Equipment)"
   youtube: null
+  url: /media/videos/atma-live-demo.mp4
+  poster: /media/videos/atma-live-demo-poster.jpg
+  credit: Royal Truck & Equipment
   local: videos/ATMA- Live Demo.mp4
   source: partner
   thrusts: [work-zone-automation]
   featured: true
   use: [thrust-work-zone-automation]
   note: >-
-    Best ATMA footage we have (drone shots of the driverless TMA truck, 720p) but it carries Royal Truck's
-    watermark and inset. Use as an embedded video with credit; ask Royal for the original or permission to cut a loop.
+    Best ATMA footage we have (drone shots of the driverless TMA truck, 720p). It carries Royal Truck's
+    watermark and inset, so it is shown with a credit line. Ask Royal for permission to use it and for a clean original.
+
+- id: av-carma-demo
+  title: CARMA cooperative driving automation demonstration
+  youtube: null
+  url: /media/videos/carma-demo.mp4
+  poster: /media/videos/carma-demo-poster.jpg
+  local: videos/CARMA DEMO.mp4
+  date: 2024-02
+  source: lab
+  thrusts: [automated-driving]
+  use: [thrust-automated-driving, facilities]
+  note: Site copy is silent, 1 min 44 s.
+
+- id: ev-cold-weather-fox43
+  title: "FOX43: Pros and cons of driving an EV in frigid temperatures"
+  youtube: null
+  url: /media/videos/fox43-ev-cold.mp4
+  poster: /media/videos/fox43-ev-cold-poster.jpg
+  credit: FOX43 (WPMT)
+  local: videos/Pros-and-cons-of-driving-an-EV-in-frigid-temperatures.mp4
+  date: 2025-01
+  source: media
+  thrusts: [electrification]
+  use: [thrust-electrification, news]
+  note: >-
+    Broadcast segment hosted with the station credit. Rehosting TV footage is the station's call;
+    if FOX43 objects, replace this with a link to the article.
