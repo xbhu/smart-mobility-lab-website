@@ -27,6 +27,8 @@ subtopic: field-evaluation
 featured: true
 atlas: https://atlas.mobilitypsu.com/papers/av-atma-field-testing-trr-2021/
 code: https://github.com/xbhu/AV-WorkZoneCDA-testing
+slides: https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%202021%20slides.pdf
+pdf: https://github.com/xbhu/AV-WorkZoneCDA-testing/blob/main/ATMA%20Field%20Testing_TRR%202021%20paper.pdf
 video: https://www.youtube.com/watch?v=O1Vrhn0wct8
 verified: crossref-2026-10-20
 status: published

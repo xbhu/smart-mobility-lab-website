@@ -10,7 +10,12 @@ year: 2026
 type: journal
 venue: Transportation Research Today
 venue_short: TR Today
+volume: '1'
+pages: '100009'
 doi: 10.1016/j.trt.2026.100009
+website: https://xbhu.github.io/HAV-Policy/
+slides: https://github.com/xbhu/HAV-Policy/blob/main/paper/HAV_Policy_Slides.pdf
+pdf: https://github.com/xbhu/HAV-Policy/blob/main/paper/HAV_policy_paper_final.pdf
 thrusts:
 - automated-driving
 subtopic: infrastructure-policy
