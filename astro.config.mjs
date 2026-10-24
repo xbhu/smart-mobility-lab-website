@@ -6,5 +6,6 @@ export default defineConfig({
   site: process.env.SITE_URL ?? "https://lab.mobilitypsu.com",
   trailingSlash: "ignore",
   build: { format: "directory" },
-  integrations: [sitemap()],
+  // /data/*.json are machine-readable exports for the Research Atlas, not pages.
+  integrations: [sitemap({ filter: (page) => !page.includes("/data/") })],
 });

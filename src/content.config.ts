@@ -112,6 +112,8 @@ const papers = defineCollection({
     atlas: z.string().url().optional(),
     atlas_slug: z.string().optional(),
     code: z.string().url().optional(),
+    data: z.string().url().optional(), // dataset or data repository
+    website: z.string().url().optional(), // project page for this paper
     slides: z.string().optional(),
     pdf: z.string().optional(),
     video: z.string().url().optional(),
