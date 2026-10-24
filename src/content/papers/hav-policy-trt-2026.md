@@ -20,7 +20,7 @@ thrusts:
 - automated-driving
 subtopic: infrastructure-policy
 featured: true
-atlas: https://atlas.mobilitypsu.com/papers/hav-policy-trt-2026/
+atlas_slug: hav-policy-trt-2026
 verified: cv-2026-09-27
 status: published
 summary: >-

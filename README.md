@@ -13,7 +13,7 @@ src/
 ├── content/
 │   ├── thrusts/           # the 4 research thrust pages (copy + subtopics + featured papers)
 │   ├── people/            # one file per person, current and alumni
-│   ├── papers/            # one file per selected paper (Atlas-compatible fields)
+│   ├── papers/            # one file per selected paper (Atlas fields)
 │   ├── news/              # one file per news item, named YYYY-MM-slug.md
 │   └── pages/             # home, PI page, Join Us, and short page intros
 └── data/

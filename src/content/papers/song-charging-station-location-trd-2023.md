@@ -18,7 +18,6 @@ thrusts:
 - electrification
 subtopic: infrastructure-planning
 featured: true
-atlas_slug: ev-yang-song-partd
 verified: crossref-2026-10-20
 note: Has code (per Atlas plan); add repo link.
 status: published

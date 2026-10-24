@@ -108,16 +108,14 @@ const papers = defineCollection({
     subtopic: z.string(),
     featured: z.boolean().optional(),
     summary: z.string().optional(),
-    // Atlas-compatible resource fields (atlas = link to an existing deep-dive page)
-    atlas: z.string().url().optional(),
-    atlas_slug: z.string().optional(),
+    // Plain-language page on the Research Atlas: https://atlas.mobilitypsu.com/<atlas_slug>/
+    atlas_slug: z.string().regex(/^[a-z0-9-]+$/).optional(),
     code: z.string().url().optional(),
     data: z.string().url().optional(), // dataset or data repository
     website: z.string().url().optional(), // project page for this paper
     slides: z.string().optional(),
     pdf: z.string().optional(),
     video: z.string().url().optional(),
-    zh: z.string().optional(),
     citation_apa: z.string().optional(),
     verified: z.string().optional(),
     ...review,

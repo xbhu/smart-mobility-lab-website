@@ -19,7 +19,6 @@ thrusts:
 - system-modeling
 subtopic: queueing-capacity
 featured: true
-atlas: https://atlas.mobilitypsu.com/papers/system-modeling-pan-vdf-review/
 code: https://github.com/panyuyan/VDF-review-code
 verified: cv-2026-09-27
 status: published
