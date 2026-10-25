@@ -23,6 +23,8 @@ featured: true
 verified: crossref-2026-10-20
 note: Official title differs slightly from the current site’s listing; Crossref title used.
 status: published
+atlas_slug: song-visionev-trd-2026
+pdf: https://atlas.mobilitypsu.com/media/song-visionev-trd-2026/Song_Hu_2026_VisionEV_TRD.pdf
 summary: >-
   Uses multimodal large language models on satellite imagery to predict where EV charging demand will
   arise, adding spatial context that tabular models miss.
