@@ -6,8 +6,8 @@ authors:
 - name: Xianbiao Hu
   person: xianbiao-hu
   corresponding: true
-- name: G. List
-- name: X. Zhou
+- name: George List
+- name: Xuesong Zhou
   corresponding: true
 year: 2025
 type: journal
@@ -20,6 +20,7 @@ thrusts:
 subtopic: queueing-capacity
 featured: true
 code: https://github.com/panyuyan/VDF-review-code
+atlas_slug: system-modeling-pan-vdf-review
 verified: cv-2026-09-27
 status: published
 summary: >-
