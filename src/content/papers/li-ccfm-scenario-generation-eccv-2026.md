@@ -18,7 +18,6 @@ thrusts:
 - automated-driving
 subtopic: prediction-behavior
 show_on_lab: true
-featured: true
 verified: cv-2026-09-27
 note: Malmö, Sweden, September 8–12, 2026.
 status: published

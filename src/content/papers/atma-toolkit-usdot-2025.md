@@ -17,7 +17,6 @@ venue_short: USDOT report
 thrusts:
 - work-zone-automation
 subtopic: odd-guidelines
-featured: true
 verified: cv-2026-09-27
 note: Add public URL if available.
 status: published
