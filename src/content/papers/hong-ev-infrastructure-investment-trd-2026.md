@@ -24,6 +24,7 @@ featured: true
 verified: cv-2026-09-27
 status: published
 atlas_slug: hong-ev-infrastructure-investment-trd-2026
+pdf: https://atlas.mobilitypsu.com/media/hong-ev-infrastructure-investment-trd-2026/Hong_et_al_2026_Public_or_Private_EV_Infrastructure_Investment_TRD.pdf
 summary: >-
   A single demand–supply coupled framework for deciding how public and private investment in EV charging
   infrastructure should be combined.
