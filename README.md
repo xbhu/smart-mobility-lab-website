@@ -41,10 +41,10 @@ background.
 primary thrust) and a `subtopic` from that thrust's file.
 
 Two independent flags decide where a paper appears. `show_on_lab: true` lists it on this site
-(Publications, thrust and people pages); keep that to top journals (TR Part series, IEEE
+(the Publications page only; thrust and people pages list every paper); keep that to top journals (TR Part series, IEEE
 Transactions) and top conferences, since a short list gets read. `featured: true` puts it on the
 Research Atlas (atlas.mobilitypsu.com) as a "Coming soon" card until its page exists. Papers led by an
-outside collaborator (first author not in `people`) are listed below the group's own papers.
+outside collaborator (first author not in `people`) are listed after the group's own papers of the same year.
 
 **A news item.** Add `src/content/news/YYYY-MM-short-title.md` with `date`, `title`, `tags`
 (grant, award, media, visit, people, event), and optional links.

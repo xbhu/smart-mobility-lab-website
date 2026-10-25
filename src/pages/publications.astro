@@ -7,8 +7,6 @@ import { labPapers } from "../lib/papers";
 
 const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
 const papers = await labPapers();
-const byYear = new Map<number, typeof papers>();
-for (const p of papers) byYear.set(p.data.year, [...(byYear.get(p.data.year) ?? []), p]);
 ---
 <Base title={intros.publications.title} description={intros.publications.lead}>
   <header class="page-head">
@@ -31,12 +29,7 @@ for (const p of papers) byYear.set(p.data.year, [...(byYear.get(p.data.year) ?? 
       </div>
       <p class="muted small">{intros.publications.note}</p>
 
-      {[...byYear.entries()].map(([year, list]) => (
-        <div class="year-group" data-year={year}>
-          <h2 class="year-head">{year}</h2>
-          <ul class="pubs">{list.map((p) => <PaperItem paper={p} />)}</ul>
-        </div>
-      ))}
+      <ul class="pubs">{papers.map((p) => <PaperItem paper={p} />)}</ul>
     </div>
   </section>
 </Base>
@@ -47,9 +40,6 @@ for (const p of papers) byYear.set(p.data.year, [...(byYear.get(p.data.year) ?? 
     buttons.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.filter === filter)));
     document.querySelectorAll<HTMLElement>(".pub").forEach((li) => {
       li.hidden = filter !== "all" && !(li.dataset.thrusts ?? "").split(" ").includes(filter);
-    });
-    document.querySelectorAll<HTMLElement>(".year-group").forEach((g) => {
-      g.hidden = !g.querySelector(".pub:not([hidden])");
     });
     const url = new URL(location.href);
     if (filter === "all") url.searchParams.delete("thrust"); else url.searchParams.set("thrust", filter);

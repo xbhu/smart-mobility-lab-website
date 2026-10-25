@@ -3,7 +3,6 @@ import Base from "../../layouts/Base.astro";
 import PaperItem from "../../components/PaperItem.astro";
 import Video from "../../components/Video.astro";
 import { getCollection, getEntry, getEntries, render } from "astro:content";
-import { labPapers } from "../../lib/papers";
 import { ROLE_LABEL, ALUMNI_ROLE_LABEL, hasProfile, initials, publicFileExists, years } from "../../lib/site";
 
 export async function getStaticPaths() {
@@ -19,7 +18,9 @@ const startupPage = isPI ? await getEntry("pages", "xianbiao-hu-startup") : null
 const Startup = startupPage ? (await render(startupPage)).Content : null;
 const { Content } = await render(isPI ? piPage! : person);
 const pi: any = piPage?.data ?? {};
-const papers = (await labPapers()).filter((p) => p.data.authors.some((a) => a.person?.id === person.id));
+const papers = (await getCollection("papers"))
+  .filter((p) => p.data.authors.some((a) => a.person?.id === person.id))
+  .sort((a, b) => b.data.year - a.data.year);
 // The PI page links to /publications instead of repeating a paper list.
 const shown = isPI ? [] : papers;
 const startupVideos = isPI && pi.startup_videos ? await getEntries(pi.startup_videos.map((id: string) => ({ collection: "videos" as const, id }))) : [];

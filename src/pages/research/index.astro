@@ -4,10 +4,9 @@ import ThrustCard from "../../components/ThrustCard.astro";
 import { getCollection } from "astro:content";
 import { intros } from "../../lib/site";
 import { thrustProjects } from "../../lib/thrust";
-import { labPapers } from "../../lib/papers";
 
 const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
-const papers = await labPapers();
+const papers = await getCollection("papers");
 // Project counts match the lists on each thrust page.
 const projectCounts = Object.fromEntries(await Promise.all(thrusts.map(async (t) => [t.id, (await thrustProjects(t)).length])));
 const count = (id: string) => ({

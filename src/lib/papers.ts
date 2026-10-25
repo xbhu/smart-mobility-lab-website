@@ -1,7 +1,7 @@
 // Which papers the lab site shows, and in what order.
 // The papers collection feeds two sites: the Research Atlas reads every paper through
 // /data/papers.json (and picks its own set with `featured`), while this site lists only papers
-// flagged `show_on_lab`: top journals (TR Part series, IEEE Transactions) and top conferences.
+// flagged `show_on_lab` on its Publications page: top journals (TR Part series, IEEE Transactions) and top conferences.
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
