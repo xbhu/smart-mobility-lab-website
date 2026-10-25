@@ -20,8 +20,9 @@ subtopic: infrastructure-planning
 show_on_lab: true
 featured: true
 verified: crossref-2026-10-20
-note: Has code (per Atlas plan); add repo link.
 status: published
+atlas_slug: song-charging-station-location-trd-2023
+pdf: https://atlas.mobilitypsu.com/media/song-charging-station-location-trd-2023/Song_Hu_2023_Demand_Supply_Coupled_Charging_Station_Location_TRD.pdf
 summary: >-
   Couples learning-based EV charging demand prediction with the charging station location problem, so
   siting decisions and demand management are planned together.
