@@ -29,6 +29,7 @@ featured: true
 verified: crossref-2026-10-20
 status: published
 atlas_slug: pan-streetlight-charging-jupd-2025
+pdf: https://atlas.mobilitypsu.com/media/pan-streetlight-charging-jupd-2025/Pan_et_al_2025_Equitable_Urban_EV_Charging_Streetlight_JUPD.pdf
 summary: >-
   Evaluates the feasibility and benefits of converting streetlights in the Kansas City right-of-way into
   EV chargers for residents without home charging.
