@@ -28,6 +28,7 @@ subtopic: streetlight-charging
 featured: true
 verified: crossref-2026-10-20
 status: published
+atlas_slug: pan-streetlight-charging-jupd-2025
 summary: >-
   Evaluates the feasibility and benefits of converting streetlights in the Kansas City right-of-way into
   EV chargers for residents without home charging.
