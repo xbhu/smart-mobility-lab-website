@@ -20,6 +20,9 @@ doi: 10.1177/03611981251394673
 thrusts:
 - system-modeling
 subtopic: queueing-capacity
+featured: true
+summary: >-
+  Improves traffic state estimation at bottlenecks by modeling demand better, using a Greenshields-grounded approach.
 verified: cv-2026-09-27
 status: published
 ---

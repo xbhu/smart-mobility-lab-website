@@ -17,6 +17,9 @@ doi: 10.1016/j.tra.2018.04.013
 thrusts:
 - system-modeling
 subtopic: behavior-demand
+featured: true
+summary: >-
+  How context-sensitive insurance telematics data can be used in auto insurance rate making.
 verified: cv-2026-09-27
 status: published
 ---

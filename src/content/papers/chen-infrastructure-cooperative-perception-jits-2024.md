@@ -20,6 +20,9 @@ doi: 10.1080/15472450.2023.2257596
 thrusts:
 - automated-driving
 subtopic: perception-localization
+featured: true
+summary: >-
+  Uses infrastructure-mounted sensors to provide cooperative perception for early-stage connected and automated vehicle deployment.
 verified: cv-2026-09-27
 status: published
 ---

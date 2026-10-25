@@ -17,6 +17,9 @@ doi: 10.1260/2046-0430.4.2.119
 thrusts:
 - system-modeling
 subtopic: behavior-demand
+featured: true
+summary: >-
+  Behavior insights for an incentive-based active demand management platform.
 verified: cv-2026-09-27
 status: published
 ---

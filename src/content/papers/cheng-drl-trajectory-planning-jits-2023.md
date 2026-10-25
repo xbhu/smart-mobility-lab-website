@@ -21,6 +21,9 @@ doi: 10.1080/15472450.2022.2046472
 thrusts:
 - automated-driving
 subtopic: planning-control
+featured: true
+summary: >-
+  Deep reinforcement learning for online longitudinal trajectory planning of connected and autonomous vehicles in mixed traffic flow.
 verified: crossref-2026-10-20
 note: Published online March 2022.
 status: published

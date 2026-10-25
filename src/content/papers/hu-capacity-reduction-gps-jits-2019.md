@@ -20,6 +20,9 @@ doi: 10.1080/15472450.2018.1488133
 thrusts:
 - system-modeling
 subtopic: behavior-demand
+featured: true
+summary: >-
+  Uses smartphone GPS trajectories and functional data analysis to study how travelers respond to a pre-planned road capacity reduction.
 verified: cv-2026-09-27
 note: Current site lists a second, wrong DOI (10.1155/2020/8836511) on the Mobility Management page.
 status: published

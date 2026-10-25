@@ -21,6 +21,9 @@ doi: 10.1080/15568318.2019.1570402
 thrusts:
 - system-modeling
 subtopic: behavior-demand
+featured: true
+summary: >-
+  An empirical study of how information and incentives change travelers' day-to-day departure time decisions.
 verified: cv-2026-09-27
 status: published
 ---

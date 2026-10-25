@@ -19,6 +19,9 @@ doi: 10.1080/15472450.2021.2010053
 thrusts:
 - electrification
 subtopic: demand-behavior
+featured: true
+summary: >-
+  Learns electric vehicle drivers' range anxiety with a gradient boosting approach built around the initial state of charge.
 verified: cv-2026-09-27
 note: Has code (per Atlas plan); add repo link.
 status: published

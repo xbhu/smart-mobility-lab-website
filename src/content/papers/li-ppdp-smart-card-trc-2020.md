@@ -18,6 +18,9 @@ doi: 10.1016/j.trc.2020.102634
 thrusts:
 - system-modeling
 subtopic: privacy
+featured: true
+summary: >-
+  A differential privacy-based algorithm for publishing transit smart card data while protecting riders' privacy.
 verified: cv-2026-09-27
 status: published
 ---

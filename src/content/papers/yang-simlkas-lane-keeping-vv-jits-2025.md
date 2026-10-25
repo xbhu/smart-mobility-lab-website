@@ -23,6 +23,9 @@ doi: 10.1080/15472450.2025.2559224
 thrusts:
 - automated-driving
 subtopic: planning-control
+featured: true
+summary: >-
+  A simulation-based framework for verifying and validating lane keeping assistance systems before they reach the road.
 verified: cv-2026-09-27
 status: published
 ---

@@ -17,6 +17,9 @@ doi: 10.3141/2284-10
 thrusts:
 - system-modeling
 subtopic: behavior-demand
+featured: true
+summary: >-
+  Models how vacant taxi cabs choose routes in urban traffic networks.
 verified: cv-2026-09-27
 status: published
 ---

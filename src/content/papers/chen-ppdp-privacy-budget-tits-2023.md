@@ -23,6 +23,9 @@ doi: 10.1109/TITS.2023.3309783
 thrusts:
 - system-modeling
 subtopic: privacy
+featured: true
+summary: >-
+  Optimizes how the privacy budget is allocated when publishing public transit trajectory data with differential privacy.
 verified: cv-2026-09-27
 status: published
 ---

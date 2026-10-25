@@ -17,6 +17,9 @@ doi: 10.1080/15472450.2016.1171151
 thrusts:
 - system-modeling
 subtopic: behavior-demand
+featured: true
+summary: >-
+  A travel demand management system that uses behavioral responses to steer the network toward a system optimum.
 verified: cv-2026-09-27
 status: published
 ---

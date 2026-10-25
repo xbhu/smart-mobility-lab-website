@@ -20,6 +20,9 @@ doi: 10.1177/03611981211056644
 thrusts:
 - work-zone-automation
 subtopic: odd-guidelines
+featured: true
+summary: >-
+  Operation guidelines for leader-follower autonomous maintenance vehicles at work zone locations.
 verified: cv-2026-09-27
 status: published
 ---

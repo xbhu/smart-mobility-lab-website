@@ -22,6 +22,9 @@ doi: 10.1177/0361198120919746
 thrusts:
 - automated-driving
 subtopic: planning-control
+featured: true
+summary: >-
+  A Monte Carlo Tree Search-based algorithm for controlling mixed traffic flow at an arterial intersection.
 verified: cv-2026-09-27
 status: published
 ---

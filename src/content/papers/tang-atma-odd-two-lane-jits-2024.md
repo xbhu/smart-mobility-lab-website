@@ -20,6 +20,9 @@ thrusts:
 - work-zone-automation
 - system-modeling
 subtopic: odd-guidelines
+featured: true
+summary: >-
+  A multi-state merging model that defines the operational design domain for autonomous vehicles in work zones on two-lane highways.
 verified: cv-2026-09-27
 status: published
 ---

@@ -21,6 +21,9 @@ doi: 10.1016/j.ait.2026.100061
 thrusts:
 - automated-driving
 subtopic: perception-localization
+featured: true
+summary: >-
+  A survey of LiDAR semantic segmentation, from clear-day methods to those that keep working in rain, fog, snow and other adverse weather.
 verified: cv-2026-09-27
 status: published
 ---

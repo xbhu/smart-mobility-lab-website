@@ -21,5 +21,8 @@ status: accepted
 thrusts:
 - automated-driving
 subtopic: perception-localization
+featured: true
+summary: >-
+  Monocular visual odometry for autonomous vehicles that models reliable correspondences between frames to keep ego-motion estimates trustworthy.
 verified: cv-2026-09-27
 ---

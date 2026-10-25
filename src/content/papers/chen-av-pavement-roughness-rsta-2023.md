@@ -19,6 +19,9 @@ doi: 10.1098/rsta.2022.0176
 thrusts:
 - automated-driving
 subtopic: infrastructure-policy
+featured: true
+summary: >-
+  A machine learning approach to assess how autonomous vehicles affect pavement roughness.
 verified: cv-2026-09-27
 status: published
 ---

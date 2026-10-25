@@ -19,6 +19,9 @@ doi: 10.1109/TITS.2017.2713808
 thrusts:
 - system-modeling
 subtopic: network-demand
+featured: true
+summary: >-
+  A network partitioning algorithm for hierarchical traffic network management based on the macroscopic fundamental diagram.
 verified: cv-2026-09-27
 status: published
 ---
