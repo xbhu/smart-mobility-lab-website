@@ -19,6 +19,7 @@ doi: 10.1016/j.tre.2025.104501
 thrusts:
 - system-modeling
 subtopic: network-demand
+show_on_lab: true
 verified: cv-2026-09-27
 status: published
 ---

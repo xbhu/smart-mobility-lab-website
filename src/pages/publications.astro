@@ -3,9 +3,10 @@ import Base from "../layouts/Base.astro";
 import PaperItem from "../components/PaperItem.astro";
 import { getCollection } from "astro:content";
 import { intros } from "../lib/site";
+import { labPapers } from "../lib/papers";
 
 const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
-const papers = (await getCollection("papers")).sort((a, b) => b.data.year - a.data.year || a.data.title.localeCompare(b.data.title));
+const papers = await labPapers();
 const byYear = new Map<number, typeof papers>();
 for (const p of papers) byYear.set(p.data.year, [...(byYear.get(p.data.year) ?? []), p]);
 ---

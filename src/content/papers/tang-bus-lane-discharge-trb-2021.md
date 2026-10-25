@@ -20,6 +20,7 @@ doi: 10.1016/j.trb.2021.04.008
 thrusts:
 - system-modeling
 subtopic: queueing-capacity
+show_on_lab: true
 featured: true
 verified: cv-2026-09-27
 status: published

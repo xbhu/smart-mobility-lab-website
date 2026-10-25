@@ -17,6 +17,7 @@ doi: 10.1016/j.trc.2017.05.015
 thrusts:
 - system-modeling
 subtopic: behavior-demand
+show_on_lab: true
 featured: true
 summary: >-
   A Bayesian network model that compares contextual and non-contextual driving behavior assessment.

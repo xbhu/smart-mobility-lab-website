@@ -106,7 +106,11 @@ const papers = defineCollection({
     status: z.enum(["published", "accepted", "under-review"]),
     thrusts: z.array(thrustId).min(1),
     subtopic: z.string(),
+    // Atlas: true shows this paper on atlas.mobilitypsu.com (as a "Coming soon" card until its page exists).
     featured: z.boolean().optional(),
+    // Lab site: true lists this paper on lab.mobilitypsu.com (Publications, thrust and people pages).
+    // Independent of `featured`: the lab site keeps only top journals and conferences.
+    show_on_lab: z.boolean().optional(),
     summary: z.string().optional(),
     // Plain-language page on the Research Atlas: https://atlas.mobilitypsu.com/<atlas_slug>/
     atlas_slug: z.string().regex(/^[a-z0-9-]+$/).optional(),

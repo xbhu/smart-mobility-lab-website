@@ -20,6 +20,7 @@ doi: 10.1016/j.trb.2022.07.006
 thrusts:
 - system-modeling
 subtopic: queueing-capacity
+show_on_lab: true
 featured: true
 code: https://github.com/chrisyangsong/roundabout_capacity_estimation
 verified: cv-2026-09-27

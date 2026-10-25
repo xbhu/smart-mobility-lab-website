@@ -23,6 +23,7 @@ doi: 10.1109/TITS.2024.3449916
 thrusts:
 - automated-driving
 subtopic: planning-control
+show_on_lab: true
 verified: crossref-2026-10-20
 status: published
 ---

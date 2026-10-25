@@ -18,6 +18,7 @@ doi: 10.1016/j.trd.2025.105069
 thrusts:
 - electrification
 subtopic: demand-behavior
+show_on_lab: true
 featured: true
 verified: crossref-2026-10-20
 note: Official title differs slightly from the current site’s listing; Crossref title used.

@@ -19,6 +19,7 @@ doi: 10.1016/j.trd.2026.105501
 thrusts:
 - electrification
 subtopic: infrastructure-planning
+show_on_lab: true
 featured: true
 verified: cv-2026-09-27
 status: published

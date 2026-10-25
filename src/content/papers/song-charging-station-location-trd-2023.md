@@ -17,6 +17,7 @@ doi: 10.1016/j.trd.2023.103975
 thrusts:
 - electrification
 subtopic: infrastructure-planning
+show_on_lab: true
 featured: true
 verified: crossref-2026-10-20
 note: Has code (per Atlas plan); add repo link.

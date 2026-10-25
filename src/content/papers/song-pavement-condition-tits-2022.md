@@ -20,6 +20,7 @@ doi: 10.1109/TITS.2022.3164596
 thrusts:
 - automated-driving
 subtopic: infrastructure-policy
+show_on_lab: true
 featured: true
 summary: >-
   An efficient and explainable ensemble learning model that predicts asphalt pavement condition from the LTPP dataset.

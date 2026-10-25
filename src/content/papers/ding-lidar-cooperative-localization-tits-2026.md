@@ -23,6 +23,7 @@ thrusts:
 - automated-driving
 - work-zone-automation
 subtopic: perception-localization
+show_on_lab: true
 featured: true
 verified: crossref-2026-10-20
 status: published

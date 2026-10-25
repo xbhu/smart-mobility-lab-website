@@ -21,6 +21,7 @@ thrusts:
 - system-modeling
 - automated-driving
 subtopic: cv-data
+show_on_lab: true
 verified: cv-2026-09-27
 status: published
 ---

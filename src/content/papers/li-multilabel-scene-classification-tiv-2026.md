@@ -18,5 +18,6 @@ status: accepted
 thrusts:
 - automated-driving
 subtopic: perception-localization
+show_on_lab: true
 verified: cv-2026-09-27
 ---

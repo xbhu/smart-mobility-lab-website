@@ -21,6 +21,7 @@ doi: 10.1016/j.trc.2022.103874
 thrusts:
 - automated-driving
 subtopic: prediction-behavior
+show_on_lab: true
 verified: crossref-2026-10-20
 status: published
 ---

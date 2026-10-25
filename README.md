@@ -40,6 +40,12 @@ background.
 `person: <id>` under the author so the paper appears on your profile. Set `thrusts` (first one is the
 primary thrust) and a `subtopic` from that thrust's file.
 
+Two independent flags decide where a paper appears. `show_on_lab: true` lists it on this site
+(Publications, thrust and people pages); keep that to top journals (TR Part series, IEEE
+Transactions) and top conferences, since a short list gets read. `featured: true` puts it on the
+Research Atlas (atlas.mobilitypsu.com) as a "Coming soon" card until its page exists. Papers led by an
+outside collaborator (first author not in `people`) are listed below the group's own papers.
+
 **A news item.** Add `src/content/news/YYYY-MM-short-title.md` with `date`, `title`, `tags`
 (grant, award, media, visit, people, event), and optional links.
 

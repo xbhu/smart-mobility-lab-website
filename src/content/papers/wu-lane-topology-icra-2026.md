@@ -14,6 +14,7 @@ venue_short: ICRA 2026
 thrusts:
 - automated-driving
 subtopic: perception-localization
+show_on_lab: true
 featured: true
 verified: cv-2026-09-27
 note: Vienna, Austria, June 1–5, 2026.

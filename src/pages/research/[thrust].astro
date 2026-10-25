@@ -6,6 +6,7 @@ import PhotoStrip from "../../components/PhotoStrip.astro";
 import { getCollection, getEntry, getEntries, render } from "astro:content";
 import { years } from "../../lib/site";
 import { thrustProjects } from "../../lib/thrust";
+import { onLab, labPapers, demoteOutsideLed } from "../../lib/papers";
 
 export async function getStaticPaths() {
   const thrusts = await getCollection("thrusts");
@@ -16,14 +17,12 @@ const { thrust } = Astro.props;
 const t = thrust.data;
 const { Content } = await render(thrust);
 
-const featured = await getEntries(t.featured_papers);
+const featured = demoteOutsideLed((await getEntries(t.featured_papers)).filter(onLab));
 const subtopics = await Promise.all(
-  t.subtopics.map(async (s) => ({ ...s, entries: await getEntries(s.papers) })),
+  t.subtopics.map(async (s) => ({ ...s, entries: demoteOutsideLed((await getEntries(s.papers)).filter(onLab)) })),
 );
 const videos = await getEntries(t.videos);
-const allPapers = (await getCollection("papers"))
-  .filter((p) => p.data.thrusts.includes(thrust.id as any))
-  .sort((a, b) => b.data.year - a.data.year);
+const allPapers = (await labPapers()).filter((p) => p.data.thrusts.includes(thrust.id as any));
 const recent = allPapers.slice(0, 10);
 const projects = await thrustProjects(thrust);
 const isUrl = (s: string | null) => Boolean(s);

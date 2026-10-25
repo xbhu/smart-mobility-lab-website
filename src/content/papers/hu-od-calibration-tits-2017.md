@@ -20,6 +20,7 @@ doi: 10.1109/TITS.2017.2661751
 thrusts:
 - system-modeling
 subtopic: network-demand
+show_on_lab: true
 featured: true
 summary: >-
   A sequential decomposition framework for calibrating dynamic origin-destination demand in a congested network.

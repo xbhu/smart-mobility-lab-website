@@ -19,6 +19,7 @@ thrusts:
 - automated-driving
 - system-modeling
 subtopic: planning-control
+show_on_lab: true
 featured: true
 verified: crossref-2026-10-20
 status: published

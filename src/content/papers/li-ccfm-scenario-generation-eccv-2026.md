@@ -17,6 +17,7 @@ venue_short: ECCV 2026
 thrusts:
 - automated-driving
 subtopic: prediction-behavior
+show_on_lab: true
 featured: true
 verified: cv-2026-09-27
 note: Malmö, Sweden, September 8–12, 2026.
