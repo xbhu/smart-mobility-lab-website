@@ -23,6 +23,7 @@ show_on_lab: true
 featured: true
 verified: cv-2026-09-27
 status: published
+atlas_slug: hong-ev-infrastructure-investment-trd-2026
 summary: >-
   A single demand–supply coupled framework for deciding how public and private investment in EV charging
   infrastructure should be combined.
