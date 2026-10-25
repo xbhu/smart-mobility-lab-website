@@ -20,6 +20,7 @@ thrusts:
 subtopic: queueing-capacity
 featured: true
 code: https://github.com/panyuyan/VDF-review-code
+pdf: https://atlas.mobilitypsu.com/media/system-modeling-pan-vdf-review/Pan_et_al_2025_VDF_Review_CommTR.pdf
 atlas_slug: system-modeling-pan-vdf-review
 verified: cv-2026-09-27
 status: published
