@@ -7,7 +7,8 @@ authors:
 - name: Xianbiao Hu
   person: xianbiao-hu
   corresponding: true
-- name: X. Zhou
+- name: Xuesong Zhou
+  corresponding: true
 year: 2026
 type: journal
 venue: 'Transportation Research Part C: Emerging Technologies'
@@ -20,6 +21,7 @@ thrusts:
 subtopic: queueing-capacity
 show_on_lab: true
 featured: true
+atlas_slug: pan-fluid-queue-trc-2026
 verified: cv-2026-09-27
 status: published
 summary: >-
