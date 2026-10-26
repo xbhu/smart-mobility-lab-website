@@ -19,6 +19,7 @@ featured: true
 verified: cv-2026-09-27
 note: Vienna, Austria, June 1–5, 2026.
 status: published
+atlas_slug: wu-lane-topology-icra-2026
 summary: >-
   Predicts the lane graph an automated vehicle needs for planning, and keeps the prediction reliable when
   lanes are occluded by gating topology reasoning on confidence and using fiducial markers as priors.
