@@ -17,6 +17,7 @@ subtopic: perception-localization
 featured: true
 show_on_lab: true
 todo: Just accepted. Add volume, pages and DOI when published; confirm the corresponding author.
+atlas_slug: biswas-atn3d-radar-lidar-tits-2027
 summary: >-
   Density-aware early fusion of LiDAR and radar for 3D object detection when sensing is extremely sparse.
 ---
