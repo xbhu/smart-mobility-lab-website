@@ -25,6 +25,7 @@ thrusts:
 subtopic: perception-localization
 show_on_lab: true
 featured: true
+atlas_slug: ding-lidar-cooperative-localization-tits-2026
 verified: crossref-2026-10-20
 status: published
 summary: >-
