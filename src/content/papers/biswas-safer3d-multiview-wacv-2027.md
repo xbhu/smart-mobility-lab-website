@@ -21,6 +21,8 @@ thrusts:
 - automated-driving
 subtopic: perception-localization
 featured: true
+atlas_slug: biswas-safer3d-multiview-wacv-2027
+pdf: https://atlas.mobilitypsu.com/media/biswas-safer3d-multiview-wacv-2027/Biswas_et_al_2027_Safer3D_WACV.pdf
 show_on_lab: true
 todo: Just accepted. Add pages and DOI when published; confirm the corresponding author.
 summary: >-
