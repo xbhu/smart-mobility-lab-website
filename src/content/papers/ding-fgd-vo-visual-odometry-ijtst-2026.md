@@ -25,4 +25,7 @@ featured: true
 summary: >-
   Monocular visual odometry for autonomous vehicles that models reliable correspondences between frames to keep ego-motion estimates trustworthy.
 verified: cv-2026-09-27
+atlas_slug: ding-fgd-vo-visual-odometry-ijtst-2026
+code: https://github.com/yuxinpsu/FGD-VO
+pdf: https://atlas.mobilitypsu.com/media/ding-fgd-vo-visual-odometry-ijtst-2026/Ding_et_al_2026_FGD-VO_IJTST.pdf
 ---
