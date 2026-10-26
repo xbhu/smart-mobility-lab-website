@@ -23,6 +23,7 @@ thrusts:
 - work-zone-automation
 subtopic: operations
 featured: true
+atlas_slug: tang-atma-route-optimization-ai-2026
 verified: cv-2026-09-27
 status: published
 summary: >-
