@@ -22,6 +22,8 @@ thrusts:
 - system-modeling
 subtopic: behavior-demand
 featured: true
+atlas_slug: hu-ubi-contextual-risk-ietits-2019
+pdf: https://atlas.mobilitypsu.com/media/hu-ubi-contextual-risk-ietits-2019/Hu_et_al_2019_Contextual_Driving_Risk_UBI_IET_ITS.pdf
 summary: >-
   A contextual driving risk model that advances usage-based insurance by accounting for the context in which driving happens.
 ---
