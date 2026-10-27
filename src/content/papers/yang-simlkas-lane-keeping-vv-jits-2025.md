@@ -28,4 +28,8 @@ summary: >-
   A simulation-based framework for verifying and validating lane keeping assistance systems before they reach the road.
 verified: cv-2026-09-27
 status: published
+atlas_slug: yang-simlkas-lane-keeping-vv-jits-2025
+code: https://github.com/ytj254/SimLKAS
+slides: https://atlas.mobilitypsu.com/media/yang-simlkas-lane-keeping-vv-jits-2025/Yang_et_al_2025_SimLKAS_JITS_slides.pdf
+pdf: https://atlas.mobilitypsu.com/media/yang-simlkas-lane-keeping-vv-jits-2025/Yang_et_al_2025_SimLKAS_JITS.pdf
 ---
