@@ -14,6 +14,8 @@ volume: '2284'
 issue: '1'
 pages: 81–88
 doi: 10.3141/2284-10
+pdf: https://atlas.mobilitypsu.com/media/hu-vacant-taxi-routing-trr-2012/Hu_et_al_2012_Vacant_Taxi_Routing_TRR.pdf
+atlas_slug: hu-vacant-taxi-routing-trr-2012
 thrusts:
 - system-modeling
 subtopic: behavior-demand
