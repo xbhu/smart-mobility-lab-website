@@ -26,4 +26,6 @@ summary: >-
 verified: cv-2026-09-27
 note: Current site lists a second, wrong DOI (10.1155/2020/8836511) on the Mobility Management page.
 status: published
+atlas_slug: hu-capacity-reduction-gps-jits-2019
+pdf: https://atlas.mobilitypsu.com/media/hu-capacity-reduction-gps-jits-2019/Hu_et_al_2019_Capacity_Reduction_GPS_JITS.pdf
 ---
