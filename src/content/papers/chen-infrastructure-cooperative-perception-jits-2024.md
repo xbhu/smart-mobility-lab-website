@@ -8,7 +8,7 @@ authors:
   person: qing-tang
 - name: Xianbiao Hu
   person: xianbiao-hu
-- name: Z. Huang
+- name: Zhitong Huang
 year: 2024
 type: journal
 venue: Journal of Intelligent Transportation Systems
@@ -25,4 +25,6 @@ summary: >-
   Uses infrastructure-mounted sensors to provide cooperative perception for early-stage connected and automated vehicle deployment.
 verified: cv-2026-09-27
 status: published
+atlas_slug: chen-infrastructure-cooperative-perception-jits-2024
+pdf: https://atlas.mobilitypsu.com/media/chen-infrastructure-cooperative-perception-jits-2024/Chen_et_al_2024_Infrastructure_Cooperative_Perception_JITS.pdf
 ---
