@@ -27,4 +27,6 @@ summary: >-
 verified: crossref-2026-10-20
 note: Published online March 2022.
 status: published
+atlas_slug: cheng-drl-trajectory-planning-jits-2023
+pdf: https://atlas.mobilitypsu.com/media/cheng-drl-trajectory-planning-jits-2023/Cheng_et_al_2023_DRL_CAV_Trajectory_Planning_JITS.pdf
 ---
