@@ -24,6 +24,8 @@ show_on_lab: true
 featured: true
 summary: >-
   A sequential decomposition framework for calibrating dynamic origin-destination demand in a congested network.
+pdf: https://atlas.mobilitypsu.com/media/hu-od-calibration-tits-2017/Hu_et_al_2017_OD_Calibration_TITS.pdf
+atlas_slug: hu-od-calibration-tits-2017
 verified: cv-2026-09-27
 status: published
 ---
