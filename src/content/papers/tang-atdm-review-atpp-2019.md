@@ -18,6 +18,8 @@ doi: 10.1016/bs.atpp.2019.05.002
 thrusts:
 - system-modeling
 subtopic: behavior-demand
+atlas_slug: tang-atdm-review-atpp-2019
+pdf: https://atlas.mobilitypsu.com/media/tang-atdm-review-atpp-2019/Tang_Hu_2019_ATDM_Behavior_Change_Review_ATPP.pdf
 verified: cv-2026-09-27
 status: published
 ---
