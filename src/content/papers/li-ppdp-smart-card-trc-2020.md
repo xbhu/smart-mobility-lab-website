@@ -4,7 +4,7 @@ title: >-
 authors:
 - name: Yang Li
   person: yang-li
-- name: D. Yang
+- name: Dasen Yang
 - name: Xianbiao Hu
   person: xianbiao-hu
   corresponding: true
@@ -24,4 +24,6 @@ summary: >-
   A differential privacy-based algorithm for publishing transit smart card data while protecting riders' privacy.
 verified: cv-2026-09-27
 status: published
+atlas_slug: li-ppdp-smart-card-trc-2020
+pdf: https://atlas.mobilitypsu.com/media/li-ppdp-smart-card-trc-2020/Li_et_al_2020_Smart_Card_PPDP_TRC.pdf
 ---
