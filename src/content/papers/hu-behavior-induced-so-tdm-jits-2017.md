@@ -14,6 +14,8 @@ volume: '21'
 issue: '1'
 pages: 12–25
 doi: 10.1080/15472450.2016.1171151
+pdf: https://atlas.mobilitypsu.com/media/hu-behavior-induced-so-tdm-jits-2017/Hu_et_al_2017_Behaviorally_Induced_System_Optimal_TDM_JITS.pdf
+atlas_slug: hu-behavior-induced-so-tdm-jits-2017
 thrusts:
 - system-modeling
 subtopic: behavior-demand
