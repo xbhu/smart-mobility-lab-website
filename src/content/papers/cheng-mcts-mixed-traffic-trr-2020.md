@@ -1,16 +1,16 @@
 ---
-title: A Monte Carlo Tree Search-Based Mixed Traffic Flow Control Algorithm for Arterial Intersection
+title: Monte Carlo Tree Search-Based Mixed Traffic Flow Control Algorithm for Arterial Intersections
 authors:
 - name: Yanqiu Cheng
   person: yanqiu-cheng
-- name: Qing Tang
-  person: qing-tang
 - name: Xianbiao Hu
   person: xianbiao-hu
   corresponding: true
+- name: Qing Tang
+  person: qing-tang
 - name: Hongsheng Qi
   person: hongsheng-qi
-- name: H. Yang
+- name: Hong Yang
 year: 2020
 type: journal
 venue: Transportation Research Record
@@ -27,4 +27,6 @@ summary: >-
   A Monte Carlo Tree Search-based algorithm for controlling mixed traffic flow at an arterial intersection.
 verified: cv-2026-09-27
 status: published
+atlas_slug: cheng-mcts-mixed-traffic-trr-2020
+pdf: https://atlas.mobilitypsu.com/media/cheng-mcts-mixed-traffic-trr-2020/Cheng_et_al_2020_MCTS_Mixed_Traffic_Control_TRR.pdf
 ---
