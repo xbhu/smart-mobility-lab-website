@@ -5,6 +5,7 @@ title: >-
 authors:
 - name: Kang An
 - name: Yi-Chang Chiu
+  corresponding: true
 - name: Xianbiao Hu
   person: xianbiao-hu
 - name: Xiaohong Chen
@@ -23,6 +24,8 @@ show_on_lab: true
 featured: true
 summary: >-
   A network partitioning algorithm for hierarchical traffic network management based on the macroscopic fundamental diagram.
+pdf: https://atlas.mobilitypsu.com/media/an-network-partitioning-mfd-tits-2018/An_et_al_2018_Network_Partitioning_MFD_TITS.pdf
+atlas_slug: an-network-partitioning-mfd-tits-2018
 verified: cv-2026-09-27
 status: published
 ---
