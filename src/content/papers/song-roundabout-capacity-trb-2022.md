@@ -25,6 +25,8 @@ featured: true
 code: https://github.com/chrisyangsong/roundabout_capacity_estimation
 verified: cv-2026-09-27
 status: published
+atlas_slug: song-roundabout-capacity-trb-2022
+pdf: https://atlas.mobilitypsu.com/media/song-roundabout-capacity-trb-2022/Song_Hu_2022_Roundabout_Capacity_TRB.pdf
 summary: >-
   An analytical approximation of roundabout capacity built on merging state transitions, with a calibration
   method and public code.
