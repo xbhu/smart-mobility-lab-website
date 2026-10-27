@@ -29,4 +29,6 @@ summary: >-
   Optimizes how the privacy budget is allocated when publishing public transit trajectory data with differential privacy.
 verified: cv-2026-09-27
 status: published
+atlas_slug: chen-ppdp-privacy-budget-tits-2023
+pdf: https://atlas.mobilitypsu.com/media/chen-ppdp-privacy-budget-tits-2023/Chen_et_al_2023_Privacy_Budget_Allocation_TITS.pdf
 ---
