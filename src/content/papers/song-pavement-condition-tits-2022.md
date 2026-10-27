@@ -5,10 +5,11 @@ title: >-
 authors:
 - name: Yang Song
   person: yang-song
-- name: D. Wang
+- name: Yizhuang David Wang
 - name: Xianbiao Hu
   person: xianbiao-hu
-- name: J. Liu
+- name: Jenny Liu
+  corresponding: true
 year: 2022
 type: journal
 venue: IEEE Transactions on Intelligent Transportation Systems
@@ -25,6 +26,8 @@ featured: true
 summary: >-
   An efficient and explainable ensemble learning model that predicts asphalt pavement condition from the LTPP dataset.
 code: https://github.com/chrisyangsong/pavement_condition_prediction
+pdf: https://atlas.mobilitypsu.com/media/song-pavement-condition-tits-2022/Song_et_al_2022_Explainable_Pavement_IRI_Prediction_TITS.pdf
+atlas_slug: song-pavement-condition-tits-2022
 verified: cv-2026-09-27
 status: published
 ---
