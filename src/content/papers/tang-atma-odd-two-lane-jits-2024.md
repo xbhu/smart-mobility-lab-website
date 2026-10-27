@@ -21,6 +21,8 @@ thrusts:
 - system-modeling
 subtopic: odd-guidelines
 featured: true
+atlas_slug: tang-atma-odd-two-lane-jits-2024
+pdf: https://atlas.mobilitypsu.com/media/tang-atma-odd-two-lane-jits-2024/Tang_Hu_2024_ATMA_ODD_Two_Lane_Highways_JITS.pdf
 summary: >-
   A multi-state merging model that defines the operational design domain for autonomous vehicles in work zones on two-lane highways.
 verified: cv-2026-09-27
