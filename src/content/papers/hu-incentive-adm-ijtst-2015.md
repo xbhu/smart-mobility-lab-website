@@ -22,4 +22,6 @@ summary: >-
   Behavior insights for an incentive-based active demand management platform.
 verified: cv-2026-09-27
 status: published
+atlas_slug: hu-incentive-adm-ijtst-2015
+pdf: https://atlas.mobilitypsu.com/media/hu-incentive-adm-ijtst-2015/Hu_et_al_2015_Incentive_Based_ADM_IJTST.pdf
 ---
