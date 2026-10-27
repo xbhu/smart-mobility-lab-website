@@ -2,6 +2,7 @@
 title: A Bayesian Network Model for Contextual Versus Non-Contextual Driving Behavior Assessment
 authors:
 - name: Xiaoyu Zhu
+  corresponding: true
 - name: Yifei Yuan
 - name: Xianbiao Hu
   person: xianbiao-hu
@@ -19,6 +20,8 @@ thrusts:
 subtopic: behavior-demand
 show_on_lab: true
 featured: true
+atlas_slug: zhu-bayesian-driving-risk-trc-2017
+pdf: https://atlas.mobilitypsu.com/media/zhu-bayesian-driving-risk-trc-2017/Zhu_et_al_2017_Bayesian_Network_Driving_Risk_TRC.pdf
 summary: >-
   A Bayesian network model that compares contextual and non-contextual driving behavior assessment.
 verified: cv-2026-09-27
