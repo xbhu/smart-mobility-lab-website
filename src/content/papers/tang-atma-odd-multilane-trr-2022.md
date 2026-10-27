@@ -20,6 +20,8 @@ thrusts:
 - work-zone-automation
 subtopic: odd-guidelines
 featured: true
+atlas_slug: tang-atma-odd-multilane-trr-2022
+pdf: https://atlas.mobilitypsu.com/media/tang-atma-odd-multilane-trr-2022/Tang_Hu_Yang_2022_ATMA_ODD_Multilane_Highways_TRR.pdf
 verified: crossref-2026-10-20
 note: Published online December 2021.
 status: published
