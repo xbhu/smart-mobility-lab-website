@@ -19,6 +19,8 @@ thrusts:
 subtopic: behavior-demand
 show_on_lab: true
 featured: true
+atlas_slug: ma-ubi-rate-making-tra-2018
+pdf: https://atlas.mobilitypsu.com/media/ma-ubi-rate-making-tra-2018/Ma_et_al_2018_Telematics_Rate_Making_TRA.pdf
 summary: >-
   How context-sensitive insurance telematics data can be used in auto insurance rate making.
 verified: cv-2026-09-27
