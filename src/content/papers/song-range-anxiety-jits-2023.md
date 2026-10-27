@@ -23,6 +23,8 @@ featured: true
 summary: >-
   Learns electric vehicle drivers' range anxiety with a gradient boosting approach built around the initial state of charge.
 verified: cv-2026-09-27
-note: Has code (per Atlas plan); add repo link.
+atlas_slug: song-range-anxiety-jits-2023
+pdf: https://atlas.mobilitypsu.com/media/song-range-anxiety-jits-2023/Song_Hu_2023_EV_Range_Anxiety_Initial_SOC_JITS.pdf
+note: No public code repository (XB, 2026-10-27).
 status: published
 ---
