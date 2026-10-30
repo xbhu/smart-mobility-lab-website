@@ -28,8 +28,9 @@ subtopics:
     name: Connected vehicle data and road conditions
     summary: >-
       Turning partial connected vehicle data into network intelligence, from estimating turning-movement
-      spillover in near real time to interpolating and forecasting road friction for PennDOT.
-    papers: [qi-spillover-cv-data-trc-2020]
+      spillover in near real time and inferring lane changes and lateral wandering from vehicle
+      trajectories, to interpolating and forecasting road friction for PennDOT.
+    papers: [qi-spillover-cv-data-trc-2020, qi-lateral-wandering-trc-2023, qi-lane-change-inference-trc-2022]
   - id: privacy
     name: Privacy-preserving mobility data
     summary: >-
