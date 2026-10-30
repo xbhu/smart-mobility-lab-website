@@ -17,8 +17,8 @@ research:
         src: /media/photos/av-door-open-ite.jpg
         alt: Students seated in the lab’s automated vehicle, a Chrysler Pacifica with a roof sensor rack
       test-track:
-        src: /media/photos/av-wrap-rear-curve.jpg
-        alt: The automated vehicle driving a curve of the LTI test track
+        src: /media/photos/test-track-tile.jpg
+        alt: Aerial view of the LTI test track, with its one-mile oval, handling area, and research buildings labeled
       driving-simulator:
         src: /media/photos/simulator-session.jpg
         alt: A participant in the driving simulator
