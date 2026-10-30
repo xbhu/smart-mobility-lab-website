@@ -1,0 +1,19 @@
+---
+// One externally funded project on the Projects & Tools page.
+import { years } from "../lib/site";
+interface Props { project: { id: string; data: any } }
+const p = Astro.props.project;
+---
+<li class="project">
+  <div>
+    <p class="project-title">{p.data.title}</p>
+    <p class="project-sponsor">{p.data.sponsors.join(", ")}</p>
+    {(p.data.tool || p.data.dataset) && (
+      <p class="news-links">
+        {p.data.tool && <a href={p.data.tool}>Project site</a>}
+        {p.data.dataset && <a href={p.data.dataset}>Dataset</a>}
+      </p>
+    )}
+  </div>
+  <p class="project-side">{years(p.data.start, p.data.end)}<br />{p.data.role}</p>
+</li>

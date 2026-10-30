@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import ProjectItem from "../components/ProjectItem.astro";
 import { getCollection } from "astro:content";
 import { intros, years } from "../lib/site";
 
@@ -35,32 +36,29 @@ const INSTITUTION: Record<string, string> = { psu: "Penn State", mst: "Missouri 
     </div>
   </section>
 
-  {groups.map((g) => (
+  {/* Penn State projects stay open; earlier institutions are collapsed by default. */}
+  {groups.slice(0, 1).map((g) => (
     <section class="section" style="padding-bottom: 24px">
       <div class="wrap">
         <h2>{g.label}</h2>
-        <ul class="projects">
-          {g.items.map((p) => (
-            <li class="project">
-              <div>
-                <p class="project-title">{p.data.title}</p>
-                <p class="project-sponsor">
-                  {p.data.sponsors.join(", ")}
-                </p>
-                {(p.data.tool || p.data.dataset) && (
-                  <p class="news-links">
-                    {p.data.tool && <a href={p.data.tool}>Project site</a>}
-                    {p.data.dataset && <a href={p.data.dataset}>Dataset</a>}
-                  </p>
-                )}
-              </div>
-              <p class="project-side">{years(p.data.start, p.data.end)}<br />{p.data.role}</p>
-            </li>
-          ))}
-        </ul>
+        <ul class="projects">{g.items.map((p) => <ProjectItem project={p} />)}</ul>
       </div>
     </section>
   ))}
+
+  <section class="section" style="padding-top: 24px">
+    <div class="wrap"><div class="accordion">
+      {groups.slice(1).map((g) => (
+        <details class="collapsible">
+          <summary>
+            <span class="collapsible-title">{g.label}</span>
+            <span class="collapsible-sub">{g.items.length} externally funded {g.items.length === 1 ? "project" : "projects"}</span>
+          </summary>
+          <ul class="projects">{g.items.map((p) => <ProjectItem project={p} />)}</ul>
+        </details>
+      ))}
+    </div></div>
+  </section>
 
   {internal.length > 0 && (
     <section class="section section--concrete" aria-labelledby="internal-title">
