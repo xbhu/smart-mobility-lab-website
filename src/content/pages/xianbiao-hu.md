@@ -60,8 +60,8 @@ directs the Smart Mobility Lab. His research covers automated vehicle perception
 physical AI and foundation models (LLMs and VLMs) for transportation, large-scale telematics data
 analytics, dynamic system modeling, and transportation electrification.
 
-His research has been supported by 43 funded projects (35 external) totaling $22.6 million, from
-sponsors including USDOT, the Department of Energy, PennDOT, and Pennsylvania DEP. He has published
+His research has been supported by 43 funded projects (35 external) totaling $22.6 million, of which
+his share is $5.4 million. Sponsors include USDOT, the Department of Energy, PennDOT, and Pennsylvania DEP. He has published
 92 journal articles.
 He is Managing Editor of the *Journal of Intelligent Transportation Systems* and chairs the IEEE
 ITSS Technical Committee on Intelligent Electrified Mobility Operations and Infrastructure.

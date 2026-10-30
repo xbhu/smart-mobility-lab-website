@@ -40,8 +40,8 @@ hero:
 stats:
   as_of: 2026-09
   items:
-    - value: "$22.6M"
-      label: in research funding across 43 projects, 35 of them external
+    - value: "$5.4M"
+      label: in research funding to our lab, from 43 projects (35 of them external)
     - value: "92"
       label: journal articles, including 17 in Transportation Research Parts A–E and 11 in IEEE Transactions
     - value: "1 of 10"
