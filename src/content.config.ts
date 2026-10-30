@@ -40,6 +40,8 @@ const thrusts = defineCollection({
         name: z.string(),
         summary: z.string(),
         papers: z.array(reference("papers")),
+        // Outside links shown under the subtopic's papers, e.g. an agency news release.
+        links: z.array(z.object({ label: z.string(), url: z.string().url(), note: z.string().optional() })).optional(),
       }),
     ),
     featured_papers: z.array(reference("papers")),

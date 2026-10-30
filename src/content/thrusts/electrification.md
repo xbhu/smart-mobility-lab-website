@@ -34,6 +34,10 @@ subtopics:
       trucks in freight yards, Penn State’s own zero-emission fleet, and DOE-funded training for emergency
       responders who work with zero-emission trucks.
     papers: []
+    links:
+      - label: DEP Awarding $39.6 Million to Replace Aging Diesel Fleets with Zero-Emission Vehicles
+        url: https://www.pa.gov/agencies/dep/newsroom/dep-awarding-396-million-to-replace-aging-diesel-fleets-with-zero-emission-vehicles
+        note: PA DEP news release, January 2024. Our lab supports this program.
 featured_papers: [song-visionev-trd-2026, hong-ev-infrastructure-investment-trd-2026, pan-streetlight-charging-jupd-2025, song-charging-station-location-trd-2023]
 videos: [ev-cold-weather-fox43]
 resources:

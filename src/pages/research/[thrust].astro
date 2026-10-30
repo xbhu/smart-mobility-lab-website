@@ -62,6 +62,9 @@ const bg = (key: string) => (shown.indexOf(key) % 2 === 1 ? "section section--co
             {s.entries.length > 0 && (
               <ul>{s.entries.slice(0, 3).map((p) => <li><em>{p.data.title}</em> ({p.data.venue_short ?? p.data.venue}, {p.data.year})</li>)}</ul>
             )}
+            {s.links && s.links.length > 0 && (
+              <ul>{s.links.map((l) => <li><a href={l.url}>{l.label}</a>{l.note && <> ({l.note})</>}</li>)}</ul>
+            )}
           </div>
         ))}
       </div>
