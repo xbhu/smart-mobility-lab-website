@@ -23,6 +23,7 @@ featured: true
 atlas_slug: hav-policy-trt-2026
 verified: cv-2026-09-27
 status: published
+show_on_lab: true
 summary: >-
   Examines U.S. policy for highly automated vehicles through six questions and shows where public perception,
   regulation, and enforcement are structurally misaligned.
