@@ -3,12 +3,16 @@ import Base from "../layouts/Base.astro";
 import ThrustCard from "../components/ThrustCard.astro";
 import Video from "../components/Video.astro";
 import { getCollection, getEntry } from "astro:content";
-import { site, formatDate } from "../lib/site";
+import { site, formatDate, publicFileExists } from "../lib/site";
 
 const home = (await getEntry("pages", "home"))!.data.sections as any;
 const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
 const news = (await getCollection("news")).sort((a, b) => String(b.data.date).localeCompare(String(a.data.date))).slice(0, home.news.count);
-const sponsors = await getCollection("sponsors");
+// External sponsors only, federal first, then state, local, and industry.
+const SPONSOR_GROUPS = ["federal", "state", "local", "industry"];
+const sponsors = (await getCollection("sponsors"))
+  .filter((s) => SPONSOR_GROUPS.includes(s.data.group))
+  .sort((a, b) => SPONSOR_GROUPS.indexOf(a.data.group) - SPONSOR_GROUPS.indexOf(b.data.group) || a.data.name.localeCompare(b.data.name));
 const av = await getEntry("facilities", "autonomous-vehicle");
 const track = await getEntry("facilities", "test-track");
 const sim = await getEntry("facilities", "driving-simulator");
@@ -132,8 +136,14 @@ const ALUMNI_WAS: Record<string, string> = { phd: "Ph.D.", postdoc: "Postdoctora
   <section class="section section--concrete" aria-labelledby="sponsors-title">
     <div class="wrap">
       <div class="section-head"><h2 id="sponsors-title">{home.sponsors.heading}</h2><a href="/projects">Projects</a></div>
-      <ul class="sponsor-wall">
-        {sponsors.map((s) => <li>{s.data.name}</li>)}
+      <ul class="sponsor-logos">
+        {sponsors.map((s) => (
+          <li>
+            {s.data.logo && publicFileExists(s.data.logo)
+              ? <img src={s.data.logo} alt={s.data.name} title={s.data.name} loading="lazy" />
+              : <span>{s.data.name}</span>}
+          </li>
+        ))}
       </ul>
     </div>
   </section>

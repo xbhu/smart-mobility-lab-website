@@ -1,4 +1,5 @@
-# Sponsors and partners shown as a name wall. logo: add only after permission (logo_permission: true).
+# External sponsors and partners, shown as a logo grid on the home page (Penn State units are not listed).
+# logo: a site path under /media/logos/; entries without a logo file show their name instead.
 - { id: usdot, name: U.S. Department of Transportation, group: federal, url: https://www.transportation.gov }
 - { id: fhwa, name: Federal Highway Administration, group: federal, url: https://highways.dot.gov }
 - { id: doe, name: U.S. Department of Energy, group: federal, url: https://www.energy.gov }
@@ -14,5 +15,3 @@
 - { id: royal-truck, name: Royal Truck, group: industry, note: LiDAR SLAM collaboration (2025) }
 - { id: kratos, name: Kratos Defense, group: industry }
 - { id: mec, name: Metropolitan Energy Center, group: local, note: Lead organization on DOE streetlight charging and terminal truck projects }
-- { id: lti, name: Larson Transportation Institute, group: penn-state, url: https://www.larson.psu.edu }
-- { id: icds, name: Institute for Computational and Data Sciences, group: penn-state }
