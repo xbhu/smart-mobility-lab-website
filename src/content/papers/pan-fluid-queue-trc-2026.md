@@ -27,4 +27,5 @@ status: published
 summary: >-
   A fluid queue model of dynamic throughput under heavy congestion that remains consistent with the fundamental
   diagram of traffic flow.
+pdf: https://atlas.mobilitypsu.com/media/pan-fluid-queue-trc-2026/Pan_et_al_2026_FD_Consistent_Fluid_Queue_TRC.pdf
 ---

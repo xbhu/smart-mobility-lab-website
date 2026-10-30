@@ -29,4 +29,5 @@ status: published
 summary: >-
   Optimizes maintenance routes when the work is performed by leader-follower autonomous vehicles, so agencies
   can plan ATMA operations across a highway network.
+pdf: https://atlas.mobilitypsu.com/media/tang-atma-route-optimization-ai-2026/Tang_et_al_2026_ATMA_Route_Optimization_AI.pdf
 ---

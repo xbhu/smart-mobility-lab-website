@@ -14,6 +14,7 @@ year: 2025
 type: conference
 venue: IEEE International Automated Vehicle Validation Conference (IAVVC)
 venue_short: IAVVC 2025
+doi: 10.1109/IAVVC61942.2025.11219540
 thrusts:
 - automated-driving
 subtopic: perception-localization
@@ -25,4 +26,5 @@ summary: >-
   Reviews visual, magnetic and wireless markers that roadside and in-road infrastructure can give automated
   vehicles as fixed reference points for localization, identification and sensor calibration, and maps
   which marker suits which driving scenario.
+pdf: https://atlas.mobilitypsu.com/media/wu-markers-review-iavvc-2025/Wu_et_al_2025_Markers_for_AVs_IAVVC.pdf
 ---

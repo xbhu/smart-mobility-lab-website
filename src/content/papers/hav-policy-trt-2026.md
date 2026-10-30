@@ -27,4 +27,5 @@ show_on_lab: true
 summary: >-
   Examines U.S. policy for highly automated vehicles through six questions and shows where public perception,
   regulation, and enforcement are structurally misaligned.
+code: https://github.com/xbhu/HAV-Policy
 ---
