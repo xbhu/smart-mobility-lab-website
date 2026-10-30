@@ -322,6 +322,9 @@ a.person:hover .person-name { text-decoration: underline; text-decoration-thickn
 .collapsible-title { font: 800 clamp(1.4rem, 2.4vw, 1.8rem) var(--font-sign); color: var(--navy); }
 .collapsible-sub { color: var(--muted); }
 .collapsible .pubs { margin-top: 8px; }
+/* Stacked collapsibles on thrust pages: one rule between items, one closing rule at the end. */
+.accordion .collapsible + .collapsible { border-top-width: 1px; border-top-color: var(--rule); }
+.accordion { border-bottom: 1px solid var(--rule); }
 
 /* Collapsible story (PI page) */
 .startup { border-top: 4px solid var(--navy); padding-top: 4px; }

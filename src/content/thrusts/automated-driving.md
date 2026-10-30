@@ -26,9 +26,8 @@ subtopics:
     summary: >-
       Algorithms that let a vehicle know where it is and what the road looks like when GPS is weak and
       lanes are occluded: LiDAR-based cooperative localization between a leader and a follower vehicle,
-      LiDAR SLAM for truck automation, monocular visual odometry, infrastructure-assisted cooperative
-      perception, all-weather LiDAR segmentation, and lane graph prediction that stays reliable under occlusion.
-    papers: [ding-lidar-cooperative-localization-tits-2026, wu-lane-topology-icra-2026, chen-infrastructure-cooperative-perception-jits-2024, ding-allweather-lidar-segmentation-survey-ait-2026, ding-fgd-vo-visual-odometry-ijtst-2026]
+      LiDAR SLAM for truck automation, monocular visual odometry, multi-view camera 3D object detection, all-weather LiDAR segmentation, and lane graph prediction that stays reliable under occlusion.
+    papers: [ding-lidar-cooperative-localization-tits-2026, wu-lane-topology-icra-2026, biswas-safer3d-multiview-wacv-2027, ding-allweather-lidar-segmentation-survey-ait-2026, ding-fgd-vo-visual-odometry-ijtst-2026]
   - id: prediction-behavior
     name: Prediction, behavior, and scenario generation
     summary: >-
@@ -55,7 +54,7 @@ subtopics:
       the PennDOT Act 130 assessment of CAV impacts on Pennsylvania, and an analysis of U.S. automated
       vehicle policy.
     papers: [hav-policy-trt-2026, chen-av-pavement-roughness-rsta-2023, qi-pavement-mixed-traffic-tb-2024, song-pavement-condition-tits-2022, penndot-cav-impact-act130-2025]
-featured_papers: [wu-lane-topology-icra-2026, li-ccfm-scenario-generation-eccv-2026, ding-lidar-cooperative-localization-tits-2026, tang-freeway-merging-tits-2025, hav-policy-trt-2026]
+featured_papers: [wu-lane-topology-icra-2026, biswas-safer3d-multiview-wacv-2027, li-ccfm-scenario-generation-eccv-2026, ding-lidar-cooperative-localization-tits-2026, tang-freeway-merging-tits-2025, hav-policy-trt-2026]
 videos: [neeli-av-demo, av-lidar-camera-demo, av-carma-demo, av-waypoint-following, av-drive-by-wire, av-carma-campus]
 facilities: [autonomous-vehicle, test-track, driving-simulator]
 projects_first: [usdot-smart-atma, penndot-act130-cav, penndot-friction-forecasting, dced-atma-gps-denied]

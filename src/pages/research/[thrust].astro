@@ -30,7 +30,7 @@ const isUrl = (s: string | null) => Boolean(s);
 const INSTITUTION: Record<string, string> = { mst: "at Missouri S&T", metropia: "at Metropia" };
 const hasResources = Boolean(t.resources && t.resources.length > 0);
 // Alternate white and concrete backgrounds over the sections that are actually shown.
-const shown = ["content", "sub", videos.length > 0 ? "videos" : null, "featured", projects.length > 0 || hasResources ? "projects" : null, "pubs"].filter(Boolean);
+const shown = ["content", "sub", videos.length > 0 ? "videos" : null, "more"].filter(Boolean);
 const bg = (key: string) => (shown.indexOf(key) % 2 === 1 ? "section section--concrete" : "section");
 ---
 <Base title={t.name} description={t.tagline} image={t.hero.image ?? undefined}>
@@ -77,19 +77,23 @@ const bg = (key: string) => (shown.indexOf(key) % 2 === 1 ? "section section--co
     </section>
   )}
 
-  <section class={bg("featured")} aria-labelledby="feat-title">
+  <section class={bg("more")} aria-label="Representative work, sponsored projects, and publications">
     <div class="wrap">
-      <h2 id="feat-title">Representative work</h2>
-      <ul class="pubs">{featured.map((p) => <PaperItem paper={p} showSummary />)}</ul>
-    </div>
-  </section>
+      <div class="accordion">
+        <details class="collapsible">
+          <summary>
+            <span class="collapsible-title" id="feat-title">Representative work</span>
+            <span class="collapsible-sub">{featured.length} papers that best represent this thrust</span>
+          </summary>
+          <ul class="pubs">{featured.map((p) => <PaperItem paper={p} showSummary />)}</ul>
+        </details>
 
-  {(projects.length > 0 || hasResources) && (
-    <section class={bg("projects")} aria-labelledby="proj-title">
-      <div class="wrap">
         {projects.length > 0 && (
-          <>
-            <div class="section-head"><h2 id="proj-title">Sponsored projects</h2><a href="/projects">All projects</a></div>
+          <details class="collapsible">
+            <summary>
+              <span class="collapsible-title" id="proj-title">Sponsored projects</span>
+              <span class="collapsible-sub">{projects.length} externally funded {projects.length === 1 ? "project" : "projects"}</span>
+            </summary>
             <ul class="projects">
               {projects.map((p) => (
                 <li class="project">
@@ -101,28 +105,26 @@ const bg = (key: string) => (shown.indexOf(key) % 2 === 1 ? "section section--co
                 </li>
               ))}
             </ul>
-          </>
+            <p><a href="/projects">All projects</a></p>
+          </details>
         )}
-        {hasResources && (
-          <>
-            <h2 id={projects.length > 0 ? undefined : "proj-title"} style={projects.length > 0 ? "margin-top: 56px" : undefined}>Data and resources</h2>
-            <div class="tools">{t.resources!.map((r) => <div class="tool"><a href={r.url}>{r.label}</a></div>)}</div>
-          </>
-        )}
-      </div>
-    </section>
-  )}
 
-  <section class={bg("pubs")} aria-labelledby="pubs-title">
-    <div class="wrap">
-      <details class="collapsible">
-        <summary>
-          <span class="collapsible-title" id="pubs-title">Recent publications</span>
-          <span class="collapsible-sub">{recent.length < allPapers.length ? `The ${recent.length} most recent of ${allPapers.length} selected papers in this thrust` : `All ${allPapers.length} selected papers in this thrust`}</span>
-        </summary>
-        <ul class="pubs">{recent.map((p) => <PaperItem paper={p} />)}</ul>
-        <p><a href={`/publications?thrust=${thrust.id}`}>All {allPapers.length} papers in this thrust</a></p>
-      </details>
+        <details class="collapsible">
+          <summary>
+            <span class="collapsible-title" id="pubs-title">Recent publications</span>
+            <span class="collapsible-sub">{recent.length < allPapers.length ? `The ${recent.length} most recent of ${allPapers.length} selected papers in this thrust` : `All ${allPapers.length} selected papers in this thrust`}</span>
+          </summary>
+          <ul class="pubs">{recent.map((p) => <PaperItem paper={p} />)}</ul>
+          <p><a href={`/publications?thrust=${thrust.id}`}>All {allPapers.length} papers in this thrust</a></p>
+        </details>
+      </div>
+
+      {hasResources && (
+        <>
+          <h2 style="margin-top: 56px">Data and resources</h2>
+          <div class="tools">{t.resources!.map((r) => <div class="tool"><a href={r.url}>{r.label}</a></div>)}</div>
+        </>
+      )}
     </div>
   </section>
 
