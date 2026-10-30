@@ -14,6 +14,7 @@ pages: '104310'
 doi: 10.1016/j.trc.2023.104310
 thrusts:
 - automated-driving
+- system-modeling
 subtopic: prediction-behavior
 show_on_lab: true
 verified: crossref-2026-10-20
