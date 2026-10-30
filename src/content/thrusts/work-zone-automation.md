@@ -32,10 +32,9 @@ subtopics:
   - id: odd-guidelines
     name: Operational design domain and guidelines
     summary: >-
-      Where and when an ATMA can operate safely. We model merging traffic around the work convoy on
-      two-lane and multilane highways to identify the operational design domain, and translate the
-      results into operation and deployment guidelines for state DOTs, including an ATMA toolkit for
-      USDOT and deployment guidelines for Colorado DOT (2025).
+      Where and when an ATMA can operate safely. We model how traffic merges around the work convoy
+      on two-lane and multilane highways to identify the operational design domain of leader-follower
+      operations.
     papers: [tang-atma-odd-two-lane-jits-2024, tang-atma-odd-multilane-trr-2022]
   - id: resilience-localization
     name: Resilience and localization
