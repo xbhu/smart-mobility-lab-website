@@ -16,7 +16,7 @@ venue: U.S. Department of Transportation
 venue_short: USDOT report
 thrusts:
 - work-zone-automation
-subtopic: odd-guidelines
+subtopic: field-evaluation
 verified: cv-2026-09-27
 note: Add public URL if available.
 status: published

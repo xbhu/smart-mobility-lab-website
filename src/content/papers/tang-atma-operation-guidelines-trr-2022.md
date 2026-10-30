@@ -19,7 +19,7 @@ pages: 696–711
 doi: 10.1177/03611981211056644
 thrusts:
 - work-zone-automation
-subtopic: odd-guidelines
+subtopic: operations
 featured: true
 atlas_slug: tang-atma-operation-guidelines-trr-2022
 pdf: https://atlas.mobilitypsu.com/media/tang-atma-operation-guidelines-trr-2022/Tang_Hu_Qin_2022_ATMA_Operation_Guidelines_TRR.pdf

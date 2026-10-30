@@ -28,7 +28,7 @@ subtopics:
       Test protocols and statistical methods that turn field logs into defensible performance
       conclusions. With Missouri DOT we designed 31 test scenarios covering communication loss,
       following accuracy, obstacle detection, and emergency situations.
-    papers: [av-atma-field-testing-trr-2021]
+    papers: [av-atma-field-testing-trr-2021, atma-toolkit-usdot-2025]
   - id: odd-guidelines
     name: Operational design domain and guidelines
     summary: >-
@@ -36,19 +36,19 @@ subtopics:
       two-lane and multilane highways to identify the operational design domain, and translate the
       results into operation and deployment guidelines for state DOTs, including an ATMA toolkit for
       USDOT and deployment guidelines for Colorado DOT (2025).
-    papers: [atma-toolkit-usdot-2025, atma-deployment-guidelines-cdot-2025, tang-atma-odd-multilane-trr-2022, tang-atma-odd-two-lane-jits-2024, tang-atma-operation-guidelines-trr-2022]
+    papers: [tang-atma-odd-two-lane-jits-2024, tang-atma-odd-multilane-trr-2022]
   - id: resilience-localization
     name: Resilience and localization
     summary: >-
       Keeping the follow truck on the lead truck’s path when GPS degrades: LiDAR-based cooperative
       localization and, with Royal Truck, a LiDAR SLAM algorithm for the leader-follower system.
-    papers: [ding-lidar-cooperative-localization-tits-2026]
+    papers: [ding-lidar-cooperative-localization-tits-2026, hu-amt-capacity-tridurle-2022]
   - id: operations
     name: Operations planning
     summary: >-
       Planning maintenance work around the capabilities of leader-follower vehicles, including route
       optimization for highway maintenance.
-    papers: [tang-atma-route-optimization-ai-2026]
+    papers: [tang-atma-route-optimization-ai-2026, tang-atma-operation-guidelines-trr-2022]
 featured_papers: [av-atma-field-testing-trr-2021, atma-toolkit-usdot-2025, tang-atma-odd-multilane-trr-2022, ding-lidar-cooperative-localization-tits-2026, tang-atma-route-optimization-ai-2026]
 videos: [atma-cdot-unveiling, atma-royal-live-demo, atma-abc-news, atma-modot-field-test, atma-cda-simulation, trb-atma-webinar]
 resources:
