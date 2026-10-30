@@ -5,4 +5,5 @@ tags:
 - people
 people:
 - qing-tang
+faculty: qing-tang
 ---

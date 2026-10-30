@@ -136,6 +136,8 @@ const news = defineCollection({
     tags: z.array(z.enum(["grant", "award", "media", "visit", "people", "event"])).min(1),
     thrusts: z.array(thrustId).optional(),
     people: z.array(reference("people")).optional(),
+    // A lab member who started a faculty position: the item is highlighted with their photo and school link.
+    faculty: reference("people").optional(),
     featured: z.boolean().optional(),
     video: reference("videos").optional(),
     image: z.string().optional(),

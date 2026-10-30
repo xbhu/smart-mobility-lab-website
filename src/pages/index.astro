@@ -7,7 +7,12 @@ import { site, formatDate, publicFileExists } from "../lib/site";
 
 const home = (await getEntry("pages", "home"))!.data.sections as any;
 const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
-const news = (await getCollection("news")).sort((a, b) => String(b.data.date).localeCompare(String(a.data.date))).slice(0, home.news.count);
+const news = await Promise.all(
+  (await getCollection("news"))
+    .sort((a, b) => String(b.data.date).localeCompare(String(a.data.date)))
+    .slice(0, home.news.count)
+    .map(async (n) => ({ ...n, facultyEntry: n.data.faculty ? await getEntry(n.data.faculty) : null })),
+);
 // External sponsors only, federal first, then state, local, and industry.
 const SPONSOR_GROUPS = ["federal", "state", "local", "industry"];
 const sponsors = (await getCollection("sponsors"))
@@ -109,8 +114,17 @@ const ALUMNI_WAS: Record<string, string> = { phd: "Ph.D.", postdoc: "Postdoctora
           <li class="news-item">
             <span class="news-date">{formatDate(n.data.date)}</span>
             <div>
-              <p class="news-title">{n.data.title}</p>
+              {n.facultyEntry ? (
+                <div class="news-faculty-mini">
+                  {publicFileExists(n.facultyEntry.data.photo) && <img src={n.facultyEntry.data.photo} alt="" loading="lazy" />}
+                  <div>
+                    <span class="tag-faculty">New faculty</span>
+                    <p class="news-title">{n.data.title}</p>
+                  </div>
+                </div>
+              ) : <p class="news-title">{n.data.title}</p>}
               {n.data.links?.[0] && <p class="news-links"><a href={n.data.links[0].url}>{n.data.links[0].label}</a></p>}
+              {n.facultyEntry?.data.current_url && <p class="news-links"><a href={n.facultyEntry.data.current_url}>Faculty page</a></p>}
             </div>
           </li>
         ))}

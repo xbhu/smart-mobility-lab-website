@@ -1,12 +1,18 @@
 ---
 import Base from "../layouts/Base.astro";
 import Video from "../components/Video.astro";
+import FacultyNews from "../components/FacultyNews.astro";
 import { getCollection, getEntry, render } from "astro:content";
 import { intros, formatDate } from "../lib/site";
 
 const news = (await getCollection("news")).sort((a, b) => String(b.data.date).localeCompare(String(a.data.date)));
 const rendered = await Promise.all(
-  news.map(async (n) => ({ n, Content: (await render(n)).Content, video: n.data.video ? await getEntry(n.data.video) : null })),
+  news.map(async (n) => ({
+    n,
+    Content: (await render(n)).Content,
+    video: n.data.video ? await getEntry(n.data.video) : null,
+    faculty: n.data.faculty ? await getEntry(n.data.faculty) : null,
+  })),
 );
 const byYear = new Map<string, typeof rendered>();
 for (const r of rendered) {
@@ -28,11 +34,12 @@ for (const r of rendered) {
         <>
           <h2 class="year-head">{year}</h2>
           <ul class="news-list">
-            {items.map(({ n, Content, video }) => (
-              <li class="news-item" id={n.id}>
+            {items.map(({ n, Content, video, faculty }) => (
+              <li class:list={["news-item", { "news-item--faculty": faculty }]} id={n.id}>
                 <span class="news-date">{formatDate(n.data.date)}</span>
                 <div>
                   <p class="news-title">{n.data.title}</p>
+                  {faculty && <FacultyNews person={faculty} />}
                   {n.data.image && <img src={n.data.image} alt={n.data.image_alt ?? ""} loading="lazy" style="max-width: 520px; width: 100%; border-radius: 6px; margin: 10px 0 12px" />}
                   {n.data.images && (
                     <div class="news-photos">

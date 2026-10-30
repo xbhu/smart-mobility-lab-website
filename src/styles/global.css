@@ -225,6 +225,28 @@ a:hover { text-decoration-thickness: 2px; }
   .sponsor-logos img[src$="usdot.svg"] { max-height: 36px; }
 }
 
+/* Faculty news: a lab member starting a faculty position. Navy card with the lane-yellow rule
+   used for faculty alumni on the People page. */
+.news-item--faculty .news-date { color: var(--navy); }
+.faculty-news { display: flex; gap: 22px; align-items: center; background: var(--navy); color: #dfe6f0; border-top: 4px solid var(--lane); border-radius: 0 0 10px 10px; padding: 20px 24px; margin: 10px 0 14px; max-width: 640px; }
+.faculty-news p { margin: 0; color: inherit; }
+.faculty-news-photo { flex: none; width: 112px; height: 112px; border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 4px var(--lane); background: var(--blue); display: grid; place-items: center; font: 800 1.8rem var(--font-sign); color: var(--white); }
+.faculty-news-photo img { width: 100%; height: 100%; object-fit: cover; }
+.faculty-news .tag-faculty { margin-bottom: 8px; }
+.faculty-news-name { font: 800 1.3rem / 1.2 var(--font-sign); }
+.faculty-news-name a { color: var(--white); text-decoration: none; }
+.faculty-news-name a:hover { text-decoration: underline; }
+.faculty-news-now { margin-top: 4px !important; font-weight: 600; }
+.faculty-news-now a { color: var(--lane); }
+.faculty-news-was { margin-top: 4px !important; font-size: 0.92rem; color: #aebbd0; }
+@media (max-width: 560px) {
+  .faculty-news { flex-direction: column; align-items: flex-start; gap: 14px; padding: 18px; }
+  .faculty-news-photo { width: 88px; height: 88px; }
+}
+.news-faculty-mini { display: flex; gap: 14px; align-items: center; }
+.news-faculty-mini img { flex: none; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; box-shadow: 0 0 0 3px var(--lane); }
+.news-faculty-mini .tag-faculty { margin-bottom: 4px; }
+
 /* ---------- Page header ---------- */
 .page-head { padding: clamp(48px, 7vw, 88px) 0 clamp(28px, 4vw, 44px); border-bottom: 1px solid var(--rule); }
 .page-head h1 { max-width: 20ch; }
