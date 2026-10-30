@@ -27,4 +27,5 @@ atlas_slug: song-range-anxiety-jits-2023
 pdf: https://atlas.mobilitypsu.com/media/song-range-anxiety-jits-2023/Song_Hu_2023_EV_Range_Anxiety_Initial_SOC_JITS.pdf
 note: No public code repository (XB, 2026-10-27).
 status: published
+code: https://github.com/chrisyangsong/state_of_charge_prediction
 ---

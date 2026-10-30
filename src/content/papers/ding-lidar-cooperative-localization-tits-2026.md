@@ -32,4 +32,5 @@ summary: >-
   A lightweight LiDAR-based model that lets the follower vehicle localize itself relative to the leader
   in an asymmetric leader-follower system, reducing reliance on GPS.
 pdf: https://atlas.mobilitypsu.com/media/ding-lidar-cooperative-localization-tits-2026/Ding_et_al_2026_LiDAR_Cooperative_Localization_TITS.pdf
+code: https://github.com/yuxinpsu/LF-CL
 ---

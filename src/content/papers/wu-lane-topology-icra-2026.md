@@ -24,4 +24,5 @@ summary: >-
   Predicts the lane graph an automated vehicle needs for planning, and keeps the prediction reliable when
   lanes are occluded by gating topology reasoning on confidence and using fiducial markers as priors.
 pdf: https://atlas.mobilitypsu.com/media/wu-lane-topology-icra-2026/Wu_Hu_2026_Lane_Topology_Fiducial_Markers_ICRA.pdf
+url: https://ieeexplore.ieee.org/abstract/document/11697413
 ---
