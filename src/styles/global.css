@@ -203,9 +203,16 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* Sponsor logos: a static grid of equal tiles; a sponsor without a logo file shows its name. */
 .sponsor-logos { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(176px, 1fr)); gap: 14px; }
-.sponsor-logos li { display: grid; place-items: center; min-height: 104px; padding: 16px 18px; background: var(--white); border: 1px solid var(--rule); border-radius: 8px; text-align: center; }
+.sponsor-logos li { display: grid; place-items: center; min-height: 104px; padding: 14px 12px; background: var(--white); border: 1px solid var(--rule); border-radius: 8px; text-align: center; }
 .sponsor-logos img { max-width: 100%; max-height: 64px; width: auto; height: auto; object-fit: contain; }
 .sponsor-logos span { font: 700 0.92rem / 1.3 var(--font-sign); color: var(--navy); }
+.sponsor-logos li:has(small) { grid-template-rows: auto auto; align-content: center; gap: 8px; }
+.sponsor-logos li:has(small) img { max-height: 52px; }
+/* Optical balance: a bold wordmark reads larger than the agency marks around it. */
+.sponsor-logos img[src$="google.svg"] { max-height: 40px; }
+.sponsor-logos img[src$="doe.svg"] { max-height: 46px; }
+.sponsor-logos img[src$="fhwa.svg"] { max-height: 76px; }
+.sponsor-logos small { font: 700 0.78rem / 1.25 var(--font-sign); color: var(--navy); }
 @media (max-width: 520px) {
   .sponsor-logos { grid-template-columns: 1fr 1fr; gap: 10px; }
   .sponsor-logos li { min-height: 88px; padding: 12px; }

@@ -204,6 +204,7 @@ const sponsors = defineCollection({
     url: z.string().url().optional(),
     logo: z.string().optional(),
     logo_permission: z.boolean().optional(),
+    show_name: z.boolean().optional(), // print the name under a seal-only logo
     note: z.string().optional(),
   }),
 });

@@ -139,9 +139,12 @@ const ALUMNI_WAS: Record<string, string> = { phd: "Ph.D.", postdoc: "Postdoctora
       <ul class="sponsor-logos">
         {sponsors.map((s) => (
           <li>
-            {s.data.logo && publicFileExists(s.data.logo)
-              ? <img src={s.data.logo} alt={s.data.name} title={s.data.name} loading="lazy" />
-              : <span>{s.data.name}</span>}
+            {s.data.logo && publicFileExists(s.data.logo) ? (
+              <>
+                <img src={s.data.logo} alt={s.data.name} title={s.data.name} loading="lazy" />
+                {s.data.show_name && <small aria-hidden="true">{s.data.name}</small>}
+              </>
+            ) : <span>{s.data.name}</span>}
           </li>
         ))}
       </ul>
