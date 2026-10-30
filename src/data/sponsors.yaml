@@ -9,10 +9,10 @@
 - { id: padep, name: Pennsylvania Department of Environmental Protection, group: state, url: https://www.dep.pa.gov, logo: /media/logos/padep.webp }
 - { id: dced, name: Pennsylvania Department of Community and Economic Development, group: state, url: https://dced.pa.gov, logo: /media/logos/dced.webp }
 - { id: cdot, name: Colorado Department of Transportation, group: state, url: https://www.codot.gov, logo: /media/logos/cdot.webp, show_name: true }
-- { id: modot, name: Missouri Department of Transportation, group: state, url: https://www.modot.org }
+- { id: modot, name: Missouri Department of Transportation, group: state, url: https://www.modot.org, logo: /media/logos/modot.svg }
 - { id: amt-pooled-fund, name: Autonomous Maintenance Technology Pooled Fund, group: state }
 - { id: kansas-city, name: "City of Kansas City, Missouri", group: local, note: Streetlight charging partner, logo: /media/logos/kansas-city.svg }
 - { id: google, name: Google, group: industry, logo: /media/logos/google.svg }
-- { id: royal-truck, name: Royal Truck, group: industry, note: LiDAR SLAM collaboration (2025) }
-- { id: kratos, name: Kratos Defense, group: industry }
-- { id: mec, name: Metropolitan Energy Center, group: local, note: Lead organization on DOE streetlight charging and terminal truck projects }
+- { id: royal-truck, name: Royal Truck, group: industry, note: LiDAR SLAM collaboration (2025), logo: /media/logos/royal-truck.webp }
+- { id: kratos, name: Kratos Defense, group: industry, logo: /media/logos/kratos.svg }
+- { id: mec, name: Metropolitan Energy Center, group: local, note: Lead organization on DOE streetlight charging and terminal truck projects, logo: /media/logos/mec.webp }
