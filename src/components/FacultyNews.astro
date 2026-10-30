@@ -1,7 +1,7 @@
 ---
 // Highlight card for a news item about a lab member starting a faculty position:
 // photo, new position (linked to the school's page), and their time in the lab.
-import { ALUMNI_ROLE_LABEL, initials, publicFileExists, years } from "../lib/site";
+import { ALUMNI_ROLE_LABEL, hasProfile, initials, publicFileExists, years } from "../lib/site";
 interface Props { person: { id: string; data: any } }
 const { person } = Astro.props;
 const d = person.data;
@@ -13,7 +13,7 @@ const photo = publicFileExists(d.photo) ? d.photo : null;
   </span>
   <div>
     <span class="tag-faculty">New faculty</span>
-    <p class="faculty-news-name"><a href={`/people/${person.id}`}>{d.name}</a></p>
+    <p class="faculty-news-name">{hasProfile(person) ? <a href={`/people/${person.id}`}>{d.name}</a> : d.name}</p>
     <p class="faculty-news-now">{d.current_url ? <a href={d.current_url}>{d.current_position}</a> : d.current_position}</p>
     <p class="faculty-news-was">{ALUMNI_ROLE_LABEL[d.role]} in the lab, {years(d.start, d.end)}</p>
   </div>
