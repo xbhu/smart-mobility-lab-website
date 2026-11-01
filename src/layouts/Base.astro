@@ -16,6 +16,8 @@ const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b
 const researchMenu = [
   ...thrusts.map((t) => ({ label: t.data.name, href: `/research/${t.id}` })),
   { label: "Facilities", href: "/facilities", divider: true },
+  // Separate site with plain-language guides to the lab's papers.
+  { label: "Research Atlas", href: site.social.atlas, external: true },
 ];
 const pageTitle = title ? `${title} | ${site.full_name}` : site.seo.title;
 const desc = description ?? site.seo.description;
@@ -56,7 +58,11 @@ const ogImage = new URL(image ?? site.hero.image, Astro.site).toString();
                   <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-research" aria-label="Research submenu"></button>
                   <ul class="submenu" id="menu-research">
                     {researchMenu.map((m: any) => (
-                      <li class:list={{ "submenu-divider": m.divider }}><a href={m.href} aria-current={isActive(m.href) ? "page" : undefined}>{m.label}</a></li>
+                      <li class:list={{ "submenu-divider": m.divider }}>{m.external ? (
+                        <a href={m.href}>{m.label} <span class="ext" aria-hidden="true">↗</span></a>
+                      ) : (
+                        <a href={m.href} aria-current={isActive(m.href) ? "page" : undefined}>{m.label}</a>
+                      )}</li>
                     ))}
                   </ul>
                 </li>
