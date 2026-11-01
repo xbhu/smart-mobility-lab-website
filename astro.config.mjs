@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
+import externalLinks from "./integrations/external-links.mjs";
 
 // SITE_URL is set by the deploy workflow; the production site is https://lab.mobilitypsu.com.
 export default defineConfig({
@@ -7,5 +8,5 @@ export default defineConfig({
   trailingSlash: "ignore",
   build: { format: "directory" },
   // /data/*.json are machine-readable exports for the Research Atlas, not pages.
-  integrations: [sitemap({ filter: (page) => !page.includes("/data/") })],
+  integrations: [sitemap({ filter: (page) => !page.includes("/data/") }), externalLinks()],
 });
