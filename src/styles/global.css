@@ -102,6 +102,7 @@ a:hover { text-decoration-thickness: 2px; }
 .nav .submenu a[aria-current="page"] { background: var(--concrete); box-shadow: inset 4px 0 0 var(--lane); }
 .submenu-divider { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--rule); }
 .nav .ext { font-weight: 700; color: var(--muted); }
+.pub-head-links { display: flex; flex-wrap: wrap; gap: 6px 28px; margin-top: 16px; }
 
 @media (max-width: 860px) {
   .nav-toggle { display: inline-flex; align-items: center; gap: 8px; font: 700 0.95rem var(--font-sign); color: var(--navy); background: none; border: 2px solid var(--navy); border-radius: 6px; padding: 6px 12px; cursor: pointer; }

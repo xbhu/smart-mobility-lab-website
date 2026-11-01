@@ -2,7 +2,7 @@
 import Base from "../layouts/Base.astro";
 import PaperItem from "../components/PaperItem.astro";
 import { getCollection } from "astro:content";
-import { intros } from "../lib/site";
+import { intros, site } from "../lib/site";
 import { labPapers } from "../lib/papers";
 
 const thrusts = (await getCollection("thrusts")).sort((a, b) => a.data.order - b.data.order);
@@ -13,7 +13,10 @@ const papers = await labPapers();
     <div class="wrap">
       <h1>{intros.publications.title}</h1>
       <p class="lede">{intros.publications.lead}</p>
-      <p><a href={intros.publications.scholar}>Full list on Google Scholar</a></p>
+      <p class="pub-head-links">
+        <a href={intros.publications.scholar}>Full list on Google Scholar</a>
+        <a href={site.social.atlas}>Plain-language guides to our papers on the Research Atlas <span aria-hidden="true">↗</span></a>
+      </p>
     </div>
   </header>
 
